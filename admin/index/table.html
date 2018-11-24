@@ -5,10 +5,33 @@
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
     <title>表格</title>
     <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
+    <script src="../../static/admin/js/jquery-3.3.1.min.js"></script>
+    <style>
+        #tips {
+            position: fixed;
+            left: 40%;
+            top: 50%;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            min-width: 150px;
+            padding: 10px;
+            border-radius: 10px;
+            display:none;
+        }
+
+        .tip_title {
+            width: 60px;
+        }
+
+        .tip_conts {
+            width: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,54 +48,119 @@
 </div>
 <div class="layui-row">
     <div class="col-xs-12">
-        <table id="table" lay-filter="table1" ></table>
+        <table id="table" lay-filter="table1"></table>
     </div>
+</div>
+<div id="tips">
+
 </div>
 
 
 <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    layui.use('table', function() {
+    layui.use('table', function () {
         var table = layui.table;
 
         //第一个实例
         table.render({
             elem: '#table'
-            , page: true //开启分页
-            , toolbar: true
-            , height: 'full-80'
-            , title: '数据表'
-            , minWidth:1200
-            , cols: [[ //表头
-                {field: 'id', title: '活动名',width:'65%', minWidth: 400}
-                , {field: 'username', title: '流程名',minWidth:150}
-                , {field: 'sex', title: '创建日期',minWidth:150, sort: true}
-                , {field: 'city', title: '服务水平监控',minWidth:150}
+            ,
+            page: true //开启分页
+            ,
+            toolbar: true
+            ,
+            height: 'full-80'
+            ,
+            title: '数据表'
+            ,
+            minWidth: 1200
+            ,
+            cols: [[ //表头
+                {field: 'titles', title: '活动名', width: '65%', minWidth: 400, event: 'openLink'}
+                , {field: 'username', title: '流程名', minWidth: 150}
+                , {field: 'sex', title: '创建日期', minWidth: 150, sort: true}
+                , {field: 'city', title: '服务水平监控', minWidth: 150}
             ]]
-            , "data": [{"id": '1000010000100001000010000100001000010000100001000010000100001000010000100001000010000100001000010000100001000065456465', "username": "user-0", "sex": "女", "city": "城市-0"}, {
-                "id": 10000,
-                "username": "user-0",
-                "sex": "女",
-                "city": "城市-0"
-            }, {"id": 10000, "username": "user-0", "sex": "女", "city": "城市-0"}, {
-                "id": 10000,
-                "username": "user-0",
-                "sex": "女",
-                "city": "城市-0"
-            }]
-            ,text:{
+            ,
+            "data": [
+                {
+                    "titles": '100001000010000100001000010001001000010000100001000065456465',
+                    "link": "https://www.baidu.com",
+                    "username": "user-0",
+                    "sex": "女",
+                    "city": "城市-0",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                }, {
+                    "titles": 10000,
+                    "username": "user-0",
+                    "link":"./show_messages.html",
+                    "sex": "女",
+                    "city": "城市-0"
+                },
+                {
+                    "titles": 10000,
+                    "username": "user-0",
+                    "sex": "女",
+                    "city": "城市-0"
+                },
+                {
+                    "titles": 10000,
+                    "username": "user-0",
+                    "sex": "女",
+                    "city": "城市-0"
+                }]
+            ,
+            text: {
                 none: "暂时还没有数据哦！"
-            }
+            }, done: function (obj) {
+                var titles;
+                $("td[lay-event='openLink']").hover(function (e) {
+                    for (var i = 0; i < obj.data.length; i++) {
+                        if (obj.data[i].messages) {
+                            for (titles in obj.data[i]) {
+                                if (obj.data[i].titles === $(this).text()) {
+                                    $("#tips").html("");
+                                    for (var j = 0; j < obj.data[i].messages.length; j++) {
+                                        $("#tips").append("<p>\n" +
+                                            "        <span class=\"tip_title\">" + obj.data[i].messages[j].name + "</span>：<span class=\"tip_conts\">" + obj.data[i].messages[j].value + "</span>\n" +
+                                            "    </p>")
+                                    }
+                                    e = e || window.event;
+                                    _x = e.pageX || e.clientX + document.body.scroolLeft;
+                                    _y = e.pageY || e.clientY + document.body.scrollTop;
+                                    $("#tips").css("left",_x+'px').css("top",_y+'px').fadeIn(500);
+                                    $(this).mouseleave(function(){
+                                        $("#tips").fadeOut(500);
+                                    })
+                                }
+                            }
+                        }
 
+                    }
+                })
+            }
         });
         //监听行单击事件
-        table.on('row(test)', function(obj){
-            console.log(obj.tr);//得到当前行元素对象
-            console.log(obj.data);//得到当前行数据
-            //obj.del(); //删除当前行
-            //obj.update(fields) //修改当前行数据
+        table.on('tool(table1)', function (obj) {
+            console.log();
+            var data = obj.data;
+            if (obj.event === "openLink") {
+
+                layer.confirm("确定跳转链接吗？", function () {
+                    window.location.href = data.link +"?link="+ encodeURIComponent(window.location.href);
+                });
+            }
         });
-    })
+    });
 </script>
 </body>
 

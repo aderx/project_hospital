@@ -115,16 +115,13 @@
 <script type="text/javascript">
     var scope = {
         link: './welcome.html'
-    }
+    };
 
     $("#refresh_home").on('click',function(){
         var homes = document.getElementById('home') ;
         if(!$("#refresh_home").hasClass("layui-this")){
             homes.contentWindow.location.reload();
-        }else{
-            return;
         }
-
     })
 </script>
 <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>

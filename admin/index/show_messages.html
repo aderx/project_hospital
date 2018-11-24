@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>表格</title>
+    <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
+    <script src="../../static/admin/js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+<div class="layui-row search_button">
+    <div class="col-xs-12">
+        <div class="test-table-reload-btn" style="margin-top: 20px;">
+            搜索活动：
+            <div class="layui-inline">
+                <input class="layui-input" name="search" id="test-table-demoReload" autocomplete="off">
+            </div>
+            <button class="layui-btn" data-type="backUrl">返回</button>
+        </div>
+    </div>
+</div>
+<div class="layui-row">
+    <div class="col-xs-12">
+        <table id="table" lay-filter="table1"></table>
+    </div>
+</div>
+<div id="tips">
+
+</div>
+
+
+<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURI(r[2]);
+            return null;
+        };
+    })(jQuery);//获取当前页面的URL属性值，接收参数name：属性名，如果有对应属性值则返回属性值否则返回 null
+    layui.use('table', function () {
+    var link = decodeURIComponent($.getUrlParam('link'));
+    $("button[data-type='backUrl']").click(function(){
+        layer.confirm("确定返回表格信息吗？", function () {
+            window.location.href = link;
+        });
+    })
+    });
+</script>
+</body>
+
+</html>
