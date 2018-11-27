@@ -38,7 +38,7 @@
 <div class="layui-row search_button">
     <div class="col-xs-12">
         <div class="test-table-reload-btn" style="margin-top: 20px;">
-            搜索活动：
+            检索：
             <div class="layui-inline">
                 <input class="layui-input" name="search" id="test-table-demoReload" autocomplete="off">
             </div>
@@ -76,19 +76,21 @@
             minWidth: 1200
             ,
             cols: [[ //表头
-                {field: 'titles', title: '活动名', width: '65%', minWidth: 400, event: 'openLink'}
-                , {field: 'username', title: '流程名', minWidth: 150}
-                , {field: 'sex', title: '创建日期', minWidth: 150, sort: true}
-                , {field: 'city', title: '服务水平监控', minWidth: 150}
+                {field: 'activity_name', title: '活动名', width: '53%', minWidth: 400, event: 'openLink'}
+                , {field: 'process_name', title: '流程名', minWidth: 150}
+                , {field: 'create_date', title: '创建日期', minWidth: 150, sort: true}
+                , {field: 'Service_monitoring', title: '服务水平监控', minWidth: 150}
+                , {field: 'cut_date', title: '截止日期', minWidth: 150}
             ]]
             ,
             "data": [
                 {
-                    "titles": '100001000010000100001000010001001000010000100001000065456465',
+                    "activity_name": '100001000010000100001000010001001000010000100001000065456465',
                     "link": "https://www.baidu.com",
-                    "username": "user-0",
-                    "sex": "女",
-                    "city": "城市-0",
+                    "process_name": "user-0",
+                    "create_date": "user-0",
+                    "Service_monitoring": "女",
+                    "cut_date": "城市-0",
                     "messages": [
                         {
                             name: "流程名称",
@@ -100,23 +102,26 @@
                         }
                     ]
                 }, {
-                    "titles": 10000,
-                    "username": "user-0",
+                    "activity_name": 10000,
+                    "process_name": "user-0",
                     "link":"./show_messages.html",
-                    "sex": "女",
-                    "city": "城市-0"
+                    "Service_monitoring": "女",
+                    "create_date": "城市-0",
+                    "cut_date": "城市-0"
                 },
                 {
-                    "titles": 10000,
-                    "username": "user-0",
-                    "sex": "女",
-                    "city": "城市-0"
+                    "activity_name": 10000,
+                    "process_name": "user-0",
+                    "Service_monitoring": "女",
+                    "create_date": "城市-0",
+                    "cut_date": "城市-0"
                 },
                 {
-                    "titles": 10000,
-                    "username": "user-0",
-                    "sex": "女",
-                    "city": "城市-0"
+                    "activity_name": 10000,
+                    "process_name": "user-0",
+                    "Service_monitoring": "女",
+                    "create_date": "城市-0",
+                    "cut_date": "城市-0"
                 }]
             ,
             text: {
@@ -151,10 +156,8 @@
         });
         //监听行单击事件
         table.on('tool(table1)', function (obj) {
-            console.log();
             var data = obj.data;
             if (obj.event === "openLink") {
-
                 layer.confirm("确定跳转链接吗？", function () {
                     window.location.href = data.link +"?link="+ encodeURIComponent(window.location.href);
                 });
