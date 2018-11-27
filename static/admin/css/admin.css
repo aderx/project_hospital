@@ -1613,6 +1613,7 @@ html {
 .main-layout-side .layui-nav-item a i {
   margin-right: 10px;
   font-size: 1.4rem;
+  width: 20px;
 }
 .main-layout-side .layui-nav-tree .layui-nav-child a {
   height: 50px;

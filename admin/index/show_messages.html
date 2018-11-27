@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
     <script src="../../static/admin/js/jquery-3.3.1.min.js"></script>
+    <script src="../../static/admin/js/basic.js"></script>
 </head>
 
 <body>
@@ -449,15 +450,6 @@
 
 <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    (function ($) {
-        $.getUrlParam = function (name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-            var r = window.location.search.substr(1).match(reg);
-            if (r != null) return decodeURI(r[2]);
-            return null;
-        };
-    })(jQuery);//获取当前页面的URL属性值，接收参数name：属性名，如果有对应属性值则返回属性值否则返回 null
-
     layui.use(['layer','form', 'layedit', 'laydate'], function () {
 
         var form = layui.form
