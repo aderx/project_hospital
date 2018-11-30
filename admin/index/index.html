@@ -15,8 +15,33 @@
     <script type="text/javascript" src="../../static/admin/js/jquery-1.11.3.min.js"></script>
     <![endif]-->
 
+    <style>
+        .loading{
+            font-size:3rem;
+            color:#fff;
+            text-align: center;
+            vertical-align: middle;
+            margin:20% 0;
+            letter-spacing: 5px;
+        }
+        .loading i{
+            font-size:4rem;
+        }
+    </style>
 </head>
 <body>
+<div class="begin"></div>
+<script>
+    var timer = null;
+    $(".begin").append($("<div>").attr("class","main-mask").css({"display":"block","background":"rgba(0,0,0,0.6)"})
+        .append($("<p>").attr("class","loading").html("<br /> 页面加载中，请稍等。。。")
+            .prepend($("<i>").attr("class","layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"))
+        ))
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+        $(".begin").html("");
+    },3000);
+</script>
 <div class="main-layout" id='main-layout'>
     <!--侧边栏-->
     <div class="main-layout-side">
@@ -111,13 +136,16 @@
         </div>
     </div>
     <!--遮罩-->
-    <div class="main-mask"></div>
+    <!--<div class="main-mask" style="display:block; opacity: 0.9">-->
+        <!--<p class="loading"><i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i> 页面加载中，请稍后。。。</p>-->
+    <!--</div>-->
 </div>
-<script type="text/javascript">
-    var scope = {
-        link: './welcome.html'
-    };
-
+<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/admin/js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/admin/js/list.js"></script>
+<script src="../../static/admin/js/nav.js"></script>
+<script>
     $("#refresh_home").on('click',function(){
         var homes = document.getElementById('home') ;
         if(!$("#refresh_home").hasClass("layui-this")){
@@ -130,12 +158,14 @@
 
         }
     })
+    window.onload = function(){
+        var f = $.cookie("f");
+        $.cookie("f", null);
+        if(f !== null && typeof Number(f) === "number"){
+            $("a[data-id='"+Number(f)+"']")[0].click();
+        }
+        $(".begin").html("");
+    }
 </script>
-<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../static/admin/js/main.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
-
-<script src="../../static/admin/js/list.js"></script>
-<script src="../../static/admin/js/nav.js"></script>
 </body>
 </html>
