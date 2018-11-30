@@ -121,7 +121,13 @@
     $("#refresh_home").on('click',function(){
         var homes = document.getElementById('home') ;
         if(!$("#refresh_home").hasClass("layui-this")){
-            homes.contentWindow.location.reload();
+            try{
+                homes.contentWindow.location.reload();
+            }catch{
+                alert("当前页面显示不正确，可能会出现显示错乱，请使用服务器访问当前页面！");
+                console.error("由于跨域问题，当前页面在本地访问时将出现显示错误，请使用服务器访问！");
+            }
+
         }
     })
 </script>

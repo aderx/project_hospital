@@ -56,7 +56,11 @@
 
 </div>
 
-
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="detail">查看详情</a>
+    <!--<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>-->
+    <!--<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>-->
+</script>
 <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use('table', function () {
@@ -77,68 +81,69 @@
             minWidth: 1200
             ,
             cols: [[ //表头
-                {field: 'activity_name', title: '活动名', width: '53%', minWidth: 400, event: 'openLink'}
-                , {field: 'process_name', title: '流程名', minWidth: 150}
-                , {field: 'create_date', title: '创建日期', minWidth: 150, sort: true}
-                , {field: 'Service_monitoring', title: '服务水平监控', minWidth: 150}
-                , {field: 'cut_date', title: '截止日期', minWidth: 150}
+                {field: 'announce_type', title: '公告类型', minWidth: 150, sort: true}
+                , {field: 'announce_name', title: '公告名称', width: '43%', minWidth: 400, event: 'openLink'}
+                , {field: 'Release_department', title: '发布部门', minWidth: 150, sort: true}
+                , {field: 'Release_date', title: '发布时间', minWidth: 150, sort: true}
+                , {field: 'cut_date', title: '有效期', minWidth: 150, sort: true}
+                , {fixed:'right',minWidth: 100,align:'center',toolbar: "#barDemo"}
             ]]
             ,
             "data": [
                 {
-                    "activity_name": '100001000010000100001000010001001000010000100001000065456465',
-                    "link": "https://www.baidu.com",
-                    "process_name": "user-0",
-                    "create_date": "user-0",
-                    "Service_monitoring": "女",
+                    "announce_type": '100001000065456465',
+                    "link": "./show_messages.html",
+                    "announce_name": "9999999999999999999",
+                    "Release_department": "user-0",
+                    "Release_date": "女",
                     "cut_date": "城市-0",
                     "messages": [
                         {
                             name: "流程名称",
-                            value: "某一个活动"
+                            value: "某一个活动1111"
                         },
                         {
                             name: "创建日期",
                             value: "2018-11-23 21：34:00"
                         }
                     ]
-                }, {
-                    "activity_name": 10000,
-                    "process_name": "user-0",
-                    "link":"./show_messages.html",
-                    "Service_monitoring": "女",
-                    "create_date": "城市-0",
-                    "cut_date": "城市-0"
-                },
-                {
-                    "activity_name": 10000,
-                    "process_name": "user-0",
-                    "Service_monitoring": "女",
-                    "create_date": "城市-0",
-                    "cut_date": "城市-0"
-                },
-                {
-                    "activity_name": 10000,
-                    "process_name": "user-0",
-                    "Service_monitoring": "女",
-                    "create_date": "城市-0",
-                    "cut_date": "城市-0"
+                },{
+                    "announce_type": '100001000010000100001000010001001000010000100001000065456465',
+                    "announce_name": "user-0",
+                    "Release_department": "user-0",
+                    "Release_date": "女",
+                    "cut_date": "城市-0",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动222222"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
                 }]
             ,
             text: {
                 none: "暂时还没有数据哦！"
             }, done: function (obj) {
                 //参数1：第几列信息展示message信息,当小于0时则不显示message信息 参数2：保持默认，传输表格数据
-                addTableMessage(1,obj);//第一列显示message信息
+                addTableMessage(2,obj);//第二列显示message信息
             }
         });
         //监听行单击事件
         table.on('tool(table1)', function (obj) {
             var data = obj.data;
             if (obj.event === "openLink") {
-                layer.confirm("确定跳转链接吗？", function () {
-                    window.location.href = data.link +"?link="+ encodeURIComponent(window.location.href);
-                });
+                    layer.confirm("确定跳转链接吗？", function () {
+                        if(data.link){
+                            location.href = data.link +"?link="+ encodeURIComponent(window.location.href);
+                        }else{
+                            layer.alert("没有可以跳转的链接哦！")
+                        }
+                    });
+
             }
         });
     });

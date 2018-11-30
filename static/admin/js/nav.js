@@ -17,7 +17,6 @@ $(function () {
 });
 
 function addList(list, list1) {//list:包含主列表的容器 list1:包含副列表的容器
-    var location = window.location.origin + window.location.pathname;//获取当前页面不包含任何属性值的根地址（例：http://www.XXX.com/index.html）
     function changeTab(ele, callback) {
         layui.use(['element'], function () {
             var element = layui.element;
@@ -59,7 +58,7 @@ function addList(list, list1) {//list:包含主列表的容器 list1:包含副�
                 var aList_j = a.list[j];
                 $dl.append($("<dd>").attr(
                     {
-                        "shiro:hasPermission": true,
+                        "shiro:hasPermission": false,
                         "name": aList_j.shiro,
                     }).append($("<a>").attr(
                     {
@@ -163,13 +162,13 @@ function addList(list, list1) {//list:包含主列表的容器 list1:包含副�
                     }
                     addMaps($mapSite, x);
                 } else if (n === null || t === null) {// 当URL中只有 t 与 n 属性中的一个时删除URL中的 t 与 n
-                    window.location.href = location + "?p=" + p;
+                    location.search = "?p=" + p;
                 } else if (nN < mXto[tN].content.length && tN < mXto.length) {//当URL中同时有 t 与 n 时则动态加载相应的数据
                     addTools(list1, mX);
                     addSample(mXto[tN].content[nN]);
                     addMaps($mapSite, x);
                 } else {//当出现未知可能性时则直接跳转默认页面，例如：当 n 与 t 与数据实际情况不符合时，删除 t 与 n
-                    window.location.href = location + "?p=" + p;
+                    location.search = "?p=" + p;
                 }
             } else {//当URL中的表示当前页面名称的属性值（p）无法与当前列表中的数据相匹配时
                 var onThis;//判断所有数据中是否有一个值与表示当前页面名称的属性值（p）对应
@@ -179,10 +178,10 @@ function addList(list, list1) {//list:包含主列表的容器 list1:包含副�
                     if (onThis) break;
                 }
                 //表示当前页面名称的属性值（p）与所有的数据中对应的名称均不匹配时页面将直接跳转至首页
-                if (!onThis) window.location.href = location + "?p=home";
+                if (!onThis) location.search =  "?p=home";
             }
         } else {//URL中无p属性时默认直接载入首页
-            window.location.href = location + "?p=home";
+            location.search =  "?p=home";
         }
     }
 }//动态的向页面中添加列表
