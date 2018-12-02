@@ -15,13 +15,7 @@
 </head>
 
 <body>
-<div class="layui-row search_button">
-    <div class="col-xs-12">
-        <div class="test-table-reload-btn" style="margin-top: 20px;">
-            <button class="layui-btn" data-type="backUrl">返回上一页</button>
-        </div>
-    </div>
-</div>
+
 <div class="layui-row">
     <div class="col-xs-12">
         <form class="layui-form" action="">
@@ -507,18 +501,7 @@
             ,"sex": "女"
             ,"desc": "我爱 layui"
         })
-
-        var link = decodeURIComponent($.getUrlParam('link'));//获取URL中link属性的值
-        $("button[data-type='backUrl']").click(function () {
-            layer.confirm("确定返回表格信息吗？", function () {
-                if(link !== 'null'){
-                    window.location.href = link;
-                }else{
-                    layer.alert("当前页面无法返回上一页！！！");
-                }
-
-            });
-        })
+        frame_all("back");
     });
 </script>
 </body>

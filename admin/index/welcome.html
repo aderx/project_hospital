@@ -18,7 +18,6 @@
     <script src="../../static/admin/js/basic.js"></script>
 </head>
 <body>
-
 <div class="wrap-container welcome-container">
     <div class="row">
         <div class="welcome-left-container col-lg-8">
@@ -435,12 +434,16 @@
         $(".h_more").click(function(){
             var page = $.getUrlParam("p",1);
             id = $(this).attr("data-id");
-            //console.log($(".layui-nav-item a[data-id='"+14+"']",window.parent.document));
             if(page === "home"){
-                $(".layui-nav-item a[data-id='"+id+"']",window.parent.document)[0].click();
+                try{
+                    $(".layui-nav-item a[data-id='"+id+"']",window.parent.document)[0].click();
+
+                }catch(er){
+                    alert("当前页面显示不正确，可能会出现显示错乱，请使用服务器访问当前页面！");
+                    console.error("此功能无法正常在本地使用，请使用服务器访问！")
+                }
             }else{
-                $.cookie("f", id, { expires: 1, domain: 'localhost' });
-                //window.cookie = encodeURIComponent("$(\".layui-nav-item a[data-id='"+id+"']\",window.parent.document)[0].click();");
+                $.cookie("f", id, { expires: 1 });
                 window.parent.location.search = "?p=home";
             }
 

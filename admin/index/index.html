@@ -12,12 +12,12 @@
     <script src="../../static/admin/js/jquery-3.3.1.min.js"></script>
     <script src="../../static/admin/js/basic.js"></script>
     <!--[if IE 8]>
-    <script type="text/javascript" src="../../static/admin/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../static/admin/js/jquery-1.9.1.min.js"></script>
     <![endif]-->
 
     <style>
         .loading{
-            font-size:3rem;
+            font-size:2.5rem;
             color:#fff;
             text-align: center;
             vertical-align: middle;
@@ -34,7 +34,7 @@
 <script>
     var timer = null;
     $(".begin").append($("<div>").attr("class","main-mask").css({"display":"block","background":"rgba(0,0,0,0.6)"})
-        .append($("<p>").attr("class","loading").html("<br /> 页面加载中，请稍等。。。")
+        .append($("<p>").attr("class","loading").html("<br /> 页面急速加载中")
             .prepend($("<i>").attr("class","layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"))
         ))
     clearTimeout(timer);
@@ -151,19 +151,24 @@
         if(!$("#refresh_home").hasClass("layui-this")){
             try{
                 homes.contentWindow.location.reload();
-            }catch{
+            }catch (er){
                 alert("当前页面显示不正确，可能会出现显示错乱，请使用服务器访问当前页面！");
-                console.error("由于跨域问题，当前页面在本地访问时将出现显示错误，请使用服务器访问！");
+                console.error("此功能无法正常在本地使用，请使用服务器访问！");
             }
 
         }
     })
     window.onload = function(){
-        var f = $.cookie("f");
-        $.cookie("f", null);
-        if(f !== null && typeof Number(f) === "number"){
-            $("a[data-id='"+Number(f)+"']")[0].click();
+        try{
+            var f = $.cookie("f");
+            $.cookie("f", null);
+            if(f !== null && typeof Number(f) === "number"){
+                $("a[data-id='"+Number(f)+"']")[0].click();
+            }
+        }catch(er){
+            console.log("no COOKIES")
         }
+
         $(".begin").html("");
     }
 </script>

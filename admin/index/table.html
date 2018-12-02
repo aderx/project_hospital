@@ -38,7 +38,7 @@
 <body>
 <div class="layui-row search_button">
     <div class="col-xs-12">
-        <div class="test-table-reload-btn" style="margin-top: 20px;">
+        <div class="test-table-reload-btn  h_tool" style="margin-top: 20px;">
             检索：
             <div class="layui-inline">
                 <input class="layui-input" name="search" id="test-table-demoReload" autocomplete="off">
@@ -61,7 +61,6 @@
 <script>
     layui.use('table', function () {
         var table = layui.table;
-
         //第一个实例
         table.render({
             elem: '#table'
@@ -129,18 +128,19 @@
                 none: "暂时还没有数据哦！"
             }, done: function (obj) {
                 //参数1：第几列信息展示message信息,当小于0时则不显示message信息 参数2：保持默认，传输表格数据
-                addTableMessage(1,obj);//第一列显示message信息
+                addTableMessage(1,obj,600,"200");//第一列显示message信息
             }
         });
         //监听行单击事件
         table.on('tool(table1)', function (obj) {
-            var data = obj.data;
             if (obj.event === "openLink") {
                 layer.confirm("确定跳转链接吗？", function () {
-                    window.location.href = data.link +"?link="+ encodeURIComponent(window.location.href);
+                    window.location.href = obj.data.link ;//+"?link="+ encodeURIComponent(window.location.href)
                 });
             }
         });
+        frame_all({"back":false});//框架公共运行函数
+
     });
 </script>
 </body>
