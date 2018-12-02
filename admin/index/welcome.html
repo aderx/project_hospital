@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
     <title>网站后台管理模版</title>
     <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
@@ -15,6 +14,9 @@
         }
     </style>
     <script src="../../static/admin/js/jquery-3.3.1.min.js"></script>
+    <!--[if IE 8]>
+    <script type="text/javascript" src="../../static/admin/js/jquery-1.11.3.min.js"></script>
+    <![endif]-->
     <script src="../../static/admin/js/basic.js"></script>
 </head>
 <body>
@@ -29,7 +31,7 @@
                 <div class="h_pad0 col-xs-12">
                     <div class="panel_title li_first_l1">
                         <span class="li_first_left col-lg-11">待办任务</span>
-                        <a href="javascrip:;" class="h_more li_first_right col-lg-1" data-id="11">更多 &gt;&gt;</a>
+                        <a href="javascrip:void(0);" class="h_more li_first_right col-lg-1" data-id="11">更多 &gt;&gt;</a>
                     </div>
                     <div class="panel_con" h_name="need_do">
                         <ul>
@@ -43,7 +45,7 @@
                     <div class="clearfix">
                         <div class="panel_title li_first_l2">
                             <span class="li_first_left col-lg-11">专项&临时任务</span>
-                            <a href="javascrip:;" class="h_more li_first_right col-lg-1" data-id="12">更多 &gt;&gt;</a>
+                            <a href="javascrip:void(0);" class="h_more li_first_right col-lg-1" data-id="12">更多 &gt;&gt;</a>
                         </div>
                         <div class="panel_con" h_name="other_do">
                             <ul>
@@ -58,7 +60,7 @@
                     <div class="clearfix">
                         <div class="panel_title li_first_l3">
                             <span class="li_first_left col-lg-11">个人工作记录</span>
-                            <a href="javascrip:;" class="h_more li_first_right col-lg-1" data-id="14">更多 &gt;&gt;</a>
+                            <a href="javascrip:void(0);" class="h_more li_first_right col-lg-1" data-id="14">更多 &gt;&gt;</a>
                         </div>
                         <div class="panel_con" h_name="personal_record">
                             <ul>
@@ -75,7 +77,7 @@
                     <div class="clearfix">
                         <div class="panel_title li_first">
                             <span class="col-lg-9 li_first_left">公告栏</span>
-                            <a href="javascrip:;" class="h_more col-lg-3 li_first_right" data-id="16">更多 &gt;&gt;</a>
+                            <a href="javascrip:void(0);" class="h_more col-lg-3 li_first_right" data-id="16">更多 &gt;&gt;</a>
                         </div>
                         <div class="panel_con" h_name="announce">
                             <ul>
@@ -88,7 +90,7 @@
                     <div class="clearfix">
                         <div class="panel_title li_first">
                             <span class="col-lg-9 li_first_left">系统消息</span>
-                            <a href="javascript:;" class="h_more col-lg-3 li_first_right" data-id="17">更多 &gt;&gt;</a>
+                            <a href="javascript:void(0);" class="h_more col-lg-3 li_first_right" data-id="17">更多 &gt;&gt;</a>
                         </div>
                         <div class="panel_con" h_name="sys_info">
                             <ul>
@@ -101,7 +103,7 @@
                     <div class="clearfix">
                         <div class="panel_title li_first">
                             <span class="col-lg-9 li_first_left">公共信息</span>
-                            <a href="javascript:" class="h_more col-lg-3 li_first_right" data-id="18">更多 &gt;&gt;</a>
+                            <a href="javascript:void(0);" class="h_more col-lg-3 li_first_right" data-id="18">更多 &gt;&gt;</a>
                         </div>
                         <div class="panel_con" h_name="public_info">
                             <ul>
@@ -309,7 +311,7 @@
                 [
                     {
                         "item": "通知公告",
-                        "src": "#",
+                        "src": "./repair.html",
                         "time": "2018-04-12"
                     },
                     {

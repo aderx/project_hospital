@@ -29,7 +29,7 @@ var main_list =
                         },
                         {
                             "title": "专项任务",
-                            "url": "./welcome.html",
+                            "url": "./repair.html",
                             "id": "12",
                             "shiro":"a"
                         },
@@ -2962,32 +2962,20 @@ var main_list =
                             "id":"1",
                             "items":[
                                 {
-                                    "title":"效率KPI",
+                                    "title":"设备成本效益分析",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
                                     "shiro":"a",
                                     "list":[
                                         {
-                                            "title":"开机率",
+                                            "title":"医疗设备成本效益分析评价",
                                             "url":"./table.html",
                                             "id":"3",
                                             "shiro":"a"
                                         },
                                         {
-                                            "title":"机时利用率",
-                                            "url":"./table.html",
-                                            "id":"3",
-                                            "shiro":"a"
-                                        },
-                                        {
-                                            "title":"空转率",
-                                            "url":"./table.html",
-                                            "id":"3",
-                                            "shiro":"a"
-                                        },
-                                        {
-                                            "title":"工作日平均闲置时间",
+                                            "title":"PACS明细查询",
                                             "url":"./table.html",
                                             "id":"3",
                                             "shiro":"a"
@@ -2995,18 +2983,58 @@ var main_list =
                                     ]
                                 },
                                 {
-                                    "title":"效率等级",
+                                    "title":"成本效益设置",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
-                                    "shiro":"a"
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"设备成本科目预设",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"设备收入科目预设",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"设备成本属性设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "title":"效率等级设置",
+                                    "title":"成本效益基础管理",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
-                                    "shiro":"a"
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"内置科目",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"会计结账日设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"医疗风险基金设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -3017,32 +3045,26 @@ var main_list =
                             "id":"1",
                             "items":[
                                 {
-                                    "title":"效率KPI",
+                                    "title":"跟踪监测",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
                                     "shiro":"a",
                                     "list":[
                                         {
-                                            "title":"开机率",
+                                            "title":"流失情况监测",
                                             "url":"./table.html",
                                             "id":"3",
                                             "shiro":"a"
                                         },
                                         {
-                                            "title":"机时利用率",
+                                            "title":"增减变动监测",
                                             "url":"./table.html",
                                             "id":"3",
                                             "shiro":"a"
                                         },
                                         {
-                                            "title":"空转率",
-                                            "url":"./table.html",
-                                            "id":"3",
-                                            "shiro":"a"
-                                        },
-                                        {
-                                            "title":"工作日平均闲置时间",
+                                            "title":"论证数据监测",
                                             "url":"./table.html",
                                             "id":"3",
                                             "shiro":"a"
@@ -3050,18 +3072,55 @@ var main_list =
                                     ]
                                 },
                                 {
-                                    "title":"效率等级",
+                                    "title":"管控结果",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
-                                    "shiro":"a"
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"经济指标动态分析报告",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "title":"效率等级设置",
+                                    "title":"综合统计",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
-                                    "shiro":"a"
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"使用情况统计表",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"经济效益分析和评价报告",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title":"工作量设置",
+                                    "url":"./table.html",
+                                    "icon":"clipboard-list",
+                                    "id":"3",
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"设备工作量设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -3072,32 +3131,14 @@ var main_list =
                             "id":"1",
                             "items":[
                                 {
-                                    "title":"效率KPI",
+                                    "title":"收入流失",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
                                     "shiro":"a",
                                     "list":[
                                         {
-                                            "title":"开机率",
-                                            "url":"./table.html",
-                                            "id":"3",
-                                            "shiro":"a"
-                                        },
-                                        {
-                                            "title":"机时利用率",
-                                            "url":"./table.html",
-                                            "id":"3",
-                                            "shiro":"a"
-                                        },
-                                        {
-                                            "title":"空转率",
-                                            "url":"./table.html",
-                                            "id":"3",
-                                            "shiro":"a"
-                                        },
-                                        {
-                                            "title":"工作日平均闲置时间",
+                                            "title":"收入流失分析",
                                             "url":"./table.html",
                                             "id":"3",
                                             "shiro":"a"
@@ -3105,18 +3146,34 @@ var main_list =
                                     ]
                                 },
                                 {
-                                    "title":"效率等级",
+                                    "title":"耗用超支",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
-                                    "shiro":"a"
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"损耗超支分析",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "title":"效率等级设置",
+                                    "title":"损失指标分析",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
                                     "id":"3",
-                                    "shiro":"a"
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"经济损失指标分析",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -3132,7 +3189,119 @@ var main_list =
                             "url":"beneft&t=2&n=0",
                             "shiro":"a",
                             "id":"1",
-                            "items":[]
+                            "items":[
+                                {
+                                    "title":"工作效率",
+                                    "url":"./table.html",
+                                    "icon":"clipboard-list",
+                                    "id":"3",
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"机时利用率",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"完好率",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title":"配置效率",
+                                    "url":"./table.html",
+                                    "icon":"clipboard-list",
+                                    "id":"3",
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"预测工作量符合率",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"功能利用率",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title":"运营效率",
+                                    "url":"./table.html",
+                                    "icon":"clipboard-list",
+                                    "id":"3",
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"投资收益率",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title":"综合评价",
+                                    "url":"./table.html",
+                                    "icon":"clipboard-list",
+                                    "id":"3",
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"综合评价",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title":"评价标准设置",
+                                    "url":"./table.html",
+                                    "icon":"clipboard-list",
+                                    "id":"3",
+                                    "shiro":"a",
+                                    "list":[
+                                        {
+                                            "title":"使用效率等级设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"完好等级设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"预测符合等级设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"功能利用等级设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        },
+                                        {
+                                            "title":"投资收益等级设置",
+                                            "url":"./table.html",
+                                            "id":"3",
+                                            "shiro":"a"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }

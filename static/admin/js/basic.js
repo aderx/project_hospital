@@ -22,7 +22,7 @@
 
 //2：为表格页面添加message提示信息
 function addTableMessage(num, obj, timeIn, timeOut) {//num：添加messages的表格列数 obj：TABLE组件返回参数，本处使用obj.data获取TABLE数据
-    if (Number(num) !== "number" && Number(num) <= 0 && typeof obj === "object") {
+    if (Number(num) !== "number" && Number(num) <= 0 && typeof obj !== "object") {
         return "参数输入错误！";
     }
     timeIn = Number(timeIn) || 500;
