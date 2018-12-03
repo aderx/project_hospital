@@ -119,13 +119,12 @@
 <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../static/admin/lib/echarts/echarts.js"></script>
 <script type="text/javascript">
-    layui.use(['layer', 'jquery','element'], function () {
+    layui.use(['layer', 'jquery','element','layer'], function () {
         var layer = layui.layer
             ,$ = layui.jquery
             ,element = layui.element
             ,myChart;
         //图表
-
         require.config({
             paths: {
                 echarts: '../../static/admin/lib/echarts'
@@ -304,6 +303,21 @@
                     myChart1.resize();
                 })
             });
+        $(function(){
+            $(".panel_con a").on('click',function(){
+                var w = document.body.clientWidth - 20;
+                var h = document.body.clientHeight - 20;
+                layer.open({
+                    type:2,
+                    title:"详情信息",
+                    content:$(this).attr("href"),
+                    area:[w+"px",h+"px"],
+                    resize:false,
+                    move:false
+                })
+                return false;
+            })
+        })
     });
     $(function(){
         var data = {
