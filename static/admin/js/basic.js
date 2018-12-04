@@ -60,7 +60,7 @@ function addTableMessage(num, obj, timeIn, timeOut) {//num：添加messages的�
     })
 }
 
-//cookies操作函数
+//3：cookies操作函数
 jQuery.cookie = function (name, value, options) {
     if (typeof value != 'undefined') {
         options = options || {};
@@ -99,8 +99,30 @@ jQuery.cookie = function (name, value, options) {
     }
 };
 
+//4：页面加载遮罩
+function markPage(text,time){
+    if(!($(".begin").length > 0)){
+        $("body").prepend($("<div>").attr("class","begin"))
+    }
+    var timer = null;
+    text = text || "页面急速加载中!";
+    time = Number(time) || 3000;
+    $(".begin").append($("<div>").attr("class","main-mask").css({"display":"block","background":"rgba(0,0,0,0.6)"})
+        .append($("<p>").attr("class","loading").html("<br />"+text)
+            .prepend($("<i>").attr("class","layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"))
+        ))
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+        $(".begin").remove();
+    },time);
+    document.addEventListener('readystatechange',function(){
+        if(document.readyState === "complete"){
+            $(".begin").remove();
+        }
+    });
+};
 
-//frame通用函数
+//5：frame通用函数
 //frame_all({"back":true},{})
 function frame_all() {
     //判断并添加 返回 按钮

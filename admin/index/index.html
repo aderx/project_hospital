@@ -29,18 +29,7 @@
     </style>
 </head>
 <body>
-<div class="begin"></div>
-<script>
-    var timer = null;
-    $(".begin").append($("<div>").attr("class","main-mask").css({"display":"block","background":"rgba(0,0,0,0.6)"})
-        .append($("<p>").attr("class","loading").html("<br /> 页面急速加载中")
-            .prepend($("<i>").attr("class","layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"))
-        ))
-    clearTimeout(timer);
-    timer = setTimeout(function(){
-        $(".begin").html("");
-    },3000);
-</script>
+<script>markPage();</script>
 <div class="main-layout" id='main-layout'>
     <!--侧边栏-->
     <div class="main-layout-side">
@@ -134,9 +123,7 @@
         </div>-->
     </div>
     <!--遮罩-->
-    <!--<div class="main-mask" style="display:block; opacity: 0.9">-->
-        <!--<p class="loading"><i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i> 页面加载中，请稍后。。。</p>-->
-    <!--</div>-->
+    <div class="main-mask"></div>
 </div>
 <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../static/admin/js/main.js" type="text/javascript" charset="utf-8"></script>
@@ -166,8 +153,6 @@
         }catch(er){
             console.log("no COOKIES")
         }
-
-        $(".begin").html("");
     }
 </script>
 </body>

@@ -15,62 +15,36 @@ var main_list =
             "tools":[],
             "items":[
                 {
-                    "title": "所有任务",
-                    "url": "javascript:",
-                    "id": "1",
+                    "title": "我的任务",
+                    "url": "./home/my_task.html",
+                    "id": "11",
                     "icon": "calendar-check",
-                    "shiro":"a",
-                    "list": [
-                        {
-                            "title": "待办任务",
-                            "url": "./table.html",
-                            "id": "11",
-                            "shiro":"a"
-                        },
-                        {
-                            "title": "专项任务",
-                            "url": "./repair.html",
-                            "id": "12",
-                            "shiro":"a"
-                        },
-                        {
-                            "title": "临时任务",
-                            "url": "./table.html",
-                            "id": "13",
-                            "shiro":"a"
-                        }
-                    ]
+                    "shiro":"a"
                 },
                 {
-                    "title": "个人工作记录",
-                    "url": "javascript:",
-                    "id": "14",
+                    "title": "提醒事项",
+                    "url": "./home/remind.html",
+                    "id": "12",
                     "icon": "clipboard",
                     "shiro":"a"
                 },
                 {
                     "title": "共享信息",
-                    "url": "javascript:",
-                    "id": "15",
+                    "url": "javascript:void(0);",
+                    "id": "13",
                     "icon": "star",
                     "shiro":"a",
                     "list": [
                         {
                             "title": "通知公告",
-                            "url": "./announcement.html",
-                            "id": "16",
-                            "shiro":"a"
-                        },
-                        {
-                            "title": "系统提醒",
-                            "url": "javascript:",
-                            "id": "17",
+                            "url": "./home/announcement.html",
+                            "id": "14",
                             "shiro":"a"
                         },
                         {
                             "title": "公共信息",
-                            "url": "javascript:",
-                            "id": "18",
+                            "url": "./home/public_info.html",
+                            "id": "15",
                             "shiro":"a"
                         }
                     ]
@@ -89,70 +63,70 @@ var main_list =
                             "title": "运行记录",
                             "url": "data&t=0&n=0",
                             "shiro": "a",
-                            "id": "1",
+                            "id": "2",
                             "items": [
                                 {
                                     "title": "运行记录",
-                                    "url": "javascript:;",
+                                    "url": "javascript:void(0);",
                                     "icon":"book-open",
-                                    "id": "3",
+                                    "id": "21",
                                     "shiro": "a",
                                     "list": [
                                         {
                                             "title": "单机运行设备",
-                                            "url": "./announcement.html",
-                                            "id": "3",
+                                            "url": "./data/equip_record.html",
+                                            "id": "22",
                                             "shiro": "a"
                                         },
                                         {
-                                            "title": "使用科室运行设备",
-                                            "url": "./table.html",
-                                            "id": "3",
+                                            "title": "使用科室设备运行记录",
+                                            "url": "./data/room_record.html",
+                                            "id": "23",
                                             "shiro": "a"
                                         }
                                     ]
                                 },
                                 {
                                     "title":"设备联网设置",
-                                    "url":"./table.html",
+                                    "url":"javascript:void(0);",
                                     "icon":"network-wired",
-                                    "id":"3",
+                                    "id":"24",
                                     "shiro": "a",
                                     "list":[
                                         {
                                             "title":"设备联网设置",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"25",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"设备值班排班设置",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"26",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"设备加班设置",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"27",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"核实工时设置",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"28",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"运行记录",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"29",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"原始记录",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"30",
                                             "shiro": "a"
                                         },
                                     ]
@@ -163,29 +137,29 @@ var main_list =
                             "title":"工作量记录",
                             "url":"data&t=0&n=1",
                             "shiro": "a",
-                            "id": "1",
+                            "id": "25",
                             'items':[
                                 {
                                     "title":"设备工作量记录",
-                                    "url":"./table.html",
-                                    "id":"3",
+                                    "url":"javascript:void(0);",
+                                    "id":"26",
                                     "icon":"industry",
                                     "shiro": "a",
                                     "list":[
                                         {
                                             "title":"单机工作量",
                                             "url":"./table.html",
-                                            "id":"3"
+                                            "id":"27"
                                         },
                                         {
                                             "title":"科室设备工作量",
                                             "url":"./table.html",
-                                            "id":"3"
+                                            "id":"28"
                                         },
                                         {
                                             "title":"同种设备工作量",
                                             "url":"./table.html",
-                                            "id":"3"
+                                            "id":"29"
                                         }
                                     ]
                                 }
@@ -194,7 +168,7 @@ var main_list =
                         {
                             "title":"实时监控",
                             "url":"http://www.baidu.com",
-                            "id":"3",
+                            "id":"30",
                             "shiro": "a"
                         }
                     ]
