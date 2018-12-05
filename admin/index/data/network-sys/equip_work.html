@@ -5,36 +5,15 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>使用科室设备运行记录</title>
-    <link rel="stylesheet" type="text/css" href="../../../static/admin/layui/css/layui.css"/>
-    <link rel="stylesheet" type="text/css" href="../../../static/admin/css/admin.css"/>
-    <script src="../../../static/admin/js/jquery-3.3.1.min.js"></script>
+    <title>设备值班排班设置</title>
+    <link rel="stylesheet" type="text/css" href="../../../../static/admin/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../../static/admin/css/admin.css"/>
+    <link rel="stylesheet" href="../../../../static/admin/css/all.min.css"/>
+    <script src="../../../../static/admin/js/jquery-3.3.1.min.js"></script>
     <!--[if IE 8]>
-    <script type="text/javascript" src="../../../static/admin/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../../../static/admin/js/jquery-1.11.3.min.js"></script>
     <![endif]-->
-    <script src="../../../static/admin/js/basic.js"></script>
-    <style>
-        #tips {
-            position: fixed;
-            left: 40%;
-            top: 50%;
-            background: rgba(0, 0, 0, 0.75);
-            color: #fff;
-            min-width: 150px;
-            padding: 10px;
-            border-radius: 10px;
-            display:none;
-        }
-
-        .tip_title {
-            width: 60px;
-        }
-
-        .tip_conts {
-            width: auto;
-        }
-    </style>
-
+    <script src="../../../../static/admin/js/basic.js"></script>
 </head>
 
 <body>
@@ -45,38 +24,26 @@
 </div>
 
 <script type="text/html" id="toolBar">
-    <form class="layui-form layui-form-pane hidden-xs" action="">
-        <div class="layui-input-inline">
-            <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+    <div class="addBtn">
+        <a class="layui-btn layui-btn-xs" lay-event="edit"><i class="fas fa-plus"></i></a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="edit"><i class="fas fa-trash-alt"></i></a>
+    </div>
+    <div class="moreBtn hidden-xs">
+        <div class="layui-inline">
+            <input class="layui-input" name="search" placeholder="设备拼音码" id="test-table-de" autocomplete="off">
         </div>
-            <div class="layui-input-inline">
-                <select name="modules" lay-verify="required" lay-search="">
-                    <option value="">输入搜索部门</option>
-                    <option value="1">CT室</option>
-                    <option value="2">核磁公正室</option>
-                    <option value="3">摄片室</option>
-                    <option value="4">内外导管室</option>
-                    <option value="5">心外ICU</option>
-                </select>
-            </div>
-            <div class="layui-input-inline">
-                <button class="layui-btn" lay-submit="" lay-filter="demo1">查找</button>
-            </div>
-    </form>
+        <button class="layui-btn" data-type="reload">搜索</button>
+    </div>
+
 </script>
 <script type="text/html" id="bar">
-    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="detail">过程记录</a>
+    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="detail">编辑</a>
 </script>
-<script src="../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    layui.use(['table','form','laydate'], function () {
-        var table = layui.table
-            ,form = layui.form
-            ,laydate = layui.laydate;
-        laydate.render({
-            elem: '#date',
-            type:'date'
-        });
+    layui.use('table', function () {
+        var table = layui.table;
+
         //第一个实例
         table.render({
             elem: '#table'
@@ -86,10 +53,18 @@
             , title: '数据表'
             , minWidth: 1200
             , cols: [[ //表头
-                 {field: 'process_name', title: '科室', minWidth: 150, sort: true}
-                , {field: 'create_date', title: '台数', minWidth: 150, sort: true}
-                , {field: 'Service_monitoring', title: '工作时长', minWidth: 150, sort: true}
-                , {field: 'Service_monitoring', title: '待机时长', minWidth: 150, sort: true}
+                  {type:"checkbox"}
+                , {field: 'equip_number', title: '设备编号', minWidth: 150}
+                , {field: 'equip_short', title: '设备简称', minWidth: 150}
+                , {field: 'work_type', title: '值班类型', minWidth: 150, sort: true}
+                , {field: 'week1', title: '周一', minWidth: 100}
+                , {field: 'week2', title: '周二', minWidth: 100}
+                , {field: 'week3', title: '周三', minWidth: 100}
+                , {field: 'week4', title: '周四', minWidth: 100}
+                , {field: 'week5', title: '周五', minWidth: 100}
+                , {field: 'week6', title: '周六', minWidth: 100}
+                , {field: 'week7', title: '周日', minWidth: 100}
+                , {fixed:'right',minWidth: 80,align:'center',toolbar: "#bar"}
             ]]
             , "data": [
                 {

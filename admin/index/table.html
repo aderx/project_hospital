@@ -67,26 +67,19 @@
         //第一个实例
         table.render({
             elem: '#table'
-            ,
-            page: true //开启分页
-            ,
-            toolbar: true
-            ,
-            height: 'full-80'
-            ,
-            title: '数据表'
-            ,
-            minWidth: 1200
-            ,
-            cols: [[ //表头
+            , page: true //开启分页
+            , toolbar: true
+            , height: 'full-80'
+            , title: '数据表'
+            , minWidth: 1200
+            , cols: [[ //表头
                 {field: 'activity_name', title: '活动名', width: '53%', minWidth: 400, event: 'openLink'}
                 , {field: 'process_name', title: '流程名', minWidth: 150}
                 , {field: 'create_date', title: '创建日期', minWidth: 150, sort: true}
                 , {field: 'Service_monitoring', title: '服务水平监控', minWidth: 150}
                 , {field: 'cut_date', title: '截止日期', minWidth: 150}
             ]]
-            ,
-            "data": [
+            , "data": [
                 {
                     "activity_name": '100001000010000100001000010001001000010000100001000065456465',
                     "link": "https://www.baidu.com",

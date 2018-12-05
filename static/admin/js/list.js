@@ -74,13 +74,13 @@ var main_list =
                                     "list": [
                                         {
                                             "title": "单机运行设备",
-                                            "url": "./data/equip_record.html",
+                                            "url": "./data/network-sys/equip_record.html",
                                             "id": "22",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "使用科室设备运行记录",
-                                            "url": "./data/room_record.html",
+                                            "url": "./data/network-sys/room_record.html",
                                             "id": "23",
                                             "shiro": "a"
                                         }
@@ -95,37 +95,37 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"设备联网设置",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/equip_network.html",
                                             "id":"25",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"设备值班排班设置",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/equip_work.html",
                                             "id":"26",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"设备加班设置",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/equip_overtime.html",
                                             "id":"27",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"核实工时设置",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/work_time.html",
                                             "id":"28",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"运行记录",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/run_record.html",
                                             "id":"29",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"原始记录",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/begin_record.html",
                                             "id":"30",
                                             "shiro": "a"
                                         },
