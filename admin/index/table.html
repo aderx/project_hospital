@@ -14,52 +14,22 @@
     <script type="text/javascript" src="../../static/admin/js/jquery-1.11.3.min.js"></script>
     <![endif]-->
     <script src="../../static/admin/js/basic.js"></script>
-    <style>
-        #tips {
-            position: fixed;
-            left: 40%;
-            top: 50%;
-            background: rgba(0, 0, 0, 0.75);
-            color: #fff;
-            min-width: 150px;
-            padding: 10px;
-            border-radius: 10px;
-            display:none;
-        }
-
-        .tip_title {
-            width: 60px;
-        }
-
-        .tip_conts {
-            width: auto;
-        }
-    </style>
-
 </head>
 
 <body>
-<div class="layui-row search_button">
-    <div class="col-xs-12">
-        <div class="test-table-reload-btn  h_tool" style="margin-top: 20px;">
-            检索：
-            <div class="layui-inline">
-                <input class="layui-input" name="search" id="test-table-demoReload" autocomplete="off">
-            </div>
-            <button class="layui-btn" data-type="reload">搜索</button>
-        </div>
-    </div>
-</div>
 <div class="layui-row">
     <div class="col-xs-12">
         <table id="table" lay-filter="table1"></table>
     </div>
 </div>
-<div id="tips">
 
-</div>
-
-
+<script type="text/html" id="toolBar">
+    检索：
+    <div class="layui-inline">
+        <input class="layui-input" name="search" id="test-table-demoReload" autocomplete="off">
+    </div>
+    <button class="layui-btn" data-type="reload">搜索</button>
+</script>
 <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use('table', function () {
@@ -68,8 +38,10 @@
         table.render({
             elem: '#table'
             , page: true //开启分页
-            , toolbar: true
-            , height: 'full-80'
+            , limit:15
+            , limits:[15,25,35,45,55,65,75,85,95]
+            , toolbar: '#toolBar'
+            , height: 'full-25'
             , title: '数据表'
             , minWidth: 1200
             , cols: [[ //表头
@@ -81,12 +53,12 @@
             ]]
             , "data": [
                 {
-                    "activity_name": '100001000010000100001000010001001000010000100001000065456465',
-                    "link": "https://www.baidu.com",
-                    "process_name": "user-0",
-                    "create_date": "user-0",
-                    "Service_monitoring": "女",
-                    "cut_date": "城市-0",
+                    "activity_name": '活动名称1',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
                     "messages": [
                         {
                             name: "流程名称",
@@ -97,45 +69,357 @@
                             value: "2018-11-23 21：34:00"
                         }
                     ]
-                }, {
-                    "activity_name": 10000,
-                    "process_name": "user-0",
-                    "link":"./show_messages.html",
-                    "Service_monitoring": "女",
-                    "create_date": "城市-0",
-                    "cut_date": "城市-0"
                 },
                 {
-                    "activity_name": 10000,
-                    "process_name": "user-0",
-                    "Service_monitoring": "女",
-                    "create_date": "城市-0",
-                    "cut_date": "城市-0"
+                    "activity_name": '活动名称2',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
                 },
                 {
-                    "activity_name": 10000,
-                    "process_name": "user-0",
-                    "Service_monitoring": "女",
-                    "create_date": "城市-0",
-                    "cut_date": "城市-0"
-                }]
+                    "activity_name": '活动名称3',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称4',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称5',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称6',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称7',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称8',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称9',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称10',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称11',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称12',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称13',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称14',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称15',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称16',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称17',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称18',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称19',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                },
+                {
+                    "activity_name": '活动名称20',
+                    "link": "./show_messahes.html",
+                    "process_name": "流程1",
+                    "create_date": "2018-12-01",
+                    "Service_monitoring": "优",
+                    "cut_date": "2019-01-01",
+                    "messages": [
+                        {
+                            name: "流程名称",
+                            value: "某一个活动"
+                        },
+                        {
+                            name: "创建日期",
+                            value: "2018-11-23 21：34:00"
+                        }
+                    ]
+                }
+            ]
             ,
             text: {
                 none: "暂时还没有数据哦！"
             }, done: function (obj) {
-                //参数1：第几列信息展示message信息,当小于0时则不显示message信息 参数2：保持默认，传输表格数据
-                addTableMessage(1,obj,600,"200");//第一列显示message信息
+                frame_all({"link":[obj,"table1"]},{"message":[1,obj]});//公共运行函数集合
             }
         });
-        //监听行单击事件
-        table.on('tool(table1)', function (obj) {
-            if (obj.event === "openLink") {
-                layer.confirm("确定跳转链接吗？", function () {
-                    window.location.href = obj.data.link ;//+"?link="+ encodeURIComponent(window.location.href)
-                });
-            }
-        });
-        frame_all({"back":false});//框架公共运行函数
 
     });
 </script>

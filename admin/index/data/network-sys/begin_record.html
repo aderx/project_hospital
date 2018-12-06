@@ -50,9 +50,19 @@
 </script>
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    layui.use('table', function () {
-        var table = layui.table;
+    layui.use(['table','laydate'], function () {
+        var table = layui.table
+            ,laydate = layui.laydate;
 
+        laydate.render({
+            elem: '#date',
+            type:'datetime'
+        })
+
+        laydate.render({
+            elem: '#date1',
+            type:'datetime'
+        })
         //第一个实例
         table.render({
             elem: '#table'
@@ -68,7 +78,7 @@
                 , {field: 'equip_short', title: '资产编号', minWidth: 150}
                 , {field: 'equip_name', title: '设备名称',width:"30%", minWidth: 150}
                 , {field: 'netequip_number', title: '联网仪编号', minWidth: 150}
-                , {field: 'overtime_edate', title: '收包时间', minWidth: 150, sort: true}
+                , {field: 'receive_time', title: '收包时间', minWidth: 200, sort: true}
                 , {field: 'data_bag', title: '数据包', minWidth: 150}
             ]]
             , "data": [
@@ -76,51 +86,50 @@
                     "equip_room":"核磁共振室",
                     "equip_number":"160232810001",
                     "equip_short":"MRI",
-                    "overtime_bdate":"时长",
-                    "overtime_edate":"4",
-                    "worktime_pm":"4",
-                    "worktime_ni":"0",
-                    "link": "./show_messages.html"
+                    "equip_name":"设备1",
+                    "netequip_number":"88888888",
+                    "receive_time":"2018-12-1 00:00:00",
+                    "data_bag":"10"
                 },{
                     "equip_room":"CT室",
                     "equip_number":"031233030001",
                     "equip_short":"CT",
-                    "type_m":"时长",
-                    "worktime_am":"4",
-                    "worktime_pm":"4",
-                    "worktime_ni":"0"
+                    "equip_name":"设备1",
+                    "netequip_number":"88888888",
+                    "receive_time":"2018-12-1 00:00:00",
+                    "data_bag":"10"
                 },{
                     "equip_room":"心外ICU",
                     "equip_number":"061222114004",
                     "equip_short":"监护仪",
-                    "type_m":"时长",
-                    "worktime_am":"4",
-                    "worktime_pm":"4",
-                    "worktime_ni":"0"
+                    "equip_name":"设备1",
+                    "netequip_number":"88888888",
+                    "receive_time":"2018-12-1 00:00:00",
+                    "data_bag":"10"
                 },{
                     "equip_room":"CT室",
                     "equip_number":"071033030001",
                     "equip_short":"CT",
-                    "type_m":"时长",
-                    "worktime_am":"4",
-                    "worktime_pm":"4",
-                    "worktime_ni":"0"
+                    "equip_name":"设备1",
+                    "netequip_number":"88888888",
+                    "receive_time":"2018-12-1 00:00:00",
+                    "data_bag":"10"
                 },{
                     "equip_room":"摄片室",
                     "equip_number":"091233015002",
                     "equip_short":"DR",
-                    "type_m":"时长",
-                    "worktime_am":"4",
-                    "worktime_pm":"4",
-                    "worktime_ni":"0"
+                    "equip_name":"设备1",
+                    "netequip_number":"88888888",
+                    "receive_time":"2018-12-1 00:00:00",
+                    "data_bag":"10"
                 },{
                     "equip_room":"心内导管室",
                     "equip_number":"121233015001",
                     "equip_short":"DSA",
-                    "type_m":"时长",
-                    "worktime_am":"4",
-                    "worktime_pm":"4",
-                    "worktime_ni":"0"
+                    "equip_name":"设备1",
+                    "netequip_number":"88888888",
+                    "receive_time":"2018-12-1 00:00:00",
+                    "data_bag":"10"
                 }]
             ,
             text: {

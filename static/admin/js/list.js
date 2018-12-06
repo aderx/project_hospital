@@ -188,37 +188,37 @@ var main_list =
                             "title":"申购管理",
                             "url":"life&t=0&n=0",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"3",
                             "items":[
                                 {
                                     "title":"科室申购",
                                     "url":"./table.html",
                                     "icon":"credit-card",
-                                    "id":"3",
+                                    "id":"31",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"科室讨论",
-                                            "url":"./table.html",
-                                            "id":"3",
+                                            "url":"./life/purchase-management/department-discuss.html",
+                                            "id":"32",
                                             "shiro":"a"
                                         },
                                         {
                                             "title": "申购单填写",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "33",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"科室汇总审核",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"34",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"申购进度跟踪",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"35",
                                             "shiro":"a"
                                         }
                                     ]
@@ -227,25 +227,25 @@ var main_list =
                                     "title":"申购汇总",
                                     "url":"./table.html",
                                     "icon":"clipboard-list",
-                                    "id":"3",
+                                    "id":"36",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"申购单论证分析",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"37",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"申购单汇总",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"38",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"临时采购授权",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"39",
                                             "shiro":"a"
                                         }
 
@@ -255,31 +255,31 @@ var main_list =
                                     "title":"集体讨论",
                                     "url":"./table.html",
                                     "icon":"comments",
-                                    "id":"3",
+                                    "id":"310",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"装备委员会记录",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"311",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"年度采购计划",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"312",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"院办公会记录",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"313",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"采购实施计划",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"314",
                                             "shiro":"a"
                                         }
                                     ]
@@ -288,13 +288,13 @@ var main_list =
                                     "title":"统计查询",
                                     "url":"./table.html",
                                     "icon":"comments",
-                                    "id":"3",
+                                    "id":"315",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"申购设备公示查询",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"316",
                                             "shiro":"a"
                                         }
                                     ]
@@ -303,19 +303,19 @@ var main_list =
                                     "title":"字典设置",
                                     "url":"./table.html",
                                     "icon":"comments",
-                                    "id":"3",
+                                    "id":"317",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"申购讨论条件",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"318",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"论证分析全额设置",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"319",
                                             "shiro":"a"
                                         }
                                     ]
@@ -326,37 +326,37 @@ var main_list =
                             "title":"招标采购",
                             "url":"life&t=0&n=1",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"320",
                             "items":[
                                 {
                                     "title":"招标采购",
                                     "url":"./table.html",
                                     "icon":"shopping-cart",
-                                    "id":"3",
+                                    "id":"321",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"计划打包",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"322",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"中标录入",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"323",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"合同录入",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"324",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"合同查询",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"325",
                                             "shiro":"a"
                                         }
                                     ]
@@ -367,31 +367,31 @@ var main_list =
                             "title":"合同执行",
                             "url":"life&t=0&n=2",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"326",
                             "items":[
                                 {
                                     "title":"合同执行",
                                     "url":"./table.html",
                                     "icon":"file-contract",
-                                    "id":"3",
+                                    "id":"327",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"到货登记",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"328",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"科室接收",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"329",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"设备验收",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"330",
                                             "shiro":"a"
                                         }
                                     ]
@@ -400,13 +400,13 @@ var main_list =
                                     "title":"信息查看",
                                     "url":"./table.html",
                                     "icon":"magic",
-                                    "id":"3",
+                                    "id":"331",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"合同进度查看",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"332",
                                             "shiro":"a"
                                         }
                                     ]
@@ -416,54 +416,54 @@ var main_list =
                         {
                             "title":"验收管理",
                             "url":"life&t=0&n=3",
-                            "id":"1",
+                            "id":"333",
                             "shiro":"a",
                             "items":[
                                 {
                                             "title":"到货登记",
                                             "url":"./table.html",
                                             "icon":"solar-panel",
-                                            "id":"3",
+                                            "id":"334",
                                             "shiro":"a"
                                 },
                                 {
                                     "title":"科室验收",
                                     "url":"./table.html",
                                     "icon":"user-md",
-                                    "id":"3",
+                                    "id":"335",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"设备验收",
                                     "url":"./table.html",
                                     "icon":"drafting-compass",
-                                    "id":"3",
+                                    "id":"336",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"统计查询",
                                     "url":"./table.html",
                                     "icon":"chart-pie",
-                                    "id":"3",
+                                    "id":"337",
                                     "shiro":"a"
                                 }
                             //     {
                             //         "title":"商务验收",
                             //         "url":"./table.html",
                             //         "icon":"solar-panel",
-                            //         "id":"3",
+                            //         "id":"338",
                             //         "shiro":"a",
                             //         "list":[
                             //             {
                             //                 "title":"待商务验收设备",
                             //                 "url":"./table.html",
-                            //                 "id":"3",
+                            //                 "id":"339",
                             //                 "shiro":"a"
                             //             },
                             //             {
                             //                 "title":"商务验收查询",
                             //                 "url":"./table.html",
-                            //                 "id":"3",
+                            //                 "id":"340",
                             //                 "shiro":"a"
                             //             }
                             //         ]
@@ -472,19 +472,19 @@ var main_list =
                             //         "title":"临床验收",
                             //         "url":"./table.html",
                             //         "icon":"user-md",
-                            //         "id":"3",
+                            //         "id":"341",
                             //         "shiro":"a",
                             //         "list":[
                             //             {
                             //                 "title":"待临床验收设备",
                             //                 "url":"./table.html",
-                            //                 "id":"3",
+                            //                 "id":"342",
                             //                 "shiro":"a"
                             //             },
                             //             {
                             //                 "title":"临床验收查询",
                             //                 "url":"./table.html",
-                            //                 "id":"3",
+                            //                 "id":"343",
                             //                 "shiro":"a"
                             //             }
                             //         ]
@@ -493,19 +493,19 @@ var main_list =
                             //         "title":"技术验收",
                             //         "url":"./table.html",
                             //         "icon":"drafting-compass",
-                            //         "id":"3",
+                            //         "id":"344",
                             //         "shiro":"a",
                             //         "list":[
                             //             {
                             //                 "title":"待技术验收设备",
                             //                 "url":"./table.html",
-                            //                 "id":"3",
+                            //                 "id":"345",
                             //                 "shiro":"a"
                             //             },
                             //             {
                             //                 "title":"技术验收查询",
                             //                 "url":"./table.html",
-                            //                 "id":"3",
+                            //                 "id":"346",
                             //                 "shiro":"a"
                             //             }
                             //         ]
@@ -523,32 +523,32 @@ var main_list =
                         {
                             "title":"操作规程",
                             "url":"life&t=1&n=0",
-                            "id":"1",
+                            "id":"347",
                             "shiro":"a",
                             "items":[
                                 {
                                     "title":"操作规程查询",
                                     "url":"./table.html",
                                     "icon":"search",
-                                    "id":"3",
+                                    "id":"348",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"已备案操作规程(2)",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"349",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"适用中操作规程(0)",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"350",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"已停用操作规程(0)",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"351",
                                             "shiro":"a"
                                         }
                                     ]
@@ -558,18 +558,18 @@ var main_list =
                                     "url":"./table.html",
                                     "icon":"pencil-alt",
                                     "shiro":"a",
-                                    "id":"3",
+                                    "id":"352",
                                     "list":[
                                         {
                                             "title":"编写",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"353",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"操作规程制定流程(0)",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"354",
                                             "shiro":"a"
                                         }
                                     ]
@@ -578,13 +578,13 @@ var main_list =
                                     "title":"操作规程再评价",
                                     "url":"./table.html",
                                     "icon":"comment-alt",
-                                    "id":"3",
+                                    "id":"355",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"操作规程再评价流程(0)",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"356",
                                             "shiro":"a"
                                         }
                                     ]
@@ -593,19 +593,19 @@ var main_list =
                                     "title":"进度查询",
                                     "url":"./table.html",
                                     "icon":"spinner",
-                                    "id":"3",
+                                    "id":"357",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"制定进度(2)",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"358",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"再评价进度(0)",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"359",
                                             "shiro":"a"
                                         }
                                     ]
@@ -613,20 +613,20 @@ var main_list =
                                 {
                                     "title":"操作规程模板",
                                     "url":"./table.html",
-                                    "id":"3",
+                                    "id":"360",
                                     "icon":"paperclip",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"模板列表(2)",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"361",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"录入模板",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"362",
                                             "shiro":"a"
                                         }
                                     ]
@@ -636,32 +636,32 @@ var main_list =
                         {
                             "title":"电子台账",
                             "url":"life&t=1&n=2",
-                            "id":"1",
+                            "id":"363",
                             "shiro":"a",
                             "items":[
                                 {
                                     "title":"设备台账",
                                     "url":"./table.html",
-                                    "id":"3",
+                                    "id":"364",
                                     "icon":"file-invoice-dollar",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"总账",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"365",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"分户账",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"366",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"分类账",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"367",
                                             "shiro":"a"
                                         }
                                     ]
@@ -670,31 +670,31 @@ var main_list =
                                     "title":"账实核对",
                                     "url":"./table.html",
                                     "icon":"clipboard-check",
-                                    "id":"3",
+                                    "id":"368",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"计划制定",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"369",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"计划查询",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"370",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"账实核对",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"371",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"核实对比",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"372",
                                             "shiro":"a"
                                         }
                                     ]
@@ -703,25 +703,25 @@ var main_list =
                                     "title":"查询统计",
                                     "url":"./table.html",
                                     "icon":"chart-pie",
-                                    "id":"3",
+                                    "id":"373",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"科室设备综合查询",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"374",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"综合查询",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"375",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"综合统计",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"376",
                                             "shiro":"a"
                                         }
                                     ]
@@ -730,13 +730,13 @@ var main_list =
                                     "title":"字典设置",
                                     "url":"./table.html",
                                     "icon":"stamp",
-                                    "id":"3",
+                                    "id":"377",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"设备金额档设置",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"378",
                                             "shiro":"a"
                                         }
                                     ]
@@ -745,13 +745,13 @@ var main_list =
                                     "title":"其他台账",
                                     "url":"./table.html",
                                     "icon":"file-invoice-dollar",
-                                    "id":"3",
+                                    "id":"379",
                                     "shiro":"a"
                                 }
 
                             ]
                         }
-                        //,
+                        //,379
                         // {
                         //     "title":"用前检查",
                         //     "url":"life&t=1&n=1",
@@ -1548,25 +1548,25 @@ var main_list =
                             "title":"风险管理",
                             "url":"safe&t=0&n=0",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"4",
                             "items":[
                                 {
                                     "title":"风险分析",
                                     "url":"./table.html",
                                     "icon":"poll",
-                                    "id":"3",
+                                    "id":"41",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"风险分值定义",
-                                            "url":"./table.html",
-                                            "id":"3",
+                                            "url":"./safe/risk-management/risk-rating.html",
+                                            "id":"42",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"风险等级",
-                                            "url":"./table.html",
-                                            "id":"3",
+                                            "url":"./safe/risk-managment/risk-rating.html",
+                                            "id":"43",
                                             "shiro":"a"
                                         }
                                     ]
@@ -2815,31 +2815,31 @@ var main_list =
                             "title":"可行性论证",
                             "url":"beneft&t=0&n=0",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"5",
                             "items":[
                                 {
                                     "title":"经济效益论证",
                                     "url":"./table.html",
                                     "icon":"credit-card",
-                                    "id":"3",
+                                    "id":"51",
                                     "shiro":"a",
                                     "list":[
                                         {
                                             "title":"项目方案录入",
-                                            "url":"./table.html",
-                                            "id":"3",
+                                            "url":"./beneft/prior-argument/scheme-input.html",
+                                            "id":"52",
                                             "shiro":"a"
                                         },
                                         {
                                             "title": "项目论证结果",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "53",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"项目财务指标",
                                             "url":"./table.html",
-                                            "id":"3",
+                                            "id":"54",
                                             "shiro":"a"
                                         },
                                         {
@@ -3294,27 +3294,27 @@ var main_list =
                             "title":"安全指标体系",
                             "url":"admin&t=0&n=0",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"6",
                             "items":[
                                 {
                                     "title":"指标数据",
                                     "icon":"chart-line",
-                                    "url":"./table.html",
-                                    "id":"3",
+                                    "url":"./admin/basic-management/index-data.html",
+                                    "id":"61",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"指标监视",
                                     "icon":"eye",
                                     "url":"./table.html",
-                                    "id":"3",
+                                    "id":"62",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"指标设置",
                                     "icon":"sliders-h",
                                     "url":"./table.html",
-                                    "id":"3",
+                                    "id":"63",
                                     "shiro":"a"
                                 }
                             ]
@@ -4032,27 +4032,27 @@ var main_list =
                             "title":"数据字典",
                             "url":"system&t=0&n=0",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"6",
                             "items":[
                                 {
                                     "title": "基础字典",
-                                    "url": "./table.html",
+                                    "url": "./system/data-dictionary/basic.html",
                                     "icon":"book",
-                                    "id": "3",
+                                    "id": "61",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "专业字典",
-                                    "url": "./table.html",
+                                    "url": "./system/data-dictionary/major.html",
                                     "icon":"torah",
-                                    "id": "3",
+                                    "id": "62",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "状态字典",
-                                    "url": "./table.html",
+                                    "url": "./system/data-dictionary/state.html",
                                     "icon":"torah",
-                                    "id": "3",
+                                    "id": "63",
                                     "shiro": "a"
                                 }
                             ]
@@ -4066,101 +4066,101 @@ var main_list =
                     "content":[
                         {
                             "title":"系统信息",
-                            "url":"system&t=1&n=1",
+                            "url":"system&t=1&n=0",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"64",
                             "items":[
                                 {
                                     "title": "LOGO设置",
-                                    "url": "./table.html",
-                                    "id": "3",
+                                    "url": "#",
+                                    "id": "65",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "报表抬头设置",
                                     "url": "./table.html",
-                                    "id": "3",
+                                    "id": "66",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "文件版本设置",
                                     "url": "./table.html",
-                                    "id": "3",
+                                    "id": "67",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "短信猫设置",
                                     "url": "./table.html",
-                                    "id": "3",
+                                    "id": "68",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "作息时间",
                                     "url": "./table.html",
-                                    "id": "3",
+                                    "id": "69",
                                     "shiro": "a"
                                 }
                             ]
                         },
                         {
                             "title":"设备设置",
-                            "url":"system&t=1&n=0",
+                            "url":"system&t=1&n=1",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"610",
                             "items":[
                                 {
                                     "title": "设备信息",
                                     "url": "./table.html",
                                     "icon":"info-circle",
-                                    "id": "3",
+                                    "id": "611",
                                     "shiro": "a",
                                     "list": [
                                         {
                                             "title": "设备信息查询",
-                                            "url": "./table.html",
-                                            "id": "3",
+                                            "url": "./system/system-setup/information-search.html",
+                                            "id": "612",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "设备信息导入",
-                                            "url": "./table.html",
-                                            "id": "3",
+                                            "url": "./system/system-setup/information-import.html",
+                                            "id": "613",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "设备信息录入",
-                                            "url": "./table.html",
-                                            "id": "3",
+                                            "url": "./system/system-setup/information-entry.html",
+                                            "id": "614",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "设备附件信息导入",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "615",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "设备附件信息录入",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "616",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "设备属性扩展",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "617",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "设备卫标分类设置",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "618",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "卫标已关联设备",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "619",
                                             "shiro": "a"
                                         }
                                     ]
@@ -4169,7 +4169,7 @@ var main_list =
                                     "title": "设备确认",
                                     "url": "./table.html",
                                     "icon":"check-circle",
-                                    "id": "3",
+                                    "id": "620",
                                     "shiro": "a"
                                 }
                             ]
@@ -4178,31 +4178,31 @@ var main_list =
                             "title":"系统提醒",
                             "url":"system&t=1&n=2",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"621",
                             "items":[
                                 {
                                     "title": "提醒设置",
                                     "url": "./table.html",
                                     "icon":"sliders-h",
-                                    "id": "3",
+                                    "id": "622",
                                     "shiro": "a",
                                     "list": [
                                         {
                                             "title": "提醒类别",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "623",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "日期前提醒设置",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "624",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "日期后提醒设置",
                                             "url": "./table.html",
-                                            "id": "3",
+                                            "id": "625",
                                             "shiro": "a"
                                         }
                                     ]
@@ -4211,7 +4211,7 @@ var main_list =
                                     "title": "提醒信息",
                                     "url": "./table.html",
                                     "icon":"bell",
-                                    "id": "3",
+                                    "id": "626",
                                     "shiro": "a"
                                 }
                             ]
@@ -4227,27 +4227,27 @@ var main_list =
                             "title":"用户管理",
                             "url":"system&t=2&n=0",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"627",
                             "items":[
                                 {
                                     "title": "用户设置",
-                                    "url": "./table.html",
+                                    "url": "./system/user-management/user-setting.html",
                                     "icon":"sliders-h",
-                                    "id": "3",
+                                    "id": "628",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "角色设置",
-                                    "url": "./table.html",
+                                    "url": "./system/user-management/role-setting.html",
                                     "icon":"users-cog",
-                                    "id": "3",
+                                    "id": "629",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "用户权限分配",
                                     "url": "./table.html",
                                     "icon":"user-lock",
-                                    "id": "3",
+                                    "id": "630",
                                     "shiro": "a"
                                 }
                             ]
@@ -4263,34 +4263,34 @@ var main_list =
                             "title":"公告",
                             "url":"system&t=3&n=0",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"631",
                             "items":[
                                 {
                                     "title": "拟稿",
                                     "url": "./table.html",
                                     "icon":"pen",
-                                    "id": "3",
+                                    "id": "632",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "审核",
                                     "url": "./table.html",
                                     "icon":"clipboard-check",
-                                    "id": "3",
+                                    "id": "633",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "查询",
                                     "url": "./table.html",
                                     "icon":"search",
-                                    "id": "3",
+                                    "id": "634",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "公告类别管理",
                                     "url": "./table.html",
                                     "icon":"sliders-h",
-                                    "id": "3",
+                                    "id": "635",
                                     "shiro": "a"
                                 }
                             ]
@@ -4299,26 +4299,26 @@ var main_list =
                             "title":"公共下载",
                             "url":"system&t=3&n=2",
                             "shiro":"a",
-                            "id":"1",
+                            "id":"636",
                             "items":[
                                 {
                                     "title": "拟稿",
                                     "url": "./table.html",
                                     "icon":"pen",
-                                    "id": "3",
+                                    "id": "637",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "审核",
                                     "url": "./table.html",
                                     "icon":"clipboard-check",
-                                    "id": "3",
+                                    "id": "638",
                                     "shiro": "a"
                                 },{
                                     "title": "查询",
                                     "url": "./table.html",
                                     "icon":"search",
-                                    "id": "3",
+                                    "id": "639",
                                     "shiro": "a"
                                 }
                             ]

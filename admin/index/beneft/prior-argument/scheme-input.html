@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
     <title>项目方案录入</title>
     <link rel="stylesheet" type="text/css" href="../../../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../../../static/admin/css/admin.css"/>
@@ -36,6 +35,14 @@
         .layui-form-item{
             margin-bottom:25px
         }
+        .input-c{
+            width:70%;
+            float:left;
+        }
+        .input-s{
+            width:30%;
+            float:left;
+        }
     </style>
 </head>
 
@@ -58,10 +65,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">投资金额<span class="sign">*</span></label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px;">
+                    <div class="input-s">
                         <select name="" lay-filter="">
                             <option value="">元</option>
                             <option value="0">万元</option>
@@ -72,10 +79,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">使用年限<span class="sign">*</span></label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px">
+                    <div class="input-s">
                         <input type="text" name="" autocomplete="off" class="layui-input" value="年" disabled>
                     </div>
                 </div>
@@ -83,10 +90,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">年工作日<span class="sign">*</span></label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px">
+                    <div class="input-s">
                         <input type="text" name="" autocomplete="off" class="layui-input" value="天" disabled>
                     </div>
                 </div>
@@ -94,10 +101,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">日工作量<span class="sign">*</span></label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px">
+                    <div class="input-s">
                         <select name="" lay-filter="">
                             <option value=""></option>
                             <option value="">例次</option>
@@ -112,10 +119,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">收费标准<span class="sign">*</span></label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px">
+                    <div class="input-s">
                         <input type="text" name="" autocomplete="off" class="layui-input" value="元" disabled>
                     </div>
                 </div>
@@ -138,10 +145,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">年运行费用<span class="sign">*</span></label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px;">
+                    <div class="input-s">
                         <select name="" lay-filter="">
                             <option value="">元</option>
                             <option value="0">万元</option>
@@ -168,10 +175,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">大修费用</label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px;">
+                    <div class="input-s">
                         <select name="" lay-filter="">
                             <option value="">元</option>
                             <option value="0">万元</option>
@@ -182,10 +189,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">年贴现率<span class="sign">*</span></label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px">
+                    <div class="input-s">
                         <input type="text" name="" autocomplete="off" class="layui-input" value="%" disabled>
                     </div>
                 </div>
@@ -193,10 +200,10 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">期望年利润</label>
                 <div class="layui-input-block">
-                    <div class="layui-input-inline" style="width:365px">
+                    <div class="input-c">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline" style="width:150px;">
+                    <div class="input-s">
                         <select name="" lay-filter="">
                             <option value="">元</option>
                             <option value="0">万元</option>

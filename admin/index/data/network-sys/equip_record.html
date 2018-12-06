@@ -58,60 +58,26 @@
             ]]
             , "data": [
                 {
-                    "announce_type": '100001000065456465',
-                    "link": "./show_messages.html",
-                    "announce_name": "9999999999999999999",
-                    "Release_department": "user-0",
-                    "Release_date": "女",
-                    "cut_date": "城市-0",
-                    "messages": [
-                        {
-                            name: "流程名称",
-                            value: "某一个活动1111"
-                        },
-                        {
-                            name: "创建日期",
-                            value: "2018-11-23 21：34:00"
-                        }
-                    ]
-                },{
-                    "announce_type": '100001000010000100001000010001001000010000100001000065456465',
-                    "announce_name": "user-0",
-                    "Release_department": "user-0",
-                    "Release_date": "女",
-                    "cut_date": "城市-0",
-                    "messages": [
-                        {
-                            name: "流程名称",
-                            value: "某一个活动222222"
-                        },
-                        {
-                            name: "创建日期",
-                            value: "2018-11-23 21：34:00"
-                        }
-                    ]
+                    "equip_room": 'CT室',
+                    "equip_number": "62583289",
+                    "equip_name": "CT",
+                    "equip_id": "X21-0",
+                    "equip_wtime": "16H",
+                    "equip_long": "15H"
+                },
+                {
+                    "equip_room": 'DSA室',
+                    "equip_number": "67358296",
+                    "equip_name": "DSA",
+                    "equip_id": "X22-0",
+                    "equip_wtime": "17H",
+                    "equip_long": "14H"
                 }]
             ,
             text: {
                 none: "暂时还没有数据哦！"
             }, done: function (obj) {
-                //参数1：第几列信息展示message信息,当小于0时则不显示message信息 参数2：保持默认，传输表格数据
-                addTableMessage(2,obj);//第二列显示message信息
-            }
-        });
-        frame_all({"back":true});//框架公共运行函数
-        //监听行单击事件
-        table.on('tool(table1)', function (obj) {
-            var data = obj.data;
-            if (obj.event === "openLink") {
-                    layer.confirm("确定跳转链接吗？", function () {
-                        if(data.link){
-                            location.href = data.link +"?link="+ encodeURIComponent(window.location.href);
-                        }else{
-                            layer.alert("没有可以跳转的链接哦！")
-                        }
-                    });
-
+                //frame_all({"check":obj},{"back":true},{"link":[obj,"table1"]},{"message":[2,obj]});//公共运行函数集合
             }
         });
     });

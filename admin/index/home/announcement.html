@@ -95,22 +95,6 @@
             text: {
                 none: "暂时还没有数据哦！"
             }, done: function (obj) {
-                //参数1：第几列信息展示message信息,当小于0时则不显示message信息 参数2：保持默认，传输表格数据
-                addTableMessage(2,obj);//第二列显示message信息
-            }
-        });
-        frame_all({"back":true});//框架公共运行函数
-        //监听行单击事件
-        table.on('tool(table1)', function (obj) {
-            var data = obj.data;
-            if (obj.event === "openLink") {
-                    layer.confirm("确定跳转链接吗？", function () {
-                        if(data.link){
-                            location.href = data.link +"?link="+ encodeURIComponent(window.location.href);
-                        }else{
-                            layer.alert("没有可以跳转的链接哦！")
-                        }
-                    });
 
             }
         });

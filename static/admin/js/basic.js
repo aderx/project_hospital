@@ -183,16 +183,16 @@ function frame_all() {
         timeOut = Number(timeOut) || 100;
         var oData = obj.data;
         $("td:nth-child(" + Number(num) + ")").mouseover(function (e) {
-            if($("#tips").length <=0){
-                $("body").append($("<div>").attr("id","tips"))
+            if($("#h_tips").length <=0){
+                $("body").append($("<div>").attr("id","h_tips"))
             }
             for (var i = 0; i < oData.length; i++) {
                 for (var titles in oData[i]) {
                     if (oData[i][titles] === $(this).text()) {//确保当前的单元值与捕获的数据中的值对应，避免对应错误
-                        $("#tips").html("");
+                        $("#h_tips").html("");
                         try {
                             for (var j = 0; j < oData[i].messages.length; j++) {
-                                $("#tips").append("<p>\n" +
+                                $("#h_tips").append("<p>\n" +
                                     "        <span class=\"tip_title\">" + oData[i].messages[j].name + "</span>：<span class=\"tip_conts\">" + oData[i].messages[j].value + "</span>\n" +
                                     "    </p>")
                             }
@@ -203,9 +203,9 @@ function frame_all() {
                         _x = e.pageX || e.clientX + document.body.scroolLeft;
                         _y = e.pageY || e.clientY + document.body.scrollTop;
                         //$("#tips").fadeOut(50);
-                        $("#tips").css("left", _x + 'px').css("top", _y + 'px').fadeIn(timeIn);
+                        $("#h_tips").css("left", _x + 'px').css("top", _y + 'px').fadeIn(timeIn);
                         $(this).mouseleave(function () {
-                            $("#tips").fadeOut(timeOut).remove();
+                            $("#h_tips").fadeOut(timeOut).remove();
                         })
                         break;
                     }
