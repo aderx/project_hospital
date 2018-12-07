@@ -31,14 +31,15 @@
     <button class="layui-btn" data-type="reload">搜索</button>
 </script>
 <script type="text/html" id="bar">
-    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="detail">查看详情</a>
+    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="more_detail">查看详情</a>
     <!--<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>-->
     <!--<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>-->
 </script>
 <script src="../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    layui.use('table', function () {
-        var table = layui.table;
+    layui.use(['table','layer'], function () {
+        var table = layui.table
+            ,layer = layui.layer;
 
         //第一个实例
         table.render({
@@ -91,11 +92,10 @@
                         }
                     ]
                 }]
-            ,
-            text: {
+            , text: {
                 none: "暂时还没有数据哦！"
             }, done: function (obj) {
-
+                frame_all(obj,{"tools":["table1","more_detail","详细信息","../show_messages.html"]})
             }
         });
     });

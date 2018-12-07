@@ -46,46 +46,46 @@
             , title: '数据表'
             , minWidth: 1200
             , cols: [[ //表头
-                 {field: 'process_name', title: '任务名称',width:"50%", minWidth: 150}
-                , {field: 'process_form', title: '任务来源', minWidth: 150}
-                , {field: 'process_date', title: '安排日期', minWidth: 150, sort: true}
+                 {field: 'task_name', title: '任务名称',width:"50%", minWidth: 150}
+                , {field: 'task_form', title: '任务来源', minWidth: 150}
+                , {field: 'task_date', title: '安排日期', minWidth: 150, sort: true}
                 , {field: 'guide_personal', title: '指定接受人', minWidth: 150, sort: true}
                 , {field: 'state', title: '状态', minWidth: 150, sort: true}
                 , {fixed:'right',minWidth: 100,align:'center',toolbar: "#bar"}
             ]]
             , "data": [
                 {
-                    "process_name": '任务1',
-                    "process_form": "直接下发",
-                    "process_date": "2018-12-01",
+                    "task_name": '任务1',
+                    "task_form": "直接下发",
+                    "task_date": "2018-12-01",
                     "guide_personal": "陈某某",
                     "state": "良好"
                 },
                 {
-                    "process_name": '任务1',
-                    "process_form": "直接下发",
-                    "process_date": "2018-12-01",
+                    "task_name": '任务1',
+                    "task_form": "直接下发",
+                    "task_date": "2018-12-01",
                     "guide_personal": "陈某某",
                     "state": "良好"
                 },
                 {
-                    "process_name": '任务1',
-                    "process_form": "直接下发",
-                    "process_date": "2018-12-01",
+                    "task_name": '任务1',
+                    "task_form": "直接下发",
+                    "task_date": "2018-12-01",
                     "guide_personal": "陈某某",
                     "state": "良好"
                 },
                 {
-                    "process_name": '任务1',
-                    "process_form": "直接下发",
-                    "process_date": "2018-12-01",
+                    "task_name": '任务1',
+                    "task_form": "直接下发",
+                    "task_date": "2018-12-01",
                     "guide_personal": "陈某某",
                     "state": "良好"
                 },
                 {
-                    "process_name": '任务1',
-                    "process_form": "直接下发",
-                    "process_date": "2018-12-01",
+                    "task_name": '任务1',
+                    "task_form": "直接下发",
+                    "task_date": "2018-12-01",
                     "guide_personal": "陈某某",
                     "state": "良好"
                 }]
@@ -93,7 +93,7 @@
             text: {
                 none: "暂时还没有数据哦！"
             }, done: function (obj) {
-
+                frame_all(obj,{"tools":["table1","detail","详细信息","../show_messages.html"]})
             }
         });
     });

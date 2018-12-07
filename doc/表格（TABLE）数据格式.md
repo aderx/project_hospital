@@ -30,6 +30,29 @@ messages为数组格式，可包含多条信息，每条信息占一行（宽度
 | name   | 是   | 内容名称 |
 | value  | 是   | 内容信息 |
 
+图示：
+
+![1544171367992](C:\Users\Fu\AppData\Roaming\Typora\typora-user-images\1544171367992.png)
+
+示例：
+
+```javascript
+{
+    "messages": [
+        {
+           name: "流程名称",
+           value: "某一个活动"
+         },
+         {
+            name: "创建日期",
+            value: "2018-11-23 21：34:00"
+          }
+    ]
+}
+```
+
+
+
 ### 私有属性：
 
 所有的私有属性即每个页面特有属性需查看页面文档。

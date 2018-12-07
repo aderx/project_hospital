@@ -420,11 +420,11 @@ var main_list =
                             "shiro":"a",
                             "items":[
                                 {
-                                            "title":"到货登记",
-                                            "url":"./table.html",
-                                            "icon":"solar-panel",
-                                            "id":"334",
-                                            "shiro":"a"
+                                    "title":"到货登记",
+                                    "url":"./table.html",
+                                    "icon":"solar-panel",
+                                    "id":"334",
+                                    "shiro":"a"
                                 },
                                 {
                                     "title":"科室验收",
@@ -534,19 +534,19 @@ var main_list =
                                     "shiro":"a",
                                     "list":[
                                         {
-                                            "title":"已备案操作规程(2)",
+                                            "title":"已备案操作规程",
                                             "url":"./table.html",
                                             "id":"349",
                                             "shiro":"a"
                                         },
                                         {
-                                            "title":"适用中操作规程(0)",
+                                            "title":"适用中操作规程",
                                             "url":"./table.html",
                                             "id":"350",
                                             "shiro":"a"
                                         },
                                         {
-                                            "title":"已停用操作规程(0)",
+                                            "title":"已停用操作规程",
                                             "url":"./table.html",
                                             "id":"351",
                                             "shiro":"a"
@@ -567,7 +567,7 @@ var main_list =
                                             "shiro":"a"
                                         },
                                         {
-                                            "title":"操作规程制定流程(0)",
+                                            "title":"操作规程制定流程",
                                             "url":"./table.html",
                                             "id":"354",
                                             "shiro":"a"
@@ -582,7 +582,7 @@ var main_list =
                                     "shiro":"a",
                                     "list":[
                                         {
-                                            "title":"操作规程再评价流程(0)",
+                                            "title":"操作规程再评价流程",
                                             "url":"./table.html",
                                             "id":"356",
                                             "shiro":"a"
@@ -597,13 +597,13 @@ var main_list =
                                     "shiro":"a",
                                     "list":[
                                         {
-                                            "title":"制定进度(2)",
+                                            "title":"制定进度",
                                             "url":"./table.html",
                                             "id":"358",
                                             "shiro":"a"
                                         },
                                         {
-                                            "title":"再评价进度(0)",
+                                            "title":"再评价进度",
                                             "url":"./table.html",
                                             "id":"359",
                                             "shiro":"a"
@@ -618,7 +618,7 @@ var main_list =
                                     "shiro":"a",
                                     "list":[
                                         {
-                                            "title":"模板列表(2)",
+                                            "title":"模板列表",
                                             "url":"./table.html",
                                             "id":"361",
                                             "shiro":"a"

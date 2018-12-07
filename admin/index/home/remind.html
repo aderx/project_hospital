@@ -62,38 +62,37 @@
             , minWidth: 1250
             , cols: [[ //表头
                 {type:"checkbox"}
-                , {field: 'process_name', title: '提醒类别', minWidth: 150}
-                , {field: 'create_date', title: '提醒信息',width:"50%", minWidth: 150, sort: true}
-                , {field: 'Service_monitoring', title: '截止日期', minWidth: 150}
+                , {field: 'remind_type', title: '提醒类别', minWidth: 150}
+                , {field: 'remind_msg', title: '提醒信息',width:"50%", minWidth: 150, sort: true}
+                , {field: 'cut_date', title: '截止日期', minWidth: 150}
                 , {field: 'remind_times', title: '累计提醒(次)', minWidth: 150}
                 , {field: 'remind_end', title: '末次提醒', minWidth: 150}
             ]]
             ,
             "data": [
                 {
-                    "activity_name": '100001000010000100001000010001001000010000100001000065456465',
-                    "remind_end": "2018-11-25",
-                    "process_name": "user-0",
-                    "create_date": "user-0",
-                    "Service_monitoring": "2018-12-01",
-                    "remind_times": "7"
+                    "remind_type": '普通提醒',
+                    "remind_msg": "新的提醒信息，请查收！",
+                    "cut_date": "2019-01-01",
+                    "remind_times": "7",
+                    "remind_end": "2018-11-25"
                 },
                 {
-                    "activity_name": '100001000010000100001000010001001000010000100001000065456465',
-                    "remind_end": "2018-11-25",
-                    "process_name": "user-0",
-                    "create_date": "user-0",
-                    "Service_monitoring": "2018-12-01",
-                    "remind_times": "7"
-                },
+                    "remind_type": '普通提醒',
+                    "remind_msg": "新的提醒信息，请查收！",
+                    "cut_date": "2019-01-01",
+                    "remind_times": "7",
+                    "remind_end": "2018-11-25"
+                }
+                ,
                 {
-                    "activity_name": '100001000010000100001000010001001000010000100001000065456465',
-                    "remind_end": "2018-11-25",
-                    "process_name": "user-0",
-                    "create_date": "user-0",
-                    "Service_monitoring": "2018-12-01",
-                    "remind_times": "7"
-                }]
+                    "remind_type": '普通提醒',
+                    "remind_msg": "新的提醒信息，请查收！",
+                    "cut_date": "2019-01-01",
+                    "remind_times": "7",
+                    "remind_end": "2018-11-25"
+                }
+            ]
             ,
             text: {
                 none: "暂时还没有数据哦！"
