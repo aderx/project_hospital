@@ -20,7 +20,7 @@
     };
 })(jQuery);
 
-//3：cookies操作函数
+//2：cookies操作函数
 jQuery.cookie = function (name, value, options) {
     if (typeof value != 'undefined') {
         options = options || {};
@@ -59,7 +59,7 @@ jQuery.cookie = function (name, value, options) {
     }
 };
 
-//4：页面加载遮罩
+//3：页面加载遮罩
 function markPage(text,time){
     if(!($(".begin").length > 0)){
         $("body").prepend($("<div>").attr("class","begin"))
@@ -82,23 +82,118 @@ function markPage(text,time){
     });
 };
 
+//tableFunc
+var func = {//this = obj
+    "addMsg":function () {
+        var num = Number(arguments[0]) || Number(arguments[0][0]) || 1//添加messages的表格列数
+            ,timeIn = Number(arguments[0][1]) || 500//动画渐入时间
+            ,timeOut = Number(arguments[0][2]) || 100//动画渐出时间
+            ,oData = this.data;
+        if(typeof oData !== "object"){
+            console.error("页面无法正常加载（参数传入错误-缺少必填项）！");
+            return ;
+        }
+        $("td:nth-child(" + Number(num) + ")").mouseover(function (e) {
+            if($("#h_tips").length <=0){
+                $("body").append($("<div>").attr("id","h_tips"))
+            }
+            for (var i = 0; i < oData.length; i++) {
+                for (var titles in oData[i]) {
+                    if (oData[i][titles] === $(this).text()) {//确保当前的单元值与捕获的数据中的值对应，避免对应错误
+                        $("#h_tips").html("");
+                        try {
+                            for (var j = 0; j < oData[i].messages.length; j++) {
+                                $("#h_tips").append("<p>\n" +
+                                    "        <span class=\"tip_title\">" + oData[i].messages[j].name + "</span>：<span class=\"tip_conts\">" + oData[i].messages[j].value + "</span>\n" +
+                                    "    </p>")
+                            }
+                        } catch (e) {
+                            continue;
+                        }
+                        e = e || window.event;
+                        _x = e.pageX || e.clientX + document.body.scroolLeft;
+                        _y = e.pageY || e.clientY + document.body.scrollTop;
+                        //$("#tips").fadeOut(50);
+                        $("#h_tips").css("left", _x + 'px').css("top", _y + 'px').fadeIn(timeIn);
+                        $(this).mouseleave(function () {
+                            $("#h_tips").fadeOut(timeOut).remove();
+                        })
+                        break;
+                    }
+                }
+            }
+        })
+    },
+    "addLink":function(value) {
+        layui.use('table', function () {
+            var table = layui.table
+                ,filter = typeof value !== "string"? value[0]:value
+                ,yes = typeof value !== "string"? value[1]:"确定要跳转链接吗？"
+                ,no = typeof value !== "string"? value[2]:"没有可以跳转的链接。"
+            table.on('tool(' + filter+ ')', function (obj) {
+                var data = obj.data;
+                if (obj.event === "openLink") {
+                        if (data.link) {
+                            layer.confirm(yes, function () {
+                                location.href = data.link + "?link=" + encodeURIComponent(window.location.href);
+                            });
+                        } else {
+                            layer.alert(no)
+                        }
+                }
+            });
+        })
+    },
+    "toolFunc":function(value){
+        layui.use('table',function() {
+            var table = layui.table,layer = layui.layer;
+            table.on('tool(' + value[0] + ')', function (obj) {
+                var w = document.body.clientWidth - 20
+                    , h = document.body.clientHeight - 20;
+                var data = obj.data;//获得当前行数据
+                if (obj.event === value[1]) {//编辑
+                    layer.open({
+                        type: value[type] || 1,
+                        title: value[title] || "详情",
+                        content: value[content] || "无内容",
+                        area: [w + "px", h + "px"],
+                        resize: false,
+                        move: false
+                    });
+                }
+            });
+        });
+    }
+}
+
+function tableFunc(){
+    try {
+        var obj = arguments[0].obj;
+        for(var name in arguments[0]){
+            if(func[name]){
+                func[name].call(obj,arguments[0][name]);
+                console.log(name +" 已加载！");
+            }
+        }
+    }catch (e) {
+        console.error("程序遇到一个无法处理的错误！");
+    }
+}
+
 //：frame通用函数
 //frame_all({"back":true},{})
-function frame_all(obj) {//obj：TABLE组件返回参数
-    var i = 0;
-    if(typeof obj === "object" && !!(obj.data)){
-        i=1;
-    }
+/*function frame_all(arg) {//obj：TABLE组件返回参数
+    var obj = this;
     //判断并添加 返回 按钮
-    for (i; i < arguments.length; i++) {
+    for (var i = 0; i < arg.length; i++) {
         var aName = "",value="";
-        if(typeof arguments[i] === "object"){
-            for(var name in arguments[i]){
+        if(typeof arg[i] === "object"){
+            for(var name in arg[i]){
                 aName = name;
-                value = arguments[i][name];
+                value = arg[i][name];
             }
         }else{
-            aName = arguments[i];
+            aName = arg[i];
         }
         switch (aName) {//依照不同的参数运行不同的函数
             case "back" :
@@ -172,11 +267,12 @@ function frame_all(obj) {//obj：TABLE组件返回参数
 
     }
     //行单击事件
-    function tableClick(value){
+    /!*function tableClick(value){
         layui.use('table',function(){
             var table = layui.table;
             table.on('tool('+value+')', function (obj) {
                 var data = obj.data;
+                console.log(data)
                 if (obj.event === "openLink") {
                     layer.confirm("确定跳转链接吗？", function () {
                         if(data.link){
@@ -189,17 +285,14 @@ function frame_all(obj) {//obj：TABLE组件返回参数
                 }
             });
         })
-    }
+    }*!/
 
     //message提示信息 未解决问题：内容相同message会共有同列
-    function addTableMessage(value) {//num：添加messages的表格列数
-        var num = value[0] || value, timeIn = value[1], timeOut = value[2];
-        if (Number(num) !== "number" && Number(num) <= 0 && typeof obj !== "object") {
-            return "参数输入错误！";
-        }
-        timeIn = Number(timeIn) || 500;
-        timeOut = Number(timeOut) || 100;
-        var oData = obj.data;
+    /!*function addTableMessage(value) {
+        var num = value[0] || 1//添加messages的表格列数
+            ,timeIn = Number(value[1]) || 500//动画渐入时间
+            ,timeOut = Number(value[2]) || 100//动画渐出时间
+            ,oData = obj.data;
         $("td:nth-child(" + Number(num) + ")").mouseover(function (e) {
             if($("#h_tips").length <=0){
                 $("body").append($("<div>").attr("id","h_tips"))
@@ -210,9 +303,7 @@ function frame_all(obj) {//obj：TABLE组件返回参数
                         $("#h_tips").html("");
                         try {
                             for (var j = 0; j < oData[i].messages.length; j++) {
-                                $("#h_tips").append("<p>\n" +
-                                    "        <span class=\"tip_title\">" + oData[i].messages[j].name + "</span>：<span class=\"tip_conts\">" + oData[i].messages[j].value + "</span>\n" +
-                                    "    </p>")
+                                $("#h_tips").append("<p>\n" + "<span class=\"tip_title\">" + oData[i].messages[j].name + "</span>：<span class=\"tip_conts\">" + oData[i].messages[j].value + "</span>\n" + "</p>")
                             }
                         } catch (e) {
                             continue;
@@ -230,7 +321,7 @@ function frame_all(obj) {//obj：TABLE组件返回参数
                 }
             }
         })
-    }
+    }*!/
 
     function toolsFunc(value){
         layui.use('table',function() {
@@ -252,6 +343,6 @@ function frame_all(obj) {//obj：TABLE组件返回参数
             });
         });
     }
-}
+}*/
 
 

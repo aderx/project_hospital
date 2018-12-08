@@ -45,6 +45,7 @@
             elem: '#table'
             , page: true //开启分页
             , limit:15
+            ,loading:true
             , limits:[15,25,35,45,55,65,75,85,95]
             , toolbar: '#toolBar'
             , height: 'full-25'
@@ -64,6 +65,13 @@
             }
             ,where:{
                 bmId : "01001"
+            }
+            ,parseData: function(res) { //res 即为原始返回的数据
+                return {
+                    "code": res.code, //解析接口状态
+                    "msg": res.msg, //解析提示文本
+                    "data": res.data.list //解析数据列表
+                }
             }
             ,
             text: {

@@ -57,34 +57,8 @@ getUrlParam函数用于获取URL地址中的参数，一个可以获取一个参
 - 当可以获取到所需的相关参数时，函数会返回URL中对应的参数值（string类型）
 - 当无法获取到所需的相关参数时，函数会返回null(object类型)
 
-## 2：addTableMessage函数
 
-addTableMessage函数用于向表格中指定的数据列hover时添加提示信息框，并且支持自定义淡入淡出时间控制。
-
-只有当TABLE中data的数据中含有messages属性值时Message函数才会起作用，否则此设置函数无效。
-
-**函数接收值：**
-
-| 参数名  | 数据类型       | 描述                                      | 必填 | 默认值 |
-| ------- | -------------- | ----------------------------------------- | ---- | ------ |
-| num     | number         | 设定显示Message信息的列                   | 是   | 无     |
-| obj     | object         | TABLE组件默认返回参数，obj.data表示行数据 | 是   | 无     |
-| timeIn  | number，string | Message信息淡入动画是时间                 | 否   | 500ms  |
-| timeOut | number，string | Message信息淡出动画是时间                 | 否   | 100ms  |
-
-**函数调用示例：**
-
-```javascript
-//table.render参数"done"中
-addTableMessage(1,obj);//TABLE的第一列数据显示Message
-addTableMessage(4,obj,600,200);//TABLE的第四列数据显示Message,600ms淡入动画，200ms淡出动画
-```
-
-**函数返回值：**
-
-当函数的参数传递错误时会返回错误说明。
-
-## 3：$.cookie函数
+## 2：$.cookie函数
 
 $.cookie函数使用jQuery形式操作页面cookie（增加、获取、删除）
 
@@ -126,7 +100,7 @@ $.cookie("f", 10, { expires: 1, domain: 'localhost' });
 
 只有当函数增加cookie时函数才会有返回值，返回值为需要获取的cookie名对应的cookie值4
 
-## 4：markPage函数
+## 3：markPage函数
 
 markPage函数用于创建页面加载效果，可以自定义显示文字。
 
@@ -154,20 +128,84 @@ markPage("马上就加载好了！");
 
 此函数没有任何返回值
 
-## *：frame_all函数
+## *：tableFunc函数
 
-frame_all函数为所有二级框架内页面共有函数，当页面不为框架内页面时，此函数无效。
+tableFunc函数用于操作table表格，是每个table表格公共操作的集合，通过JSON格式引用相应函数
 
-frame_all函数是多函数聚合，其中包含多种函数，是一个可扩展函数。
+| 属性值  | 必填 | 数据类型          | 描述                                                |
+| ------- | ---- | ----------------- | --------------------------------------------------- |
+| obj     | 是   | Object            | TABLE组件函数默认参数，也可以是AJAX获取到的所有数据 |
+| addMsg  | 否   | Number \|\| Array | 向表格中添加提示信息                                |
+| addLink | 否   | String            | 表格点击跳转链接（需要event=“openLink”支持）        |
 
-**当需要操作表格数据时，frame_all函数第一项必须为layui表格返回函数的参数`obj**`
+示例：
 
-> 操作表格时推荐将frame_all函数引用放置到表格的done参数内
+```javascript
+function(obj){
+    tableFunc({
+        "obj":obj,
+        "addMsg":2,
+        "addLink":"table1",
+        "toolFunc":{
+            "title":"详细情况",
+            "content":"无内容"
+        }
+    })
+}
+```
 
-frame_all函数可以接收String数据也可以接收Object数据，允许任意多个值的传递。
 
-> 示例，请参考具体函数介绍
 
-### 1：backPage函数
+### 1：addMsg函数
 
-backPage函数用于向页面中添加返回按钮，主要用于当页面跳转后可以通过此按钮返回原页面
+addMsg函数用于向页面中指定列加入提示信息。
+
+> 由于LAYUI框架限制addMsg函数依照鼠标所在TABLE内容判断并显示，故最好在当前列数据不重复的情况下使用，否则有可能会出现数据对应错误。
+>
+
+**函数接收值：**
+
+| 参数名  | 数据类型           | 描述                      | 必填 | 默认值 |
+| ------- | ------------------ | ------------------------- | ---- | ------ |
+| num     | Number             | 设定显示Message信息的列   | 否   | 1      |
+| timeIn  | Number \|\| String | Message信息淡入动画是时间 | 否   | 500ms  |
+| timeOut | Number \|\| String | Message信息淡出动画是时间 | 否   | 100ms  |
+
+> 如果对应数据内无message数据（参考-表格（TABLE）公共属性.md）则表格不会添加message信息
+>
+> 如果参数填写错误，将使用默认值
+
+**函数调用示例：**
+
+```javascript
+{
+    "addMsg":2//表格第二列数据添加message
+    "addMsg":[3,600,"300"]//表格第三列数据添加600ms淡入300ms淡出的message
+}
+```
+
+
+### 2：addLink函数
+
+addLink函数用于向页面中指定列加入提示信息。
+
+**此函数根据表头的`event=“openLink”`来判断是哪一列数据，当传入的参数不为String类型时函数将默认选定`lay-filter="table1"`的表格标签**
+
+**函数接收值：**
+
+| 参数名 | 数据类型 | 描述               | 必填 | 默认值               |
+| ------ | -------- | ------------------ | ---- | -------------------- |
+| value  | String   | 用于指定table标签  | 是   | table1               |
+| yes    | String   | 跳转确认框提示内容 | 否   | 确定要跳转链接吗？   |
+| no     | String   | 当前无链接提示内容 | 否   | 没有可以跳转的链接。 |
+
+> 如果对应数据内无link数据（参考-表格（TABLE）公共属性.md）则当弹出确认链接后
+
+**函数调用示例：**
+
+```javascript
+{
+    "addMsg":2//表格第二列数据添加message
+    "addMsg":[3,600,"300"]//表格第三列数据添加600ms淡入300ms淡出的message
+}
+```

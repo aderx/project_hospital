@@ -2033,6 +2033,9 @@ html {
 .tip_conts {
   width: auto;
 }
+#moreBar {
+  margin-top: 5px;
+}
 @media (max-width: 768px) {
   .main-layout-side {
     position: fixed;
