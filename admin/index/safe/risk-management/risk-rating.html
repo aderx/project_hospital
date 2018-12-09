@@ -46,17 +46,21 @@
     <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="detail">风险估计</a>
 </script>
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use('table', function () {
         var table = layui.table;
         //第一个实例
         table.render({
-            elem: '#table'
-            , page: true //开启分页
-            , toolbar: '#toolBar'
-            , height: 'full-25'
-            , title: '数据表'
-            , minWidth: 1200
+            elem: addTable.elem
+            , page: addTable.page
+            , toolbar: addTable.toolbar
+            , height: addTable.height
+            , title: addTable.title
+            , limit:addTable.limit
+            , limits:addTable.limits
+            , minWidth: addTable.minWidth
+            , text: addTable.text
             , cols: [[ //表头
                 {type:"checkbox"}
                 , {field: 'equip_number', title: '设备编号',width:"15%", minWidth: 150}
@@ -119,10 +123,7 @@
                     "functional-analysis":"",
                     "feature-analysis":"",
                 }]
-            ,
-            text: {
-                none: "暂时还没有数据哦！"
-            }, done: function (obj) {
+            , done: function (obj) {
                 //frame_all({"check":obj},{"back":true},{"link":[obj,"table1"]},{"message":[2,obj]});//公共运行函数集合
             }
         });

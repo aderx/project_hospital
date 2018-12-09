@@ -36,6 +36,7 @@
     <!--<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>-->
 </script>
 <script src="../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use(['table','layer'], function () {
         var table = layui.table
@@ -43,15 +44,15 @@
 
         //第一个实例
         table.render({
-            elem: '#table'
-            , page: true //开启分页
-            , limit:15
-            , loading:true
-            , limits:[15,25,35,45,55,65,75,85,95]
-            , toolbar: '#toolBar'
-            , height: 'full-25'
-            , title: '数据表'
-            , minWidth: 1200
+            elem: addTable.elem
+            , page: addTable.page
+            , toolbar: addTable.toolbar
+            , height: addTable.height
+            , title: addTable.title
+            , limit:addTable.limit
+            , limits:addTable.limits
+            , minWidth: addTable.minWidth
+            , text: addTable.text
             , cols: [[ //表头
                 {field: 'announce_type', title: '公告类型', minWidth: 150, sort: true}
                 , {field: 'announce_name', title: '公告名称', width: '43%', minWidth: 400, event: 'openLink'}
@@ -95,10 +96,8 @@
                         }
                     ]
                 }]
-            , text: {
-                none: "暂时还没有数据哦！"
-            }, done: function (obj) {
-                frame_all(obj,{"tools":["table1","more_detail","详细信息","../show_messages.html"]})
+            , done: function (obj) {
+                //frame_all(obj,{"tools":["table1","more_detail","详细信息","../show_messages.html"]})
             }
         });
     });

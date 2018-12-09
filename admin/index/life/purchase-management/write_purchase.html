@@ -37,20 +37,21 @@
     <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="purchase">申购单</a>
 </script>
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use('table', function () {
         var table = layui.table;
         //第一个实例
         table.render({
-            elem: '#table'
-            , page: true //开启分页
-            , limit:15
-            ,loading:true
-            , limits:[15,25,35,45,55,65,75,85,95]
-            , toolbar: '#toolBar'
-            , height: 'full-25'
-            , title: '数据表'
-            , minWidth: 1200
+            elem: addTable.elem
+            , page: addTable.page
+            , toolbar: addTable.toolbar
+            , height: addTable.height
+            , title: addTable.title
+            , limit:addTable.limit
+            , limits:addTable.limits
+            , minWidth: addTable.minWidth
+            , text: addTable.text
             , cols: [[ //表头
                 {field: 'eqPmName', title: '设备名称', width: '53%', minWidth: 400, event: 'openLink'}
                 , {field: 'eqPmJc', title: '设备简称', minWidth: 150}
@@ -73,11 +74,8 @@
                     "data": res.data.list //解析数据列表
                 }
             }
-            ,
-            text: {
-                none: "暂时还没有数据哦！"
-            }, done: function (obj) {
-                frame_all(obj,{"link":"table1"},{"message":[1]});//公共运行函数集合
+            , done: function (obj) {
+                //frame_all(obj,{"link":"table1"},{"message":[1]});//公共运行函数集合
             }
         });
 

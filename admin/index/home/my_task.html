@@ -33,21 +33,22 @@
     <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="detail">过程记录</a>
 </script>
 <script src="../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use('table', function () {
         var table = layui.table;
 
         //第一个实例
         table.render({
-            elem: '#table'
-            , page: true //开启分页
-            , limit:15
-            , loading:true
-            , limits:[15,25,35,45,55,65,75,85,95]
-            , toolbar: '#toolBar'
-            , height: 'full-25'
-            , title: '数据表'
-            , minWidth: 1200
+            elem: addTable.elem
+            , page: addTable.page
+            , toolbar: addTable.toolbar
+            , height: addTable.height
+            , title: addTable.title
+            , limit:addTable.limit
+            , limits:addTable.limits
+            , minWidth: addTable.minWidth
+            , text: addTable.text
             , cols: [[ //表头
                  {field: 'task_name', title: '任务名称',width:"50%", minWidth: 150}
                 , {field: 'task_form', title: '任务来源', minWidth: 150}
@@ -92,11 +93,8 @@
                     "guide_personal": "陈某某",
                     "state": "良好"
                 }]
-            ,
-            text: {
-                none: "暂时还没有数据哦！"
-            }, done: function (obj) {
-                frame_all(obj,{"tools":["table1","detail","详细信息","../show_messages.html"]})
+            , done: function (obj) {
+                //frame_all(obj,{"tools":["table1","detail","详细信息","../show_messages.html"]})
             }
         });
     });

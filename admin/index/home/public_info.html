@@ -34,20 +34,21 @@
     <button class="layui-btn" data-type="reload">搜索</button>
 </script>
 <script src="../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use('table', function () {
         var table = layui.table;
         //第一个实例
         table.render({
-            elem: '#table'
-            , page: true //开启分页
-            , limit:15
-            , loading:true
-            , limits:[15,25,35,45,55,65,75,85,95]
-            , toolbar: '#toolBar'
-            , height: 'full-25'
-            , title: '数据表'
-            , minWidth: 1200
+            elem: addTable.elem
+            , page: addTable.page
+            , toolbar: addTable.toolbar
+            , height: addTable.height
+            , title: addTable.title
+            , limit:addTable.limit
+            , limits:addTable.limits
+            , minWidth: addTable.minWidth
+            , text: addTable.text
             , cols: [[ //表头
                 {type:"checkbox"}
                 , {field: 'doc_name', title: '文档名称',width:"50%", minWidth: 150}
@@ -89,10 +90,7 @@
                     "up_personal": "用户2",
                     "up_date": "2018-12-01"
                 }]
-            ,
-            text: {
-                none: "暂时还没有数据哦！"
-            }, done: function (obj) {
+            , done: function (obj) {
 
             }
         });

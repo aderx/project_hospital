@@ -48,21 +48,22 @@
     <button class="layui-btn" data-type="reload">搜索</button>
 </script>
 <script src="../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use(['table','element'], function () {
         var table = layui.table
             ,element = layui.element;
         //第一个实例
         table.render({
-            elem: '#table'
-            , page: true //开启分页
-            , limit:15
-            , loading:true
-            , limits:[15,25,35,45,55,65,75,85,95]
-            , toolbar: '#toolBar'
-            , height: 'full-73'
-            , title: '数据表'
-            , minWidth: 1250
+            elem: addTable.elem
+            , page: addTable.page
+            , toolbar: addTable.toolbar
+            , height: addTable.height
+            , title: addTable.title
+            , limit:addTable.limit
+            , limits:addTable.limits
+            , minWidth: addTable.minWidth
+            , text: addTable.text
             , cols: [[ //表头
                 {type:"checkbox"}
                 , {field: 'remind_type', title: '提醒类别', minWidth: 150}
@@ -96,18 +97,17 @@
                     "remind_end": "2018-11-25"
                 }
             ]
-            ,
-            text: {
-                none: "暂时还没有数据哦！"
-            }
         });
         table.render({
-            elem: '#table1'
-            , page: true //开启分页
-            , toolbar: '#toolBar'
-            , height: 'full-80'
-            , title: '数据表'
-            , minWidth: 1250
+            elem: addTable.elem
+            , page: addTable.page
+            , toolbar: addTable.toolbar
+            , height: addTable.height
+            , title: addTable.title
+            , limit:addTable.limit
+            , limits:addTable.limits
+            , minWidth: addTable.minWidth
+            , text: addTable.text
             , cols: [[ //表头
                 {type:"checkbox"}
                 , {field: 'process_name', title: '文档名称',width:"50%", minWidth: 150}
@@ -155,10 +155,6 @@
                     "create_date": "城市-0",
                     "cut_date": "城市-0"
                 }]
-            ,
-            text: {
-                none: "暂时还没有数据哦！"
-            }
         });
 
         //frame_all({"back": false});//框架公共运行函数

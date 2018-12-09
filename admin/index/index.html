@@ -144,15 +144,21 @@
         }
     })
     window.onload = function(){
-        if($(".layui-nav-item a span").length <= 0){
+        if($('.layui-nav-tree .layui-nav-child').length >0 && $('.layui-nav-tree .layui-nav-child').prev().children("span").length <= 0){
             location.reload();
-        }
+        }//判断当前页面渲染是否正确，不正确的话将刷新页面重新渲染
+        if($('.layui-nav-tree .layui-nav-child').length >0){
+            $(".layui-nav-tree .layui-nav-item").eq(1).addClass("layui-nav-itemed")
+        }else{
+            $(".layui-nav-tree .layui-nav-item").eq(1).addClass("layui-this")
+        }//展开第一项列表
+
         try{
             var f = $.cookie("f");
             $.cookie("f", null);
             if(f !== null && typeof Number(f) === "number"){
                 $("a[data-id='"+Number(f)+"']")[0].click();
-            }
+            }//读取cookies跳转页面
         }catch(er){
             console.log("no COOKIES")
         }

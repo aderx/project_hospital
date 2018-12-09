@@ -46,17 +46,21 @@
     <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="detail">申购单</a>
 </script>
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
     layui.use('table', function () {
         var table = layui.table;
         //第一个实例
         table.render({
-            elem: '#table'
-            , page: true //开启分页
-            , toolbar: '#toolBar'
-            , height: 'full-25'
-            , title: '数据表'
-            , minWidth: 1200
+            elem: addTable.elem
+            , page: addTable.page
+            , toolbar: addTable.toolbar
+            , height: addTable.height
+            , title: addTable.title
+            , limit:addTable.limit
+            , limits:addTable.limits
+            , minWidth: addTable.minWidth
+            , text: addTable.text
             , cols: [[ //表头
                 {type:"checkbox"}
                 , {field: 'purchase-depart', title: '申购科室',width:"20%", minWidth: 150}
@@ -75,10 +79,7 @@
                     "classify_wb":"68404058",
                     "purchase_num":"20181114344"
                 }]
-            ,
-            text: {
-                none: "暂时还没有数据哦！"
-            }, done: function (obj) {
+            , done: function (obj) {
                 //frame_all({"check":obj},{"back":true},{"link":[obj,"table1"]},{"message":[2,obj]});//公共运行函数集合
             }
         });

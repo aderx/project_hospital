@@ -259,11 +259,15 @@
 
         //日期
         laydate.render({
-            elem: '#date',
+            elem: '#date2',
             type: 'datetime'
         });
         laydate.render({
-            elem: '#date1'
+            elem: "#date",
+            format: "yyyy-MM-dd",
+            range: false,
+            type: "date",
+            value: "2018-12-9"
         });
 
         //创建一个编辑器
