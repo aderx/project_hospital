@@ -63,40 +63,48 @@
     <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
     <script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
     <script>
-        layui.use('table',function(){
-            var table = layui.table;
-
-            //方法级渲染
-            table.render({
-                elem: addTable.elem
-                , page: addTable.page
-                , toolbar: addTable.toolbar
-                , height: addTable.height
-                , title: addTable.title
-                , limit:addTable.limit
-                , limits:addTable.limits
-                , minWidth: addTable.minWidth
-                , text: addTable.text
-               ,cols: [[ //表头
+        addTable ={
+            table:{
+                cols: [[ //表头
                     {checkbox:true,fixed:true}
-                    , {field: 'dictionary-name', title: '字典名称', width: '70%', minWidth: 400}
-                    , {field: 'dictionary-type', title: '字典类型', minWidth: 150}
+                    , {field: 'dictionary-name', title: '字典名称', width: '45%', minWidth: 400}
+                    , {field: 'dictionary-type', title: '字典类型', minWidth: 150,event:"openLink"}
                 ]]
-               , "data": [
+                , "data": [
                     {
-                        "dictionary-name": '公告',
-                        "dictionary-type": "公告类型"
-                    },
-                    {"dictionary-name": '通知',
-                        "dictionary-type": "公告类型"
-                    },
-                    {
-                        "dictionary-name": '通告',
-                        "dictionary-type": "公告类型"
-                    }
-                    ]
-               })
-        })
+                        "dictionary-name":"核磁共振室",
+                        "dictionary-type":"160232810001",
+                        "link":"./welcome.html",
+                        "messages":[
+                            {
+                                name:"名称",
+                                value:"6666666"
+                            },
+                            {
+                                name:"时间",
+                                value:"666666668888"
+                            }
+                        ]
+                    },{
+                        "dictionary-name":"核磁共振室",
+                        "dictionary-type":"160232810001"
+                    },{
+                        "dictionary-name":"核磁共振室",
+                        "dictionary-type":"160232810001"
+                    }]
+                , done: function (obj) {
+                    tableFunc({
+                        "obj":obj,
+                        "addMsg":2,
+                        "addLink":"table1"
+                    })
+                }
+            },
+            date :{
+                elem : "#date1",
+                type : "datetime"
+            }
+        }
     </script>
 </body>
 </html>
