@@ -27,7 +27,7 @@
     <div class="addBtn">
         <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="edit"><i class="fas fa-trash-alt"></i></a>
     </div>
-    <div class="moreBtn hidden-xs">
+    <div class="hidden-xs" id="moreBar">
         <div class="layui-inline">
             <input class="layui-input" name="search" placeholder="申购单号" autocomplete="off">
         </div>
@@ -43,20 +43,9 @@
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    layui.use('table', function () {
-        var table = layui.table;
-        //第一个实例
-        table.render({
-            elem: addTable.elem
-            , page: addTable.page
-            , toolbar: addTable.toolbar
-            , height: addTable.height
-            , title: addTable.title
-            , limit:addTable.limit
-            , limits:addTable.limits
-            , minWidth: addTable.minWidth
-            , text: addTable.text
-            , cols: [[ //表头
+    addTable ={
+        table:{
+            cols: [[ //表头
                 {type:"checkbox"}
                 , {field: 'equip_name', title: '设备名称',width:"20%", minWidth: 150}
                 , {field: 'purchase-num', title: '申购单号', minWidth: 150}
@@ -80,8 +69,8 @@
             , done: function (obj) {
                 //frame_all({"check":obj},{"back":true},{"link":[obj,"table1"]},{"message":[2,obj]});//公共运行函数集合
             }
-        });
-    });
+        }
+    }
 </script>
 </body>
 

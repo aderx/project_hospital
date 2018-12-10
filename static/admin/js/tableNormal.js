@@ -1,6 +1,7 @@
 $(function () {
-    layui.use(['table', 'form', 'laydate'], function () {
+    layui.use(['table', 'form', 'laydate','element'], function () {
         var table = layui.table
+            , element = layui.element
             , laydate = layui.laydate// 初始化
             , date = new Date()
             , today = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()//获取年-月-日
@@ -33,12 +34,27 @@ $(function () {
             }
         }
 
-            if (tbs.cols) {
+            if (tbs && tbs.cols) {
                 comp(tbs, args_table);
                 table.render(tbs);
+            }else{
+                for(var i=0;i<tbs.length;i++){
+                    console.log(tbs[i].cols);
+                    if(tbs[i].cols){
+                        comp(tbs[i], args_table);
+                        table.render(tbs[i]);
+                    }
+                }
             }
-            if (das.elem) {
+            if (das && das.elem) {
                 comp(das, args_date);
+                if(das.range){
+                    var bars = "-";
+                    if(typeof  das.range === "string"){
+                        bars = das.range
+                    }
+                    das.value = today+" "+bars+" "+today
+                }
                 laydate.render(das);
             }
 

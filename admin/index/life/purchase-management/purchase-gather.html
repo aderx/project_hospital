@@ -29,16 +29,10 @@
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <div class="col-xs-12">
-                        <a href=""><button class=" layui-btn layui-btn-normal">汇 总</button></a>
-                        <table id="table" lay-filter="table"></table>
-                    </div>
+                    <table id="table" lay-filter="table"></table>
                 </div>
                 <div class="layui-tab-item">
-                    <div class="col-xs-12">
-                        <a href="" ><button class="layui-btn layui-btn-normal">汇 总</button></a>
-                        <table id="table1" lay-filter="table1"></table>
-                    </div>
+                    <table id="table1" lay-filter="table1"></table>
                 </div>
             </div>
         </div>
@@ -47,9 +41,10 @@
 
 <script type="text/html" id="toolBar">
     <div class="addBtn">
+        <a href=""><button class=" layui-btn layui-btn-xs">汇 总</button></a>
         <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="edit"><i class="fas fa-trash-alt"></i></a>
     </div>
-    <div class="moreBtn hidden-xs">
+    <div class="hidden-xs" id="moreBar">
         <div class="layui-inline">
             <input class="layui-input" name="search" placeholder="全部科室" autocomplete="off">
         </div>
@@ -62,41 +57,21 @@
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    layui.use(['table','element'], function () {
-        var table = layui.table;
-          element = layui.element;
-        //第一个实例
-        table.render({
-            elem: addTable.elem
-            , page: addTable.page
-            , toolbar: addTable.toolbar
-            , height: addTable.height
-            , title: addTable.title
-            , limit:addTable.limit
-            , limits:addTable.limits
-            , minWidth: addTable.minWidth
-            , text: addTable.text
-            , cols: [[ //表头
+    addTable ={
+        table:[{
+            elem:"#table"
+            ,height:'full-75'
+            ,cols: [[ //表头
                 {type:"checkbox"}
                 , {field: 'purchase-depart', title: '申购科室',width:"40%", minWidth: 150}
                 , {field: 'device-num', title: '设备数量', minWidth: 400}
                 , {field: 'money', title: '金额', minWidth: 150, sort: true}
             ]]
             , done: function (obj) {
-                //frame_all({"check":obj},{"back":true},{"link":[obj,"table1"]},{"message":[2,obj]});//公共运行函数集合
             }
-        });
-        //第二个表格
-        table.render({
-            elem: addTable.elem
-            , page: addTable.page
-            , toolbar: addTable.toolbar
-            , height: addTable.height
-            , title: addTable.title
-            , limit:addTable.limit
-            , limits:addTable.limits
-            , minWidth: addTable.minWidth
-            , text: addTable.text
+        },{
+            elem:"#table1"
+            ,height:'full-75'
             ,cols:[[
                 {type:'checkbox'}
                 ,{field:'device-name',title:'设备名称',width:'35%',minWidth:200}
@@ -104,8 +79,8 @@
                 ,{field:'device-num',title:'设备数量',minWidth:250}
                 ,{field:'money',title:'金额',minWidth:250,sort:true}
             ]]
-        });
-    });
+        }]
+    }
 </script>
 </body>
 

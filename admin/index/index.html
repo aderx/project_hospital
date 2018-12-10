@@ -59,9 +59,12 @@
             </div>
             <!--顶部导航-->
             <div class="menus">
-                <div class="menus_con">
+                <div class="layui-nav">
+                    <div class="menus_con">
 
+                    </div>
                 </div>
+
             </div>
             <!--用户信息-->
             <div class="info1">
@@ -131,6 +134,9 @@
 <script src="../../static/admin/js/list.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../static/admin/js/nav.js" type="text/javascript" charset="utf-8"></script>
 <script>
+    layui.use('element',function(){
+        var element = layui.element;
+    })
     $("#refresh_home").on('click',function(){
         var homes = document.getElementById('home') ;
         if(!$("#refresh_home").hasClass("layui-this")){

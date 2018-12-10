@@ -148,17 +148,17 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"单机工作量",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/equip_worktime.html",
                                             "id":"27"
                                         },
                                         {
                                             "title":"科室设备工作量",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/room_worktime.html",
                                             "id":"28"
                                         },
                                         {
                                             "title":"同种设备工作量",
-                                            "url":"./table.html",
+                                            "url":"./data/network-sys/same_worktime.html",
                                             "id":"29"
                                         }
                                     ]
@@ -205,19 +205,19 @@ var main_list =
                                         },
                                         {
                                             "title": "申购单填写",
-                                            "url": "./table.html",
+                                            "url": "./life/purchase-management/write_purchase.html",
                                             "id": "33",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"科室汇总审核",
-                                            "url":"./table.html",
+                                            "url":"./life/purchase-management/gather-audit.html",
                                             "id":"34",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"申购进度跟踪",
-                                            "url":"./table.html",
+                                            "url":"./life/purchase-management/tracking-schedule.html",
                                             "id":"35",
                                             "shiro":"a"
                                         }
@@ -238,7 +238,7 @@ var main_list =
                                         },
                                         {
                                             "title":"申购单汇总",
-                                            "url":"./table.html",
+                                            "url":"./life/purchase-management/purchase-gather.html",
                                             "id":"38",
                                             "shiro":"a"
                                         },
@@ -3614,7 +3614,7 @@ var main_list =
                             "items":[
                                 {
                                     "title": "LOGO设置",
-                                    "url": "#",
+                                    "url": "./table.html",
                                     "id": "65",
                                     "shiro": "a"
                                 },

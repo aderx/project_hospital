@@ -30,11 +30,7 @@
     <div class="hidden-xs" id="moreBar">
         <form class="layui-form layui-form-pane" action="">
             <div class="layui-input-inline">
-                <input type="text" name="date" id="date" lay-verify="date" placeholder="开始时间" autocomplete="off" class="layui-input">
-            </div>
-            <span>-</span>
-            <div class="layui-input-inline">
-                <input type="text" name="date1" id="date1" lay-verify="date" placeholder="结束时间" autocomplete="off" class="layui-input">
+                <input type="text" name="date" id="date" lay-verify="date" autocomplete="off" class="layui-input">
             </div>
             <div class="layui-inline">
                 <input class="layui-input" name="search" placeholder="联网仪编号" autocomplete="off">
@@ -132,9 +128,9 @@
                 })
             }
         },
-        date :{
-            elem : "#date1",
-            type : "datetime"
+        date:{
+            elem:"#date",
+            range:"~"
         }
     }
 </script>
