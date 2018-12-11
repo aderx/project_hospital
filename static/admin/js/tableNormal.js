@@ -1,10 +1,15 @@
+var date = new Date()
+    , year = date.getFullYear()
+    , month = date.getMonth() + 1
+    , day = date.getDate();
+
 $(function () {
     layui.use(['table', 'form', 'laydate','element'], function () {
         var table = layui.table
+            ,form = layui.form
             , element = layui.element
-            , laydate = layui.laydate// 初始化
-            , date = new Date()
-            , today = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()//获取年-月-日
+            , laydate = layui.laydate
+            , today = year+ "-" + month + "-" + day//获取年-月-日
             , args_date = {
                 value: today,
                 format: "y-M-d"
@@ -32,31 +37,40 @@ $(function () {
                     x[name] = y[name];
                 }
             }
-        }
+        }//匹配默认值
 
-            if (tbs && tbs.cols) {
+            if (Type(tbs) === "json") {
                 comp(tbs, args_table);
                 table.render(tbs);
-            }else{
+            }else if(Type(tbs) === "array"){
                 for(var i=0;i<tbs.length;i++){
-                    console.log(tbs[i].cols);
-                    if(tbs[i].cols){
+                    if(Type(tbs[i]) === "json"){
                         comp(tbs[i], args_table);
                         table.render(tbs[i]);
                     }
                 }
-            }
-            if (das && das.elem) {
-                comp(das, args_date);
-                if(das.range){
-                    var bars = "-";
-                    if(typeof  das.range === "string"){
-                        bars = das.range
+            }//TABLE表格创建
+
+            if (das) {
+                if(Type(das) === "json"){
+                    a(das);
+                }else if(Type(das) === "array"){
+                    for(var j=0;j<das.length;j++){
+                        a(das[j]);
                     }
-                    das.value = today+" "+bars+" "+today
                 }
-                laydate.render(das);
-            }
+                function a(das){
+                    comp(das, args_date);
+                    if(das.range){
+                        var bars = "-";
+                        if(Type(das.range) === "array"){
+                            bars = das.range
+                        }
+                        das.value = today+" "+bars+" "+today
+                    }
+                    laydate.render(das);
+                }
+            }//DATE创建
 
 
     });

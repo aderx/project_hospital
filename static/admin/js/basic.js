@@ -82,6 +82,31 @@ function markPage(text,time){
     });
 };
 
+//4：判断对象数据类型
+function Type(value){
+    if(typeof value === "object"){
+        if(value instanceof Array){
+            return "array";
+        }else if(value instanceof Function){
+            return "function";
+        }else{
+            try{
+                var tt = typeof JSON.parse(JSON.stringify(value))
+            }catch{
+                return value.prototype
+            }
+            if(tt === "object"){
+                return "json"
+            }
+        }
+    }
+    else if(typeof value === "function"){
+        return "function";
+    }else{
+        return typeof(value).toLowerCase();
+    }
+}
+
 //tableFunc
 var func = {//this = obj
     "addMsg":function () {
@@ -127,30 +152,36 @@ var func = {//this = obj
     "addLink":function(value) {
         layui.use('table', function () {
             var table = layui.table
-                ,filter = typeof value !== "string"? value[0]:value
-                ,yes = typeof value !== "string"? value[1]:"确定要跳转链接吗？"
-                ,no = typeof value !== "string"? value[2]:"没有可以跳转的链接。"
+                ,filter = Type(value) !== "string"? value[0]:value
+                ,yes = Type(value) !== "string"? value[1]:"确定要跳转链接吗？"
+                ,no = Type(value) !== "string"? value[2]:"没有可以跳转的链接。"
             table.on('tool(' + filter+ ')', function (obj) {
                 var data = obj.data;
                 if (obj.event === "openLink") {
-                        if (data.link) {
-                            layer.confirm(yes, function () {
-                                location.href = data.link + "?link=" + encodeURIComponent(window.location.href);
-                            });
-                        } else {
-                            layer.alert(no)
-                        }
+                    if (data.link) {
+                        layer.confirm(yes, function () {
+                            location.href = data.link + "?link=" + encodeURIComponent(window.location.href);
+                        });
+                    } else {
+                        layer.alert(no)
+                    }
                 }
             });
         })
     },
     "toolFunc":function(value){
-        for(var i=0;i<value.length;i++){
-            if(typeof value !== "object" || typeof value[0] !== "object"){
-                console.error("参数填写错误！");
-                return ;
+        if(Type(value) === "json"){
+            cc(value);
+        }else if(Type(value) === "array"){
+            for(var i=0;i<value.length;i++){
+                cc(value[i]);
             }
-            var vas = value[i];
+        }else{
+            console.error("toolFunc函数参数填写错误！");
+            return ;
+        }
+        function cc(vas){
+            console.log(vas);
             layui.use('table',function() {
                 var table = layui.table,layer = layui.layer,filt = vas.filter || "table1",tool = vas.tool || "tool";
                 table.on(''+tool+'(' + filt + ')', function (obj) {
@@ -170,12 +201,12 @@ var func = {//this = obj
                 });
             });
         }
-
     }
 }
 
 function tableFunc(){
     // try {
+    if(Type(arguments) === "json"){
         var obj = arguments[0].obj;
         for(var name in arguments[0]){
             if(func[name]){
@@ -183,6 +214,10 @@ function tableFunc(){
                 console.log(name +" 已加载！");
             }
         }
+    }else{
+        console.error("tableFunc参数填写错误")
+    }
+
     // }catch (e) {
     //     console.error("程序遇到一个无法处理的错误！");
     // }

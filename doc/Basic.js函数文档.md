@@ -223,7 +223,7 @@ toolFunc函数为表格按钮添加点击事件,使用数组形式，每一项�
 | title   | String   | 弹窗的标题                                                   | 否   | “详情”                |
 | type    | Number   | 弹出窗口的填充类型（1：填充文字 2：填充页面）                | 否   | 1                     |
 | content | String   | 弹出窗口的文字或者链接地址                                   | 否   | “无内容”              |
-| tool    | String   | 控制按钮在表格中位置<br>（“tool”表格主体按钮 “toolbar”表格顶部工具条内容） | 否   | tool                  |
+| tool    | String   | 控制按钮在表格中位置<br>(**“tool”表格主体按钮 “toolbar”表格顶部工具条内容）**<br>*此项填写不正确将无法出现效果* | 否   | tool                  |
 | area    | Array    | 弹出窗口的大小                                               | 否   | [width-20,height-20]* |
 | resize  | Boolean  | 窗口是否可以允许用户调节大小                                 | 否   | false                 |
 | move    | Boolean  | 窗口是否可以允许用户移动                                     | 否   | false                 |
