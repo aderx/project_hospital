@@ -92,8 +92,8 @@ function Type(value){
         }else{
             try{
                 var tt = typeof JSON.parse(JSON.stringify(value))
-            }catch{
-                return value.constructor
+            }catch(e){
+                return value.constructor;
             }
             if(tt === "object"){
                 return "json"

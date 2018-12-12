@@ -8,6 +8,7 @@
     <title>角色设置</title>
     <link rel="stylesheet" type="text/css" href="../../../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../../../static/admin/css/admin.css"/>
+    <link rel="stylesheet" href="../../../../static/admin/css/all.min.css"/>
     <script src="../../../../static/admin/js/jquery-3.3.1.min.js"></script>
     <!--[if IE 8]>
     <script type="text/javascript" src="../../../../static/admin/js/jquery-1.11.3.min.js"></script>
@@ -17,7 +18,7 @@
 <body>
 <div class="layui-row">
     <div class="col-xs-12">
-        <table id="table" lay-filter=""></table>
+        <table id="table" lay-filter="table1"></table>
     </div>
 </div>
 
@@ -26,24 +27,24 @@
 </script>
 
 <script type="text/html" id="toolBar">
-    <form class="layui-form hidden-xs">
-        <div class="test-table-reload-btn  h_tool">
-            角色工号查找：
-            <div class="layui-inline">
-                <select name="classify" lay-verify="">
-                    <option>角色</option>
-                    <option>aaa</option>
-                    <option>cc</option>
-                    <option>rr</option>
-                    <option>aa</option>
-                </select>
-            </div>
-            <div class="layui-inline">
-                <input class="layui-input" name="search" id="test-table-demoReload" autocomplete="off" placeholder="工号">
-            </div>
-            <button class="layui-btn" data-type="reload">搜索</button>
+    <div class="addBtn">
+        <a class="layui-btn layui-btn-xs" lay-event="add"><i class="fas fa-plus"></i></a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="edit"><i class="fas fa-trash-alt"></i></a>
+    </div>
+    <div class="hidden-xs"  id="moreBar">
+        <div class="layui-input-inline">
+            <select name="modules" lay-verify="required" lay-search="">
+                <option value="">角色</option>
+                <option value="1">aaa</option>
+                <option value="2">bbb</option>
+
+            </select>
         </div>
-    </form>
+        <div class="layui-inline">
+            <input class="layui-input" name="search" placeholder="工号" id="test-table-demoReload" autocomplete="off">
+        </div>
+        <button class="layui-btn" data-type="reload">搜索</button>
+    </div>
 </script>
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
@@ -79,11 +80,19 @@ addTable ={
                 "name":"包洪初",
                 "role":"使用部门医学装备管理小组组长;"
             }]
-        , done: function (obj) {
+        ,  done: function (obj) {
             tableFunc({
                 "obj":obj,
-                "addMsg":2,
-                "addLink":"table1"
+                "toolFunc":[{
+                    "event":'edit'
+                },{
+                    "tool":'toolbar',
+                    "filter":"table1",
+                    "event":"add",
+                    "title":"角色设置",
+                    "type":2,
+                    "content":"./child/role-settingAdd.html"
+                }]
             })
         }
     }
