@@ -128,6 +128,20 @@ markPage("马上就加载好了！");
 
 此函数没有任何返回值
 
+## 4：Type函数
+
+Type函数用于判断给定的数据类型，并且返回对应数据类型名称（统一为小写形式）
+
+| 数据类型 | 举例               | 返回结果 |
+| -------- | ------------------ | -------- |
+| Number   | Type(1)            | number   |
+| Array    | Type([])           | array    |
+| Function | Type(function(){}) | function |
+| Json     | Type({})           | json     |
+| String   | Type(“ppp”)        | string   |
+
+> 其他非常规数据类型，将指向其constructor
+
 ## *：tableFunc函数
 
 tableFunc函数用于操作table表格，是每个table表格公共操作的集合，通过JSON格式引用相应函数
@@ -235,7 +249,7 @@ toolFunc函数为表格按钮添加点击事件,使用数组形式，每一项�
 ```javascript
 {
     "toolFunc":[{
-        "tool":"toolbar"
+        "tool":"toolbar"//如操作的是表格顶部工具，此项必修修改为toolbar，否则可以不写
     	"filter":"table1",
     	"event":"record",
     	"title":"详细内容",

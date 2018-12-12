@@ -93,7 +93,7 @@ function Type(value){
             try{
                 var tt = typeof JSON.parse(JSON.stringify(value))
             }catch{
-                return value.prototype
+                return value.constructor
             }
             if(tt === "object"){
                 return "json"
@@ -205,7 +205,6 @@ var func = {//this = obj
 }
 
 function tableFunc(){
-    // try {
     if(Type(arguments) === "json"){
         var obj = arguments[0].obj;
         for(var name in arguments[0]){
@@ -217,10 +216,6 @@ function tableFunc(){
     }else{
         console.error("tableFunc参数填写错误")
     }
-
-    // }catch (e) {
-    //     console.error("程序遇到一个无法处理的错误！");
-    // }
 }
 
 

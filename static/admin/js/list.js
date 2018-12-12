@@ -371,21 +371,21 @@ var main_list =
                             "items":[
                                 {
                                     "title":"到货登记",
-                                    "url":"./table.html",
+                                    "url":"./life/purchase-management/goods-reg.html",
                                     "icon":"solar-panel",
                                     "id":"334",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"科室验收",
-                                    "url":"./table.html",
+                                    "url":"./life/purchase-management/room-reg.html",
                                     "icon":"user-md",
                                     "id":"335",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"设备验收",
-                                    "url":"./table.html",
+                                    "url":"./life/purchase-management/equip-reg.html",
                                     "icon":"drafting-compass",
                                     "id":"336",
                                     "shiro":"a"

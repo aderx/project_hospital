@@ -11,6 +11,7 @@ $(function () {
             , laydate = layui.laydate
             , today = year+ "-" + month + "-" + day//获取年-月-日
             , args_date = {
+                elem: "#date",
                 value: today,
                 format: "y-M-d"
             }
@@ -51,8 +52,10 @@ $(function () {
                 }
             }//TABLE表格创建
 
-            if (das) {
-                if(Type(das) === "json"){
+            if (das && das !== false) {
+                if(das === true){
+                    a(args_date);
+                }else if(Type(das) === "json"){
                     a(das);
                 }else if(Type(das) === "array"){
                     for(var j=0;j<das.length;j++){
