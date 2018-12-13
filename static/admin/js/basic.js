@@ -84,7 +84,11 @@ function markPage(text,time){
 
 //4：判断对象数据类型
 function Type(value){
-    if(typeof value === "object"){
+    if(value === undefined){
+        return "undefined";
+    }else if(value === null){
+        return "null";
+    }else if(typeof value === "object"){
         if(value instanceof Array){
             return "array";
         }else if(value instanceof Function){
@@ -103,7 +107,8 @@ function Type(value){
     else if(typeof value === "function"){
         return "function";
     }else{
-        return typeof(value).toLowerCase();
+        var type = typeof(value);
+        return type.toLowerCase();
     }
 }
 
@@ -181,10 +186,10 @@ var func = {//this = obj
             return ;
         }
         function cc(vas){
-            console.log(vas);
             layui.use('table',function() {
                 var table = layui.table,layer = layui.layer,filt = vas.filter || "table1",tool = vas.tool || "tool";
                 table.on(''+tool+'(' + filt + ')', function (obj) {
+                    console.log(22);
                     var w = document.body.clientWidth - 20
                         , h = document.body.clientHeight - 20;
                     var data = obj.data;//获得当前行数据
@@ -201,6 +206,26 @@ var func = {//this = obj
                 });
             });
         }
+    },
+    "tableBtn":function(vas){
+        layui.use('table',function() {
+            var table = layui.table,layer = layui.layer,filt = vas.filter || "table1",event = vas.event || "dataSearch",id = vas.tool || "hideXs";
+            table.on('toolbar(' + filt + ')', function (obj) {
+                var w = document.body.clientWidth - 20
+                    , h = document.body.clientHeight - 20;
+                var data = obj.data;//获得当前行数据
+                if (obj.event === vas.event) {//弹出窗口
+                    layer.open({
+                        type: vas.type || 1,
+                        title: vas.title || "详细查找",
+                        content: vas.content || $('#'+id),
+                        area: vas.area || [w + "px", h + "px"],
+                        resize: vas.resize || false,
+                        move: vas.move || false
+                    });
+                }
+            });
+        });
     }
 }
 

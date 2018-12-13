@@ -421,19 +421,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"已备案操作规程",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/record-rule.html",
                                             "id":"340",
                                             "shiro":"a"
                                         },
                                         {
-                                            "title":"适用中操作规程",
-                                            "url":"./table.html",
+                                            "title":"试用中操作规程",
+                                            "url":"./life/use-management/test-rule.html",
                                             "id":"341",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"已停用操作规程",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/banned-rule.html",
                                             "id":"342",
                                             "shiro":"a"
                                         }
@@ -441,20 +441,20 @@ var main_list =
                                 },
                                 {
                                     "title":"操作规程制定",
-                                    "url":"./table.html",
+                                    "url":"javascript",
                                     "icon":"pencil-alt",
                                     "shiro":"a",
                                     "id":"343",
                                     "list":[
                                         {
                                             "title":"编写",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/edit-rule.html",
                                             "id":"344",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"操作规程制定流程",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/process-rule.html",
                                             "id":"345",
                                             "shiro":"a"
                                         }
@@ -469,7 +469,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"操作规程再评价流程",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/again-rule.html",
                                             "id":"347",
                                             "shiro":"a"
                                         }
@@ -484,13 +484,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"制定进度",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/process-edit.html",
                                             "id":"349",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"再评价进度",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/process-again.html",
                                             "id":"350",
                                             "shiro":"a"
                                         }
@@ -505,13 +505,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"模板列表",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/modern-list.html",
                                             "id":"352",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"录入模板",
-                                            "url":"./table.html",
+                                            "url":"./life/use-management/modern-edit.html",
                                             "id":"353",
                                             "shiro":"a"
                                         }
@@ -521,7 +521,7 @@ var main_list =
                         },
                         {
                             "title":"电子台账",
-                            "url":"life&t=1&n=2",
+                            "url":"life&t=1&n=1",
                             "id":"354",
                             "shiro":"a",
                             "items":[
@@ -534,19 +534,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"总账",
-                                            "url":"./table.html",
+                                            "url":"./life/electric-bill/bill-list.html",
                                             "id":"356",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"分户账",
-                                            "url":"./table.html",
+                                            "url":"./life/electric-bill/bill-hueman.html",
                                             "id":"357",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"分类账",
-                                            "url":"./table.html",
+                                            "url":"./life/electric-bill/bill-type.html",
                                             "id":"358",
                                             "shiro":"a"
                                         }
@@ -3626,19 +3626,19 @@ var main_list =
                                 },
                                 {
                                     "title": "文件版本设置",
-                                    "url": "./table.html",
+                                    "url": "./system/system-setup/DOCED-setup.html",
                                     "id": "77",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "短信猫设置",
-                                    "url": "./table.html",
+                                    "url": "./system/system-setup/modem-gsm.html",
                                     "id": "78",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "作息时间",
-                                    "url": "./table.html",
+                                    "url": "./system/system-setup/time-table.html",
                                     "id": "79",
                                     "shiro": "a"
                                 }
@@ -3677,13 +3677,13 @@ var main_list =
                                         },
                                         {
                                             "title": "设备附件信息导入",
-                                            "url": "./table.html",
+                                            "url": "./system/system-setup/fjImport.html",
                                             "id": "715",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "设备附件信息录入",
-                                            "url": "./table.html",
+                                            "url": "./system/system-setup/fjEntry.html",
                                             "id": "716",
                                             "shiro": "a"
                                         },
@@ -3701,7 +3701,7 @@ var main_list =
                                         },
                                         {
                                             "title": "卫标已关联设备",
-                                            "url": "./table.html",
+                                            "url": "./system/system-setup/weiBiao.html",
                                             "id": "719",
                                             "shiro": "a"
                                         }
@@ -3731,19 +3731,19 @@ var main_list =
                                     "list": [
                                         {
                                             "title": "提醒类别",
-                                            "url": "./table.html",
+                                            "url": "./system/system-setup/reminder-classify.html",
                                             "id": "723",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "日期前提醒设置",
-                                            "url": "./table.html",
+                                            "url": "./system/system-setup/preDate.html",
                                             "id": "724",
                                             "shiro": "a"
                                         },
                                         {
                                             "title": "日期后提醒设置",
-                                            "url": "./table.html",
+                                            "url": "./system/system-setup/afterDate.html",
                                             "id": "725",
                                             "shiro": "a"
                                         }
@@ -3751,7 +3751,7 @@ var main_list =
                                 },
                                 {
                                     "title": "提醒信息",
-                                    "url": "./table.html",
+                                    "url": "./system/system-setup/reminder-information.html",
                                     "icon":"bell",
                                     "id": "726",
                                     "shiro": "a"
@@ -3809,14 +3809,14 @@ var main_list =
                             "items":[
                                 {
                                     "title": "拟稿",
-                                    "url": "./table.html",
+                                    "url": "./system/portal-management/draft.html",
                                     "icon":"pen",
                                     "id": "732",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "审核",
-                                    "url": "./table.html",
+                                    "url": "./system/portal-management/auditing.html",
                                     "icon":"clipboard-check",
                                     "id": "733",
                                     "shiro": "a"
@@ -3852,13 +3852,13 @@ var main_list =
                                 },
                                 {
                                     "title": "审核",
-                                    "url": "./table.html",
+                                    "url": "./system/portal-management/download-auditing.html",
                                     "icon":"clipboard-check",
                                     "id": "738",
                                     "shiro": "a"
                                 },{
                                     "title": "查询",
-                                    "url": "./table.html",
+                                    "url": "./system/portal-management/download-search.html",
                                     "icon":"search",
                                     "id": "739",
                                     "shiro": "a"

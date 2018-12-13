@@ -1,7 +1,9 @@
 var date = new Date()
     , year = date.getFullYear()
     , month = date.getMonth() + 1
-    , day = date.getDate();
+    , day = date.getDate()
+    , today = year+ "-" + month + "-" + day//获取年-月-日
+    , time = date.getTime();
 
 $(function () {
     layui.use(['table', 'form', 'laydate','element'], function () {
@@ -9,7 +11,6 @@ $(function () {
             ,form = layui.form
             , element = layui.element
             , laydate = layui.laydate
-            , today = year+ "-" + month + "-" + day//获取年-月-日
             , args_date = {
                 elem: "#date",
                 value: today,
@@ -29,7 +30,8 @@ $(function () {
                 }
             }
             , tbs = addTable.table
-            , das = addTable.date;
+            , das = addTable.date
+            , fos = addTable.form;
 
 
         function comp(x, y) {
@@ -40,7 +42,7 @@ $(function () {
             }
         }//匹配默认值
 
-            if (Type(tbs) === "json") {
+        if (Type(tbs) === "json") {
                 comp(tbs, args_table);
                 table.render(tbs);
             }else if(Type(tbs) === "array"){
@@ -52,7 +54,7 @@ $(function () {
                 }
             }//TABLE表格创建
 
-            if (das && das !== false) {
+        if (das && das !== false) {
                 if(das === true){
                     a(args_date);
                 }else if(Type(das) === "json"){
