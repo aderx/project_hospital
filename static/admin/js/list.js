@@ -2962,19 +2962,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"已备案的规章制度",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/beian-rules.html",
                                             "id":"616",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"试用中的规章制度",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/tryout-rules.html",
                                             "id":"617",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"已停用的规章制度",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/blockup-rules.html",
                                             "id":"618",
                                             "shiro":"a"
                                         }
@@ -2995,7 +2995,7 @@ var main_list =
                                         },
                                         {
                                             "title":"待审核",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/check-pending.html",
                                             "id":"621",
                                             "shiro":"a"
                                         },
