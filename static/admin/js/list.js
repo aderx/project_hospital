@@ -2906,7 +2906,7 @@ var main_list =
                                         },
                                         {
                                             "title":"岗位管理",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/position-management.html",
                                             "id":"68",
                                             "shiro":"a"
                                         }
@@ -2921,25 +2921,25 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"部门类别设置",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/department-category.html",
                                             "id":"610",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"管理部门类别设置",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/manage-department.html",
                                             "id":"611",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"维修部门设置",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/service-department.html",
                                             "id":"612",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"科室系统字典",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/department-system.html",
                                             "id":"613",
                                             "shiro":"a"
                                         }
@@ -2989,7 +2989,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"编写",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/write.html",
                                             "id":"620",
                                             "shiro":"a"
                                         },
@@ -3001,13 +3001,13 @@ var main_list =
                                         },
                                         {
                                             "title":"待修改",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/revise.html",
                                             "id":"622",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"试用中",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/tryout.html",
                                             "id":"623",
                                             "shiro":"a"
                                         }
@@ -3022,25 +3022,25 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"待评价",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/evaluate.html",
                                             "id":"625",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待修改",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/revise.html",
                                             "id":"626",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待审核",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/check-pending.html",
                                             "id":"627",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"试用中",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/tryout.html",
                                             "id":"628",
                                             "shiro":"a"
                                         }
@@ -3055,13 +3055,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"制定进度",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/schedule-development.html",
                                             "id":"630",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"再评价进度",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/revalue.html",
                                             "id":"631",
                                             "shiro":"a"
                                         }
@@ -3076,13 +3076,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"模板列表",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/template-list.html",
                                             "id":"633",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"模板录入",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/template-entry.html",
                                             "id":"634",
                                             "shiro":"a"
                                         }
@@ -3105,19 +3105,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"已备案的岗位职责",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-beian.html",
                                             "id":"637",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"试用中的岗位职责",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-tryoutRules.html",
                                             "id":"638",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"已停用的岗位职责",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-blockup.html",
                                             "id":"639",
                                             "shiro":"a"
                                         }
@@ -3132,25 +3132,25 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"编写",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/begin-write.html",
                                             "id":"641",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待审核",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-checkPending.html",
                                             "id":"642",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待修改",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-revise.html",
                                             "id":"643",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"试用中",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-tryout.html",
                                             "id":"644",
                                             "shiro":"a"
                                         }
@@ -3165,25 +3165,25 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"待评价",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-checkPending.html",
                                             "id":"646",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待修改",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-checkPending.html",
                                             "id":"647",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待审核",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-checkPending.html",
                                             "id":"648",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"试用中",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-checkPending.html",
                                             "id":"649",
                                             "shiro":"a"
                                         }
@@ -3198,13 +3198,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"制定进度",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-schedule.html",
                                             "id":"651",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"再评价进度",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-revalue.html",
                                             "id":"652",
                                             "shiro":"a"
                                         }
@@ -3219,13 +3219,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"模板列表",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-templateList.html",
                                             "id":"654",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"模板录入",
-                                            "url":"./table.html",
+                                            "url":"./admin/basic-management/post-templateEntry.html",
                                             "id":"655",
                                             "shiro":"a"
                                         }
