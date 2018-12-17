@@ -3255,13 +3255,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"科室管理团队",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/department-management.html",
                                             "id":"658",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待审核管理团队",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/checkPending-team.html",
                                             "id":"659",
                                             "shiro":"a"
                                         },
@@ -3289,37 +3289,37 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"科室质安管理团队汇总",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/qualitySafe-management.html",
                                             "id":"663",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"质控管理员名单",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/qualityControl-management.html",
                                             "id":"664",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"监测联络员名单",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/monitoring-liaison.html",
                                             "id":"665",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"科室资产管理人员名单",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/asset-management.html",
                                             "id":"666",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"计量管理员名单",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/metering-management.html",
                                             "id":"667",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"未成立管理团队科室",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/not-established.html",
                                             "id":"668",
                                             "shiro":"a"
                                         }
@@ -3334,13 +3334,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"设备使用管理人授权",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/department-use.html",
                                             "id":"670",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"设备操作人授权",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/department-operation.html",
                                             "id":"671",
                                             "shiro":"a"
                                         },
