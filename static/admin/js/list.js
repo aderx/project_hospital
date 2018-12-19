@@ -579,7 +579,7 @@ var main_list =
                                         },
                                         {
                                             "title":"核实对比",
-                                            "url":"./life/electric-bill/compere-com.html\"",
+                                            "url":"./life/electric-bill/compere-com.html",
                                             "id":"363",
                                             "shiro":"a"
                                         }
