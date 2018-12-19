@@ -384,7 +384,6 @@
             }
 
         })
-
         //5：welcome数据添加
         function getData(data) {
             addData(h_name[0],data.task);
@@ -406,6 +405,9 @@
                 }
 
             }
+        }
+        if($(".panel-body canvas").width() < 100){
+            $.cookie("ww",$(".panel-body canvas").width());
         }
     })
 
