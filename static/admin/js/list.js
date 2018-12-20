@@ -561,25 +561,25 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"计划制定",
-                                            "url":"./table.html",
+                                            "url":"./life/electric-bill/plan-write.html",
                                             "id":"360",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"计划查询",
-                                            "url":"./table.html",
+                                            "url":"./life/electric-bill/plan-search.html",
                                             "id":"361",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"账实核对",
-                                            "url":"./table.html",
+                                            "url":"./life/electric-bill/purchase-check.html",
                                             "id":"362",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"核实对比",
-                                            "url":"./table.html",
+                                            "url":"./life/electric-bill/compere-com.html",
                                             "id":"363",
                                             "shiro":"a"
                                         }

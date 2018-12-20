@@ -112,6 +112,75 @@ function Type(value){
     }
 }
 
+/**
+ *@todo 本地存储 localStorage
+ * 为了保持统一，将sessionStorage更换为存储周期更长的localStorage
+ */
+//本地存储记录所有打开的窗口
+function setStorageMenu(title, url, id) {
+    var menu = JSON.parse(sessionStorage.getItem('menu'));
+    if(menu) {
+        var deep = false;
+        for(var i = 0; i < menu.length; i++) {
+            if(menu[i].id === id) {
+                deep = true;
+                menu[i].title = title;
+                menu[i].url = url;
+                menu[i].id = id;
+                menu[i].search = $.getUrlParam('p');
+            }
+        }
+        if(!deep) {
+            menu.push({
+                title: title,
+                url: url,
+                id: id,
+                search:$.getUrlParam('p')
+            })
+        }
+    } else {
+        menu = [{
+            title: title,
+            url: url,
+            id: id,
+            search:$.getUrlParam('p')
+        }]
+    }
+    sessionStorage.setItem('menu', JSON.stringify(menu));
+}
+//本地存储记录当前打开窗口
+function setStorageCurMenu() {
+    var curMenu = sessionStorage.getItem('curMenu');
+    var text = $('.layui-tab-title').find('.layui-this').text();
+    text = text.split('ဆ')[0];
+    var url = $('.layui-tab-content').find('.layui-show').find('.weIframe').attr('src');
+    var id = $('.layui-tab-title').find('.layui-this').attr('lay-id');
+    curMenu = {
+        title: text,
+        url: url,
+        id: id,
+        search:$.getUrlParam('p')
+    };
+    sessionStorage.setItem('curMenu', JSON.stringify(curMenu));
+}
+//本地存储中移除删除的元素
+function removeStorageMenu(id) {
+    var menu = JSON.parse(sessionStorage.getItem('menu'));
+    //var curMenu = JSON.parse(localStorage.getItem('curMenu'));
+    if(menu) {
+        var deep = false;
+        for(var i = 0; i < menu.length; i++) {
+            if(menu[i].id === id) {
+                deep = true;
+                menu.splice(i, 1);
+            }
+        }
+    } else {
+        return false;
+    }
+    sessionStorage.setItem('menu', JSON.stringify(menu));
+}
+
 //tableFunc
 var func = {//this = obj
     "addMsg":function () {
@@ -242,5 +311,4 @@ function tableFunc(){
         console.error("tableFunc参数填写错误")
     }
 }
-
 
