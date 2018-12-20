@@ -3375,19 +3375,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"工程师负责部门划分",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/engineer-department.html",
                                             "id":"676",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"维修部门负责设备划分",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/service-equipment.html",
                                             "id":"677",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"工程师负责设备划分",
-                                            "url":"./table.html",
+                                            "url":"./admin/discipline-management/service-equipment.html",
                                             "id":"678",
                                             "shiro":"a"
                                         }
@@ -3395,7 +3395,7 @@ var main_list =
                                 },
                                 {
                                     "title":"领导分管划分",
-                                    "url":"./table.html",
+                                    "url":"./admin/discipline-management/leadership-charge.html",
                                     "icon":"chalkboard-teacher",
                                     "id":"679",
                                     "shiro":"a"
@@ -3410,14 +3410,14 @@ var main_list =
                             "items":[
                                 {
                                     "title":"员工信息查询",
-                                    "url":"./table.html",
+                                    "url":"./admin/discipline-management/employee-query.html",
                                     "icon":"search",
                                     "id":"681",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"员工信息导入",
-                                    "url":"./table.html",
+                                    "url":"./admin/discipline-management/employee-input.html",
                                     "icon":"file-import",
                                     "id":"682",
                                     "shiro":"a"
@@ -3439,49 +3439,49 @@ var main_list =
                             "items":[
                                 {
                                     "title":"设备证照检查",
-                                    "url":"./table.html",
+                                    "url":"./admin/supervision/certificate-inspection.html",
                                     "icon":"check-square",
                                     "id":"684",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"设备证件导入",
-                                    "url":"./table.html",
+                                    "url":"./admin./supervision/certificate-input.html",
                                     "icon":"file-import",
                                     "id":"685",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"厂商多证导入",
-                                    "url":"./table.html",
+                                    "url":"./admin/supervision/producer-introduction.html",
                                     "icon":"file-import",
                                     "id":"686",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"规章制度检查",
-                                    "url":"./table.html",
+                                    "url":"./admin/supervision/rules-regulations.html",
                                     "icon":"check-square",
                                     "id":"687",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"设备状态及标识检查",
-                                    "url":"./table.html",
+                                    "url":"./admin/supervision/device-status.html",
                                     "icon":"check-square",
                                     "id":"688",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"机构与岗位职责检查",
-                                    "url":"./table.html",
+                                    "url":"./admin/supervision/institutional-post.html",
                                     "icon":"check-square",
                                     "id":"689",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"操作规程与应急预案检查",
-                                    "url":"./table.html",
+                                    "url":"./admin/supervision/operating-regulations.html",
                                     "icon":"check-square",
                                     "id":"690",
                                     "shiro":"a"
@@ -3510,25 +3510,25 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"新建改善提案",
-                                            "url":"./table.html",
+                                            "url":"./admin/improvement/new-improvement.html",
                                             "id":"693",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"已退回提案",
-                                            "url":"./table.html",
+                                            "url":"./admin/improvement/proposal-returned.html",
                                             "id":"694",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待受理提案",
-                                            "url":"./table.html",
+                                            "url":"./admin/improvement/proposal-returned.html",
                                             "id":"695",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"待审批提案",
-                                            "url":"./table.html",
+                                            "url":"./admin/improvement/proposal-returned.html",
                                             "id":"696",
                                             "shiro":"a"
                                         }
@@ -3543,13 +3543,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"提案制订进度",
-                                            "url":"./table.html",
+                                            "url":"./admin/improvement/proposal-progress.html",
                                             "id":"698",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"改善提案检查",
-                                            "url":"./table.html",
+                                            "url":"./admin/improvement/proposal-progress.html",
                                             "id":"699",
                                             "shiro":"a"
                                         }
