@@ -7,10 +7,7 @@ var date = new Date()
 
 $(function () {
     layui.use(['table', 'form', 'laydate','element'], function () {
-        var table = layui.table
-            ,form = layui.form
-            , element = layui.element
-            , laydate = layui.laydate
+        var table = layui.table,form = layui.form, element = layui.element, laydate = layui.laydate
             , args_date = {
                 elem: "#date",
                 value: today,
@@ -30,12 +27,12 @@ $(function () {
                 }
                 , id : "table"
             }
-            , tbs = addTable.table
-            , das = addTable.date
-            , fos = addTable.form
-            , res = addTable.reSet;
+            , tbs = addTable.table//自定义表格参数
+            , das = addTable.date//自定义日期选择器参数
+            , fos = addTable.form//自定义表单参数-未启用
+            , res = addTable.reSet;//自定义数据重载参数
 
-
+        //判断是否有自定义数据(与默认数据相比)
         function comp(x, y) {
             for (var name in y) {
                 if (!x[name]) {
@@ -79,24 +76,32 @@ $(function () {
                     laydate.render(das);
                 }
             }//DATE创建
-
+        //表格数据重载(查询数据)
         if(res){
-            var $ = layui.$,type = res.type || "search", active = {};
+            var $ = layui.$,type = res.type || "search", active = {},value = {};
             active[type] = function(){
-                res.vars && res.vars();
+                for(var name in res.where){
+                    value[name] = $(res.where[name]).val();
+                }
                 //执行重载
-                table.reload(res.tableId || "table", {
+                table.reload(res.tid || args_table.id, {
                     url:res.url
                     ,where: res.where || {}
                 });
+                //重新绑定事件
+                $(".layui-table-tool .layui-btn").on('click',function(){
+                    var type = $(this).data('type');
+                    active[type] ? active[type].call(this) : '';
+                });
             }
-
-            $(".layui-table-tool .layui-btn").click(function(){
+            //首次页面渲染后按钮事件绑定
+            $(".layui-table-tool .layui-btn").on('click',function(){
                 var type = $(this).data('type');
                 active[type] ? active[type].call(this) : '';
             });
         }
     });
 });
+
 
 

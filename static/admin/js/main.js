@@ -53,18 +53,23 @@ layui.use(['layer', 'form', 'element', 'jquery', 'dialog'], function () {
         mainLayout.removeClass('hide-side');
     });
 
-    element.on('tabDelete(tab)', function(data){
+    element.on('tabDelete', function(data){
         var id = $(this).parent().attr("lay-id")
             ,ground = data.elem[0].childNodes[1].childNodes
             ,num = ground.length;
-        if(num < 4 ){
-            document.getElementById('home').contentWindow.location.reload();//重新加载welcome页，避免统计图表错乱
+        //根据cookie值判断是否重载图表
+        if($(".navs li").length <= 1){
+            if($.cookie("ww") < 100){
+                $.cookie("ww",null);
+                document.getElementById('home').contentWindow.location.reload();
+            }
+
         }
-        //console.log($(".layui-nav-item a[data-id='"+id+"']").parent());
+        //将当前删除的tab对应的列表选中取消
         $(".layui-nav-item a[data-id='"+id+"']").parent().removeClass("layui-this");
-        if($('.layui-nav-tree .layui-nav-child').length >0 && $('.layui-nav-tree .layui-nav-child').prev().children("span").length <= 0){
+        /*if($('.layui-nav-tree .layui-nav-child').length >0 && $('.layui-nav-tree .layui-nav-child').prev().children("span").length <= 0){
             location.reload();
-        }
+        }*/
     });
     //菜单隐藏显示
     hideBtn.on('click', function () {
@@ -135,11 +140,12 @@ layui.use(['layer', 'form', 'element', 'jquery', 'dialog'], function () {
                 menu = JSON.parse(sessionStorage.getItem("menu"));
                 if(menu.length === 0){
                     //$(".layui-nav-tree .layui-nav-item")[1].click();
-                    if(se !== "home")
-                    if($('.layui-nav-tree .layui-nav-child').length >0){
-                        $(".layui-nav-tree .layui-nav-item").eq(1).addClass("layui-nav-itemed")
-                    }else{
-                        $(".layui-nav-tree .layui-nav-item").eq(1).addClass("layui-this")
+                    if(se !== "home"){
+                        if($('.layui-nav-tree .layui-nav-child').length >0){
+                            $(".layui-nav-tree .layui-nav-item").eq(1).addClass("layui-nav-itemed")
+                        }else{
+                            $(".layui-nav-tree .layui-nav-item").eq(1).addClass("layui-this")
+                        }
                     }
                     return false;
                 }
@@ -156,11 +162,6 @@ layui.use(['layer', 'form', 'element', 'jquery', 'dialog'], function () {
                 }
             } else if(sessionStorage.getItem("menu")){
                 $(".layui-nav-tree .layui-nav-item")[1].click();
-                // if($('.layui-nav-tree .layui-nav-child').length >0){
-                //     $(".layui-nav-tree .layui-nav-item").eq(1).addClass("layui-nav-itemed")
-                // }else{
-                //     $(".layui-nav-tree .layui-nav-item").eq(1).addClass("layui-this")
-                // }
                 return false;
             }
             var curMenu,id;
@@ -171,7 +172,6 @@ layui.use(['layer', 'form', 'element', 'jquery', 'dialog'], function () {
                     return;
                 }
                 id = curMenu.id;
-                if (id) { //因为默认桌面首页不存在lay-id,所以要对此判断
                     $('.layui-tab-title li[lay-id="' + id + '"]').addClass('layui-this');
                     element.tabChange('tab', id);
                     var $this_tag = $(".layui-nav-tree *[data-id="+id+"]");
@@ -180,13 +180,6 @@ layui.use(['layer', 'form', 'element', 'jquery', 'dialog'], function () {
                     if($this_tag.parent()[0].tagName === "DD" || $this_tag.parent()[0].tagName === "dd"){
                         $this_tag.parent().parent().parent().addClass("layui-nav-itemed");
                     }
-                } else {
-                    $(".layui-tab-title li").eq(0).addClass('layui-this'); //未生效
-                    $('.layui-tab-content iframe').eq(0).parent().addClass('layui-show');
-                }
-            } else {
-                $(".layui-tab-title li").eq(0).addClass('layui-this'); //未生效
-                $('.layui-tab-content iframe').eq(0).parent().addClass('layui-show');
             }
 
         }, 100);

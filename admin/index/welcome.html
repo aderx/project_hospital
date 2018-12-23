@@ -406,10 +406,15 @@
 
             }
         }
-        if($(".panel-body canvas").width() < 100){
-            $.cookie("ww",$(".panel-body canvas").width());
-        }
     })
+    window.onload = function(){
+        //当页面canvas加载不正确时页面重载
+        var ww = $('canvas').width();
+        if(ww < 100){
+            $.cookie("ww",ww);
+        }
+    }
+
 </script>
 </body>
 </html>

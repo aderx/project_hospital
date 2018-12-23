@@ -138,34 +138,24 @@
     })
 
     window.onload = function(){
-        //$(".layui-icon layui-unselect layui-tab-close").on('click',function(){
-            var homes = document.getElementById('home') ;
-            if($("#refresh_home").hasClass("layui-this")){
-                try{
-                    homes.contentWindow.location.reload();
-                }catch (er){
-                    alert("当前页面显示不正确，可能会出现显示错乱，请使用服务器访问当前页面！");
-                    console.error("此功能无法正常在本地使用，请使用服务器访问！");
-                }
-            }
-        //})
+            var homes = document.getElementById('home');
+        //判断当前页面渲染是否正确，不正确的话将刷新页面重新渲染
         if($('.layui-nav-tree .layui-nav-child').length >0 && $('.layui-nav-tree .layui-nav-child').prev().children("span").length <= 0){
             location.reload();
-        }//判断当前页面渲染是否正确，不正确的话将刷新页面重新渲染
-        $(".navs li").on('click',function(){
-            var text = $('.layui-tab-title').find('.layui-this').text();
-            text = text.split('ဆ')[0];
-            var id = $('.layui-tab-title').find('.layui-this').attr('lay-id');
-            var homes = document.getElementById('home') ;
-            $(".navs li[lay-id="+id+"] ")
-            if($("#refresh_home").hasClass("layui-this")){
+        }
+        //判断主页点击时渲染是否正确，不正确重载主页
+        $("#refresh_home").click(function(){
+            if($(this).hasClass("layui-this") || $.cookie("ww") > 100 ){
+                return false;
+            }
+            setTimeout(function(){
                 try{
                     homes.contentWindow.location.reload();
                 }catch (er){
                     alert("当前页面显示不正确，可能会出现显示错乱，请使用服务器访问当前页面！");
                     console.error("此功能无法正常在本地使用，请使用服务器访问！");
                 }
-            }
+            },10)
         })
         //展开第一项列表
         try{
