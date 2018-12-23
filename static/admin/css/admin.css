@@ -2083,6 +2083,12 @@ html {
 .padRight .layui-table-tool-temp {
   padding-right: 0;
 }
+.layui-layer-shade{
+  z-index: 666!important;
+}
+.layui-layer-page .hidden-xs{
+  display: block!important;
+}
 @media (max-width: 768px) {
   .main-layout-side {
     position: fixed;
@@ -2608,4 +2614,3 @@ html {
     margin-left: 80px;
   }
 }
-/*# sourceMappingURL=admin.css.map */

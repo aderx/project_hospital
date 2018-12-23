@@ -28,10 +28,12 @@ $(function () {
                 , text: {
                     none: "暂时还没有数据哦！"
                 }
+                , id : "table"
             }
             , tbs = addTable.table
             , das = addTable.date
-            , fos = addTable.form;
+            , fos = addTable.form
+            , res = addTable.reSet;
 
 
         function comp(x, y) {
@@ -42,6 +44,7 @@ $(function () {
             }
         }//匹配默认值
 
+        //默认表格渲染
         if (Type(tbs) === "json") {
                 comp(tbs, args_table);
                 table.render(tbs);
@@ -53,7 +56,7 @@ $(function () {
                     }
                 }
             }//TABLE表格创建
-
+        //默认日期选择器渲染
         if (das && das !== false) {
                 if(das === true){
                     a(args_date);
@@ -77,7 +80,22 @@ $(function () {
                 }
             }//DATE创建
 
+        if(res){
+            var $ = layui.$,type = res.type || "search", active = {};
+            active[type] = function(){
+                res.vars && res.vars();
+                //执行重载
+                table.reload(res.tableId || "table", {
+                    url:res.url
+                    ,where: res.where || {}
+                });
+            }
 
+            $(".layui-table-tool .layui-btn").click(function(){
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+        }
     });
 });
 

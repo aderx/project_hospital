@@ -97,7 +97,7 @@
         <div class="main-layout-body">
             <!--tab 切换-->
             <div class="layui-tab layui-tab-brief main-layout-tab" lay-filter="tab" lay-allowClose="true" style="background:#fff;">
-                <ul class="layui-tab-title" style="margin-right:40px;">
+                <ul class="layui-tab-title navs" style="margin-right:40px;">
                     <li class="layui-this welcome" id="refresh_home">系统主页</li>
                 </ul>
                 <!--右侧折叠副列表-->
@@ -136,17 +136,7 @@
     layui.use('element',function(){
         var element = layui.element;
     })
-    $("#refresh_home").on('click',function(){
-        var homes = document.getElementById('home') ;
-        if($("#refresh_home").hasClass("layui-this")){
-            try{
-                homes.contentWindow.location.reload();
-            }catch (er){
-                alert("当前页面显示不正确，可能会出现显示错乱，请使用服务器访问当前页面！");
-                console.error("此功能无法正常在本地使用，请使用服务器访问！");
-            }
-        }
-   })
+
     window.onload = function(){
         //$(".layui-icon layui-unselect layui-tab-close").on('click',function(){
             var homes = document.getElementById('home') ;
@@ -159,10 +149,25 @@
                 }
             }
         //})
-        // if($('.layui-nav-tree .layui-nav-child').length >0 && $('.layui-nav-tree .layui-nav-child').prev().children("span").length <= 0){
-        //     location.reload();
-        // }//判断当前页面渲染是否正确，不正确的话将刷新页面重新渲染
-//展开第一项列表
+        if($('.layui-nav-tree .layui-nav-child').length >0 && $('.layui-nav-tree .layui-nav-child').prev().children("span").length <= 0){
+            location.reload();
+        }//判断当前页面渲染是否正确，不正确的话将刷新页面重新渲染
+        $(".navs li").on('click',function(){
+            var text = $('.layui-tab-title').find('.layui-this').text();
+            text = text.split('ဆ')[0];
+            var id = $('.layui-tab-title').find('.layui-this').attr('lay-id');
+            var homes = document.getElementById('home') ;
+            $(".navs li[lay-id="+id+"] ")
+            if($("#refresh_home").hasClass("layui-this")){
+                try{
+                    homes.contentWindow.location.reload();
+                }catch (er){
+                    alert("当前页面显示不正确，可能会出现显示错乱，请使用服务器访问当前页面！");
+                    console.error("此功能无法正常在本地使用，请使用服务器访问！");
+                }
+            }
+        })
+        //展开第一项列表
         try{
             var f = $.cookie("f");
             $.cookie("f", null);
@@ -170,7 +175,7 @@
                 $("a[data-id='"+Number(f)+"']")[0].click();
             }//读取cookies跳转页面
         }catch(er){
-            console.log("no COOKIES")
+            console.log("no COOKIES");
         }
     }
 </script>

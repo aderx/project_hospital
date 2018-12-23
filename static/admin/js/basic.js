@@ -153,6 +153,9 @@ function setStorageCurMenu() {
     var curMenu = sessionStorage.getItem('curMenu');
     var text = $('.layui-tab-title').find('.layui-this').text();
     text = text.split('ဆ')[0];
+    if(text === "系统主页"){
+        return;
+    }
     var url = $('.layui-tab-content').find('.layui-show').find('.weIframe').attr('src');
     var id = $('.layui-tab-title').find('.layui-this').attr('lay-id');
     curMenu = {
