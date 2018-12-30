@@ -3614,19 +3614,19 @@ var main_list =
                             "items":[
                                 {
                                     "title": "LOGO设置",
-                                    "url": "./table.html",
+                                    "url": "./system/system-setup/LOGO-set.html",
                                     "id": "75",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "报表抬头设置",
-                                    "url": "./table.html",
+                                    "url": "./system/system-setup/bbtt-set.html",
                                     "id": "76",
                                     "shiro": "a"
                                 },
                                 {
                                     "title": "设备标签抬头设置",
-                                    "url": "./table.html",
+                                    "url": "./system/system-setup/equip-head-set.html",
                                     "id": "760",
                                     "shiro": "a"
                                 },
