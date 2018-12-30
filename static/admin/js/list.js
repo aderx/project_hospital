@@ -2392,19 +2392,19 @@ var main_list =
                                         },
                                         {
                                             "title": "项目论证结果",
-                                            "url": "./table.html",
+                                            "url": "./beneft/prior-argument/argument-result.html",
                                             "id": "53",
                                             "shiro": "a"
                                         },
                                         {
                                             "title":"项目财务指标",
-                                            "url":"./table.html",
+                                            "url":"./beneft/prior-argument/financial-index.html",
                                             "id":"54",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"设备与方案关联",
-                                            "url":"./table.html",
+                                            "url":"./beneft/prior-argument/scheme-association.html",
                                             "id":"55",
                                             "shiro":"a"
                                         }
@@ -2419,7 +2419,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"设备评价等级列表",
-                                            "url":"./table.html",
+                                            "url":"./beneft/prior-argument/evaluate-list.html",
                                             "id":"57",
                                             "shiro":"a"
                                         }
@@ -2449,25 +2449,25 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"开机率",
-                                            "url":"./table.html",
+                                            "url":"./beneft/usage-situation/boot-rate.html",
                                             "id":"510",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"机时利用率",
-                                            "url":"./table.html",
+                                            "url":"./beneft/usage-situation/utilization-ratio.html",
                                             "id":"511",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"空转率",
-                                            "url":"./table.html",
+                                            "url":"./beneft/usage-situation/idling-rate.html",
                                             "id":"512",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"工作日平均闲置时间",
-                                            "url":"./table.html",
+                                            "url":"./beneft/usage-situation/average-time.html",
                                             "id":"513",
                                             "shiro":"a"
                                         }
@@ -2475,14 +2475,14 @@ var main_list =
                                 },
                                 {
                                     "title":"效率等级",
-                                    "url":"./table.html",
+                                    "url":"./beneft/usage-situation/efficiency-level.html",
                                     "icon":"clipboard-list",
                                     "id":"514",
                                     "shiro":"a"
                                 },
                                 {
                                     "title":"效率等级设置",
-                                    "url":"./table.html",
+                                    "url":"./beneft/usage-situation/set-efficiency-level.html",
                                     "icon":"clipboard-list",
                                     "id":"515",
                                     "shiro":"a"
@@ -2504,13 +2504,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"医疗设备成本效益分析评价",
-                                            "url":"./table.html",
+                                            "url":"./beneft/cost-benefit/analysis-evaluation.html",
                                             "id":"518",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"PACS明细查询",
-                                            "url":"./table.html",
+                                            "url":"./beneft/cost-benefit/pacs-check.html",
                                             "id":"519",
                                             "shiro":"a"
                                         }
@@ -2525,13 +2525,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"设备成本科目预设",
-                                            "url":"./table.html",
+                                            "url":"./beneft/cost-benefit/set-equipmentcost-subject.html",
                                             "id":"521",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"设备收入科目预设",
-                                            "url":"./table.html",
+                                            "url":"./beneft/cost-benefit/set-equipment-income.html",
                                             "id":"522",
                                             "shiro":"a"
                                         },
@@ -2552,7 +2552,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"内置科目",
-                                            "url":"./table.html",
+                                            "url":"./beneft/cost-benefit/internal-subjects.html",
                                             "id":"525",
                                             "shiro":"a"
                                         },
@@ -2587,19 +2587,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"流失情况监测",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/wastage.html",
                                             "id":"530",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"增减变动监测",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/increase-decrease.html",
                                             "id":"531",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"论证数据监测",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/argument-data.html",
                                             "id":"532",
                                             "shiro":"a"
                                         }
@@ -2614,7 +2614,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"经济指标动态分析报告",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/economic-indicator.html",
                                             "id":"534",
                                             "shiro":"a"
                                         }
@@ -2629,13 +2629,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"使用情况统计表",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/service-condition.html",
                                             "id":"536",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"经济效益分析和评价报告",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/economic-benefit.html",
                                             "id":"537",
                                             "shiro":"a"
                                         }
@@ -2650,7 +2650,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"设备工作量设置",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/device-work.html",
                                             "id":"539",
                                             "shiro":"a"
                                         }
@@ -2673,7 +2673,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"收入流失分析",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/income-lose.html",
                                             "id":"542",
                                             "shiro":"a"
                                         }
@@ -2688,7 +2688,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"损耗超支分析",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/overspending.html",
                                             "id":"544",
                                             "shiro":"a"
                                         }
@@ -2703,7 +2703,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"经济损失指标分析",
-                                            "url":"./table.html",
+                                            "url":"./beneft/sz-supervise/economic-loss.html",
                                             "id":"546",
                                             "shiro":"a"
                                         }

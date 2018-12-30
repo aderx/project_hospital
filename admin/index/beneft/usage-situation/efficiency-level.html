@@ -5,7 +5,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>设备评价等级列表</title>
+    <title>效率等级</title>
     <link rel="stylesheet" type="text/css" href="../../../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../../../static/admin/css/admin.css"/>
     <link rel="stylesheet" href="../../../../static/admin/css/all.min.css"/>
@@ -14,7 +14,11 @@
     <script type="text/javascript" src="../../../../static/admin/js/jquery-1.11.3.min.js"></script>
     <![endif]-->
     <script src="../../../../static/admin/js/basic.js"></script>
-
+    <style>
+        .setW{
+            width: 80px;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,8 +38,8 @@
     <div class="hidden-xs" id="hideXs">
         <div class="layui-row">
             <div class="col-xs-12" style="padding:0">
-                <form class="layui-form layui-form-pane maxCont" action="">
-                    <div class="layui-inline xs-100 mar10-0 pad0-10">
+                <form class="layui-form layui-form-pane hidden-xs" id="moreBar" action="">
+                    <div class="layui-inline xs-100 mar10-0 pad0-10 setW">
                         <select>
                             <option disabled>日期类型</option>
                             <option>日</option>
@@ -43,27 +47,33 @@
                             <option>年</option>
                         </select>
                     </div>
-                    <div class="layui-inline xs-100 mar10-0 pad0-10">
-                        <input type="text" name="date" id="date" class="layui-input" >
+                    <div class="layui-input-inline  xs-100 mar10-0 pad0-10">
+                        <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-inline xs-100 mar10-0 pad0-10">
-                        <select>
-                            <option disabled>效益评价结果</option>
-                            <option selected>效益良好</option>
-                            <option>效益一般</option>
-                            <option>效益较差</option>
-                        </select>
-                    </div>
-                    <div class="layui-inline xs-100 mar10-0 pad0-10">
-                        <select>
-                            <option>科室</option>
-                            <option>CT室</option>
-                            <option>核磁共振室</option>
-                            <option>摄片室</option>
+
+                    <div class="layui-input-inline  xs-100 mar10-0 pad0-10">
+                        <select name="modules" lay-verify="required" lay-search="">
+                            <option value="">全部</option>
+                            <option value="1">效率等级</option>
+                            <option value="2">超负荷运转</option>
+                            <option value="3">高效运转</option>
+                            <option value="4">中效运转</option>
+                            <option value="5">低效运转</option>
+                            <option value="6">全部</option>
                         </select>
                     </div>
                     <div class="layui-input-inline  xs-100 mar10-0 pad0-10">
-                        <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="demo1">查找</button>
+                        <select name="modules" lay-verify="required" lay-search="">
+                            <option value="">输入搜索部门</option>
+                            <option value="1">CT室</option>
+                            <option value="2">核磁公正室</option>
+                            <option value="3">摄片室</option>
+                            <option value="4">心内导管室</option>
+                            <option value="5">心外ICU</option>
+                        </select>
+                    </div>
+                    <div class="layui-input-inline  xs-100 mar10-0 pad0-10">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo1">查找</button>
                     </div>
                 </form>
             </div>
@@ -76,32 +86,29 @@
     addTable ={
         table:{
             cols: [[ //表头
-                {field: 'authorized_person', title: '使用科室', minWidth: 200}
-                , {field: 'authorized_depart', title: '设备编号', minWidth: 200,sort:true}
-                , {field: 'authorized_depart', title: '设备名称', minWidth: 200}
-                , {field: 'authorized_depart', title: '规格', minWidth: 200}
-                , {field: 'authorized_depart', title: '启用日期', minWidth: 200,sort:true}
-                , {field: 'authorized_depart', title: '使用年份', minWidth: 200,sort:true}
-                , {field: 'authorized_depart', title: '诊疗单位', minWidth: 200}
-                , {field: 'authorized_depart', title: '实际工作量', minWidth: 200,sort:true}
-                , {field: 'authorized_depart', title: '评价等级', minWidth: 200,sort:true}
+                {field: 'equip_number', title: '设备编号',width:"30%",minWidth: 150}
+                ,{field: 'equip_name', title: '设备名称',width:"30%", minWidth: 150}
+                , {field: 'utilization-ratio', title: '机时利用率', minWidth: 150,sort:true}
+                , {field: 'eff-level', title: '效率等级', minWidth: 150,sort:true}
             ]]
-            , height: "full-25"
             , "data": [
                 {
-                    "authorized_person":"核磁共振室",
-                    "authorized_depart":"160232810001",
-                    "open_time":"MRI",
-                    "close_time":"设备1",
-                    "authorizer":"88888888",
-                    "time":"2018-12-1 00:00:00"
-                },{
-                    "authorized_person":"核磁共振室",
-                    "authorized_depart":"160232810001",
-                    "open_time":"MRI",
-                    "close_time":"设备1",
-                    "authorizer":"88888888",
-                    "time":"2018-12-1 00:00:00"
+                    "equip_number": "62583289",
+                    "equip_name": "CT",
+                    "utilization-ratio": "机时利用率",
+                    "eff-level": "1"
+                }
+                ,{
+                    "equip_number": "62583289",
+                    "equip_name": "CT",
+                    "utilization-ratio": "机时利用率",
+                    "eff-level": "2"
+                }
+                ,{
+                    "equip_number": "62583289",
+                    "equip_name": "CT",
+                    "utilization-ratio": "机时利用率",
+                    "eff-level": "3"
                 }]
             , done: function (obj) {
                 tableFunc({
@@ -115,14 +122,10 @@
                 })
             }
         },
-        date:{
-            elem:'#date'
-        },
-        form:{
-
+        date :{
+            elem : "#date"
         }
     }
 </script>
 </body>
-
 </html>
