@@ -251,7 +251,9 @@ var func = {//this = obj
             cc(value);
         }else if(Type(value) === "array"){
             for(var i=0;i<value.length;i++){
-                cc(value[i]);
+                (function(i){
+                    cc(value[i]);
+                })(i)
             }
         }else{
             console.error("toolFunc函数参数填写错误！");

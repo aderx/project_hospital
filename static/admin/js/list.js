@@ -3625,6 +3625,12 @@ var main_list =
                                     "shiro": "a"
                                 },
                                 {
+                                    "title": "设备标签抬头设置",
+                                    "url": "./table.html",
+                                    "id": "760",
+                                    "shiro": "a"
+                                },
+                                {
                                     "title": "文件版本设置",
                                     "url": "./system/system-setup/DOCED-setup.html",
                                     "id": "77",
