@@ -14,14 +14,6 @@
     <![endif]-->
     <script src="../../../../static/admin/js/basic.js"></script>
     <style type="text/css">
-        .title{
-            height:50px;
-            background-color:#eeeeee;
-            border-radius:5px;
-            margin-top:20px;
-            line-height:50px;
-            font-size:18px;
-        }
         .layui-form-item{
             margin-top:30px;
         }
@@ -30,31 +22,25 @@
 <body>
 
 <div class="layui-row">
-    <form class="layui-form layui-form-pane" action="">
+    <form class="layui-form layui-form-pane" action="" enctype="multipart/form-data">
         <div class="layui-row">
             <div class="col-xs-12">
-                <div class="title"><span style="margin-left:15px;">文件版本设置</span></div>
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>文件版本设置</legend>
+                </fieldset>
             </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">单位代码</label>
+                    <label class="layui-form-label">LOGO</label>
                     <div class="layui-input-block">
-                        <input type="text" name="" autocomplete="off" value="YTYHD" class="layui-input">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <div class="layui-form-item">
-                    <label class="layui-form-label">版本号</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="" autocomplete="" value="1" class="layui-input">
+                        <input type="file" accept="image/*" name="logoFile" autocomplete="off" class="layui-input" style="padding:5px;">
                     </div>
                 </div>
             </div>
             <div class="col-xs-12">
                 <div class="layui-form-item">
                     <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit="" lay-filter="">提交</button>
+                        <button class="layui-btn" lay-submit="" lay-filter="submit">提交</button>
                         <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                     </div>
                 </div>
@@ -67,6 +53,15 @@
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
+    $(function(){
+        $("button[lay-filter='submit']").on('click',function(){
+            JQajax({
+                url:"/logo/setLogo",
+                data:{"logoFile":$("input[name='logoFile']").val()},
+                method:"POST"
+            })
+        })
+    })
 </script>
 </body>
 </html>

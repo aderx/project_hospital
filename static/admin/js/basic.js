@@ -112,6 +112,27 @@ function Type(value){
     }
 }
 
+function JQajax(value){
+    if(!value.data || !value.url){
+        return false;
+    }
+    var data = function(callback){
+        $.ajax({
+            url:value.url,
+            method:value.method || "GET",
+            data:value.data,
+            success:callback || function(data){
+                if(data.code === 0){
+                    alert("提交成功！");
+                }else if(data.code === 1){
+                    alert("提交失败，请重试！");
+                }
+
+            }
+        })
+    }
+   data(value.success)
+}
 /**
  *@todo 本地存储 localStorage
  * 为了保持统一，将sessionStorage更换为存储周期更长的localStorage
