@@ -26,7 +26,7 @@
 <script type="text/html" id="toolBar">
     <div class="addBtn">
         <a class="layui-btn layui-btn-xs" lay-event="add"><i class="fas fa-plus"></i></a>
-        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="edit"><i class="fas fa-trash-alt"></i></a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del"><i class="fas fa-trash-alt"></i></a>
     </div>
     <div class="visible-xs" id="check">
         <a class="layui-btn layui-btn-primary layui-btn-fluid layui-btn-sm" lay-event="dataSearch">数据检索</a>
@@ -94,20 +94,27 @@
             , done: function (obj) {
                 tableFunc({
                     "obj":obj,
-                    "toolFunc":[
-                        // {
-                        //     "tool":"toolbar",
-                        //     "filter":"table1",
-                        //     "event":"add",
-                        //     "title":"添加内容",
-                        //     "type":2,
-                        //     "content":"./child/set-equipmentcost-subject-add.html"
-                        // },
+                    // "toolFunc":[
+                    //     {
+                    //         tool:"toolbar",
+                    //         title:"数据查找",
+                    //         event:"dataSearch",
+                    //         content:$("#hideXs")
+                    //     }
+                    // ]
+                    "toolFunc":[{
+                        tool:"toolbar",
+                        title:"添加",
+                        type:2,
+                        event:"add",
+                        content:"./child/equipmentcost-add.html"
+                    },
                         {
-                            tool:"toolbar",
-                            title:"数据查找",
-                            event:"dataSearch",
-                            content:$("#hideXs")
+                            type:2,
+                            title:"编辑",
+                            event: "edit",
+                            content:"./child/equipmentcost-edit.html"
+
                         }
                     ]
                 })

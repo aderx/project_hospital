@@ -1576,7 +1576,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"计划制定",
-                                            "url":"./table.html",
+                                            "url":"./safe/application-training/plan-formulation.html",
                                             "id":"43929",
                                             "shiro":"a"
                                         }
@@ -1603,7 +1603,7 @@ var main_list =
                                         },
                                         {
                                             "title":"人员录入",
-                                            "url":"./table.html",
+                                            "url":"./safe/application-training/personnel-input.html",
                                             "id":"43933",
                                             "shiro":"a"
                                         }
@@ -1645,7 +1645,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"计划查询",
-                                            "url":"./table.html",
+                                            "url":"./safe/application-training/plan-query.html",
                                             "id":"43939",
                                             "shiro":"a"
                                         },
@@ -1687,7 +1687,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"可疑报告",
-                                            "url":"./table.html",
+                                            "url":"./safe/medical-incident/suspicious-report.html",
                                             "id":"43944",
                                             "shiro":"a"
                                         },
@@ -1720,7 +1720,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"报告查询",
-                                            "url":"./table.html",
+                                            "url":"./safe/medical-incident/report-query.html",
                                             "id":"43949",
                                             "shiro":"a"
                                         },
@@ -2215,7 +2215,7 @@ var main_list =
                             'items':[
                                 {
                                     "title":"使用说明",
-                                    "url":"./table.html",
+                                    "url":"./safe/facturer-management/instructions.html\n",
                                     "icon":"info",
                                     "id":"439929",
                                     "shiro":"a"
@@ -2229,13 +2229,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"经营/生产许可证",
-                                            "url":"./table.html",
+                                            "url":"./safe/facturer-management/business-license.html",
                                             "id":"439931",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"产品注册证",
-                                            "url":"./table.html",
+                                            "url":"./safe/facturer-management/registration-certificate.html",
                                             "id":"439932",
                                             "shiro":"a"
                                         }
@@ -2250,13 +2250,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"许可证列表",
-                                            "url":"./table.html",
+                                            "url":"./safe/facturer-management/license-list.html",
                                             "id":"439934",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"注册证列表",
-                                            "url":"./table.html",
+                                            "url":"./safe/facturer-management/registration-list.html",
                                             "id":"439935",
                                             "shiro":"a"
                                         }
@@ -2264,7 +2264,7 @@ var main_list =
                                 },
                                 {
                                     "title":"综合验证",
-                                    "url":"./table.html",
+                                    "url":"./safe/facturer-management/comprehensive-verification.html",
                                     "icon":"check",
                                     "id":"439936",
                                     "shiro":"a"

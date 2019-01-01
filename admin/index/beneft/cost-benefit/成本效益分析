@@ -117,9 +117,16 @@
                   ]
         问题：是否需要添加删除按钮
         未完成：添加页面，功能还不完善(set-equipmentcost-subject-add.html)
-        bug:addTable添加多个按钮事件室会默认显示最后一个（js闭包性，for循环后执行最后一个），路径性弹窗会报错addTable not found（原因未知）
        首页面已完成；
-       内部跳转页面未完成；
+           chile:
+                a、添加页面（equipmentcost-add.html）
+                    1)、科室选择（department-select.html）
+                    2）、设备选择（equipment-select.html）
+                    2)、成本明细项添加（detailed-add.html）
+                b、编辑页面（equipmentcost-edit.html）
+                    1)、编辑内编辑（equipent-edit-edit.html）
+                    此页面功能未完善：科室选择，设备选择，日期选择只读，只有金额可以修改。
+
 
     2、设备收入科目预设（set-equipment-income.html）
           1、设备成本科目预设(set-equipmentcost-subject.html)
@@ -132,14 +139,20 @@
                                 }
                           ]
             首页面已完成
-            其他问题同“设备成本科目预设”
-
+            a、添加页面(equipmentincome-add.html)
+                  同1设备成本科目预设
+                  1)、科室选择（department-select.html）
+                  2）、设备选择（equipment-select.html）
+                  2)、成本明细项添加（detailed-add.html）
+            b、编辑页面（equipmentcost-edit.html）
+                    同1设备成本科目预设
+                  1)、编辑内编辑（equipent-edit-edit.html）
+                      此页面功能未完善：科室选择，设备选择，日期选择只读，只有金额可以修改。
     3、设备成本属性设置
         暂无页面参考
 
 
-
-三成本效益基础管理
+三、成本效益基础管理
     1、内置科目(internal-subjects.html)
         已完成；
 
@@ -147,3 +160,8 @@
         暂无页面参考
     3、医疗风险基金设置
         暂无页面参考
+
+
+
+ 大体页面已完成，内部功能细节未做，参数传递未做（主要是成本效益设置内不页面跳转较多，功能细节比较复杂），成本效益设置中的
+ 设备成本科目预设 和 设备收入科目预设的移动端搜索显示有bug

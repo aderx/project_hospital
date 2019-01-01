@@ -284,6 +284,7 @@ var func = {//this = obj
             layui.use('table',function() {
                 var table = layui.table,layer = layui.layer,filt = vas.filter || "table1",tool = vas.tool || "tool";
                 table.on(''+tool+'(' + filt + ')', function (obj) {
+                    console.log(table);
                     console.log(22);
                     var w = document.body.clientWidth - 20
                         , h = document.body.clientHeight - 20;

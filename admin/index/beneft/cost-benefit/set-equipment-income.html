@@ -25,13 +25,13 @@
 
 <script type="text/html" id="toolBar">
     <div class="addBtn">
-        <a class="layui-btn layui-btn-xs" lay-event="add"><i class="fas fa-plus"></i></a>
-        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="edit"><i class="fas fa-trash-alt"></i></a>
+        <a class="layui-btn layui-btn-xs"  lay-event="add"><i class="fas fa-plus"></i></a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del"><i class="fas fa-trash-alt"></i></a>
     </div>
-    <div class="visible-xs" id="check">
-        <a class="layui-btn layui-btn-primary layui-btn-fluid layui-btn-sm" lay-event="dataSearch">数据检索</a>
+    <div class="visible-xs" id="check" >
+        <a class="layui-btn layui-btn-primary layui-btn-fluid layui-btn-sm" lay-event="dataSearch" id="dataSearch">数据检索</a>
     </div>
-    <div class="hidden-xs" id="hideXs">
+    <div class="hidden-xs" id="hideXs"  lay-filter="table2">
         <div class="layui-row">
             <div class="col-xs-12" style="padding:0">
                 <form class="layui-form layui-form-pane maxCont" action="">
@@ -50,7 +50,7 @@
     </div>
 </script>
 <script type="text/html" id="bar">
-    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="edit" name="modify">编辑</a>
 </script>
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
@@ -62,7 +62,7 @@
                 , {field: 'bmName', title: '部门名称',width:"30%", minWidth: 150}
                 , {field: 'eqName', title: '设备名称',width:"30%", minWidth: 150}
                 , {field: 'eqXh', title: '设备型号',width:"25%",minWidth: 150}
-                , {fixed:'right',minWidth: 80,align:'center',toolbar: "#bar"}
+                , {fixed:'right',minWidth: 80,align:'center',toolbar: "#bar",name: "eqId"}
             ]]
             , height: "full-25"
             , "data": [
@@ -94,29 +94,33 @@
             , done: function (obj) {
                 tableFunc({
                     "obj":obj,
-                    "toolFunc":[
+                    // "toolFunc":[
+                    //     {
+                    //         "tool":"toolbar",
+                    //         "title":"数据查找",
+                    //         "event":"dataSearch",
+                    //         "content":$("#hideXs")
+                    //     }
+                    // ],
+                    "toolFunc":[{
+                        tool:"toolbar",
+                        title:"添加",
+                        type:2,
+                        event:"add",
+                        content:"./child/equipmentincome-add.html"
+                    },
                         {
-                            "tool":"toolbar",
-                            "filter":"table1",
-                            "event":"add",
-                            "title":"添加内容",
-                            "type":2,
-                            "content":"./child/set-equipmentcost-subject-add.html"
-                        },
-                        {
-                            tool:"toolbar",
-                            title:"数据查找",
-                            event:"dataSearch",
-                            content:$("#hideXs")
+                            type:2,
+                            event: "edit",
+                            content:"./child/equipmentcost-edit.html"
+
                         }
                     ]
                 })
             }
+
         }
     }
-</script>
-<script>
-
 </script>
 </body>
 
