@@ -136,7 +136,7 @@
 <script>
     layui.use('element',function(){
         var element = layui.element;
-    })
+    });
 
     window.onload = function(){
             var homes = document.getElementById('home');
@@ -157,7 +157,7 @@
                     console.error("此功能无法正常在本地使用，请使用服务器访问！");
                 }
             },10)
-        })
+        });
         //展开第一项列表
         try{
             var f = $.cookie("f");
