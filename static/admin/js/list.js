@@ -1534,19 +1534,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"维修发票登记",
-                                            "url":"./table.html",
+                                            "url":"./safe/maintenance-management/invoice-registration.html",
                                             "id":"43924",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"维修发票审核",
-                                            "url":"./table.html",
+                                            "url":"./safe/maintenance-management/invoice-audit.html",
                                             "id":"43925",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"维修发票查询",
-                                            "url":"./table.html",
+                                            "url":"./safe/maintenance-management/invoice-inquiry.html",
                                             "id":"43926",
                                             "shiro":"a"
                                         }

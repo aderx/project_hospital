@@ -1,3 +1,30 @@
+维修管理（maintenance-management）
+    1、设备维修
+        1）、报修
+        2）、维修任务
+        3）、维修费申请
+        4）、补录维修报告
+
+    2、维修合同
+        1）、合同录入
+        2）、合同支付
+        3）、合同查询
+
+    3、维修配件
+        1）、配件申购
+        2）、配件入库
+        3）、入库查询
+        4）、出库查询
+        5）、配件出库
+        6）、配件字典
+
+    4、维修发票
+        1）、维修发票登记              ./safe/manance-management/invoice-registration.html
+        2）、维修发票审核              ./safe/maintenance-management/invoice-audit.html
+        3）、维修发票查询              ./safe/maintenance-management/invoice-inquiry.html
+
+
+
 应用培训（application-training）
     1、人员培训
         1).计划制定                   ./safe/application-training/plan-formulation.html
@@ -41,9 +68,3 @@
 
         3）、工程师
             a、设置外院维修工程师
-
-
-
-
-    待解决：
-        1、xxx-xxx的日期验证有问题

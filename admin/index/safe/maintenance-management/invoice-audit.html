@@ -5,7 +5,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>设备收入科目预设</title>
+    <title>维修发票审核</title>
     <link rel="stylesheet" type="text/css" href="../../../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../../../static/admin/css/admin.css"/>
     <link rel="stylesheet" href="../../../../static/admin/css/all.min.css"/>
@@ -24,10 +24,6 @@
 </div>
 
 <script type="text/html" id="toolBar">
-    <div class="addBtn">
-        <a class="layui-btn layui-btn-xs"  lay-event="add"><i class="fas fa-plus"></i></a>
-        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del"><i class="fas fa-trash-alt"></i></a>
-    </div>
     <div class="visible-xs" id="check" >
         <a class="layui-btn layui-btn-primary layui-btn-fluid layui-btn-sm" lay-event="dataSearch" id="dataSearch">数据检索</a>
     </div>
@@ -36,10 +32,13 @@
             <div class="col-xs-12" style="padding:0">
                 <form class="layui-form layui-form-pane maxCont" action="">
                     <div class="layui-inline xs-100 mar10-0 pad0-10">
-                        <input class="layui-input" name="search" placeholder="部门名称">
+                        <input class="layui-input" name="search" placeholder="发票号">
                     </div>
                     <div class="layui-inline xs-100 mar10-0 pad0-10">
-                        <input class="layui-input" name="search" placeholder="设备名称">
+                        <input class="layui-input" name="search" placeholder="维修设备">
+                    </div>
+                    <div class="layui-inline xs-100 mar10-0 pad0-10">
+                        <input class="layui-input" name="search" placeholder="维修单号">
                     </div>
                     <div class="layui-input-inline  xs-100 mar10-0 pad0-10" align="center">
                         <button class="layui-btn" data-type="reload">搜索</button>
@@ -50,7 +49,7 @@
     </div>
 </script>
 <script type="text/html" id="bar">
-    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="edit" name="modify">编辑</a>
+    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="edit" name="modify">审核</a>
 </script>
 <script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
@@ -59,61 +58,40 @@
         table:{
             cols: [[ //表头
                 {type:"checkbox"}
-                , {field: 'bmName', title: '部门名称',width:"30%", minWidth: 150}
-                , {field: 'eqName', title: '设备名称',width:"30%", minWidth: 150}
-                , {field: 'eqXh', title: '设备型号',width:"25%",minWidth: 150}
-                , {fixed:'right',minWidth: 80,align:'center',toolbar: "#bar",name: "eqId"}
+                , {field: 'repair_num', title: '维修单号', minWidth: 120}
+                , {field: 'repair_equi', title: '维修设备', minWidth: 120}
+                , {field: 'invoice_num', title: '发票号',minWidth: 180}
+                , {field: 'invoice_amount', title: '发票金额', minWidth: 120}
+                , {field: 'register_person', title: '登记人', minWidth: 120}
+                , {field: 'register_time', title: '登记时间',minWidth: 180}
+                , {fixed:'right',width:80,minWidth: 80,align:'center',toolbar: "#bar",name: "eqId"}
             ]]
             , height: "full-25"
             , "data": [
                 {
-                    "bmName": "CT室",       //部门名称
-                    "eqName": "cs设备编号4",     //设备名称
-                    "eqXh": "测试型号1",         //设备编号
+                    "repair_num": "20181200003",       //维修单号
+                    "repair_equi": "TDP治疗机",         //维修设备
+                    "invoice_num": "1231231231231231",            //发票号
+                    "invoice_amount": "40.0",       //发票金额
+                    "register_person": "Admin",     //登记人
+                    "register_time": "2018-12-11 18:58:06", //登记时间
                     "eqId": "10000"              //设备id，不显示，用于点击编辑按钮传入到下个页面
-                },
-                {
-                    "bmName": "CT室",
-                    "eqName": "cs设备编号2",
-                    "eqXh": "测试型号2",
-                    "eqId": "10001"
-                },
-                {
-                    "bmName": "CT室",
-                    "eqName": "cs设备编号3",
-                    "eqXh": "xx3",
-                    "eqId": "10003"
-                },
-                {
-                    "bmName": "CT室",
-                    "eqName": "cs设备编号5",
-                    "eqXh": "xx5",
-                    "eqId": "10006"
                 }
             ]
             , done: function (obj) {
                 tableFunc({
                     "obj":obj,
-                    // "toolFunc":[
-                    //     {
-                    //         "tool":"toolbar",
-                    //         "title":"数据查找",
-                    //         "event":"dataSearch",
-                    //         "content":$("#hideXs")
-                    //     }
-                    // ],
-                    "toolFunc":[{
-                        tool:"toolbar",
-                        title:"添加",
-                        type:2,
-                        event:"add",
-                        content:"./child/equipmentincome-add.html"
+                    "toolFunc":[    {
+                        "tool":"toolbar",
+                        "title":"数据查找",
+                        "event":"dataSearch",
+                        "content":$("#hideXs")
                     },
                         {
                             type:2,
-                            title:"编辑",
                             event: "edit",
-                            content:"./child/equipmentcost-edit.html"
+                            "title":"审核",
+                            content:"./child/examine.html"
 
                         }
                     ]
