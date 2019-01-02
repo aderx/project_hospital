@@ -49,21 +49,19 @@
     </form>
 </div>
 
-
-<script src="../../../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../../../static/admin/js/tableNormal.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    $(function(){
-        $("button[lay-filter='submit']").on('click',function(){
-            JQajax({
-                url:"/logo/setLogo",
-                data:{name:"logoFile",file:$("input[name='logoFile']").val()},
-                processData:false,
-                contentType:"multipart/form-data",
-                method:"POST"
-            })
-        })
-    })
+    renderMod = {
+        form:{
+            submit:{
+                filter:"submit",
+                form:{
+                    switch:"html",
+                    url:"#",
+                    data:["logoFile","name"]
+                }
+            }
+        }
+    }
 </script>
 </body>
 </html>
