@@ -1119,13 +1119,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"风险分值定义",
-                                            "url":"./safe/risk-management/risk-rating.html",
+                                            "url":"./table.html",
                                             "id":"42",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"风险等级",
-                                            "url":"./safe/risk-managment/risk-rating.html",
+                                            "url":"./safe/risk-management/risk-rating.html",
                                             "id":"43",
                                             "shiro":"a"
                                         }

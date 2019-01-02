@@ -1,4 +1,8 @@
-维修管理（maintenance-management）
+一、风险管理（废弃）（risk-management）
+    1、风险分析
+        1）、风险等级                 ./safe/risk-management/risk-rating.html
+
+二、维修管理（maintenance-management）
     1、设备维修
         1）、报修
         2）、维修任务
@@ -25,19 +29,21 @@
 
 
 
-应用培训（application-training）
+三、应用培训（application-training）
     1、人员培训
         1).计划制定                   ./safe/application-training/plan-formulation.html
         2).计划查询                    ./safe/application-training/plan-query.html
         3)、人员录入                   ./safe/application-training/personnel-input.html
 
-医疗事件（medical-incident）
+四、医疗事件（medical-incident）
     1、安全（不良）事件
         1）、可疑报告                  ./safe/medical-incident/suspicious-report.html
     2、统计查询
         1）、报告查询                  ./safe/medical-incident/report-query.html
 
-厂商管理（facturer-management）
+五、质量管理（废弃）
+
+六、厂商管理（废弃）（facturer-management）
     1、资质审核
         1）、使用说明                 ./safe/facturer-management/instructions.html
 

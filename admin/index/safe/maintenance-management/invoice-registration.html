@@ -24,9 +24,11 @@
         .sign{
             color:red;
         }
-        .layui-textarea{
-            min-height: 40px;
-            height: 40px;
+        #btn{
+            color: #00b5f9;
+            display: block;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -67,7 +69,7 @@
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-block">
-                    <button class="layui-btn  layui-btn-primary"><a href="./child/externalcourt-repair.html" style="color: #00b5f9">使用科室直接院外报修</a></button>
+                    <button class="layui-btn  layui-btn-primary" style="padding: 0px 5px;"><a id="btn" href="./child/externalcourt-repair.html">使用科室直接院外报修</a></button>
                 </div>
             </div>
         </div>
@@ -131,7 +133,7 @@
                 type:2,
                 title:'维修单号',
                 content:'./child/maintenance-number.html' ,
-                area:['96%','90%'],
+                area:['95%','95%'],
                 btn:['选择','取消']
             });
             return false;

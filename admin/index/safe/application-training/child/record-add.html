@@ -96,7 +96,7 @@
 
         <div class="col-xs-12 col-sm-6">
             <div class="layui-form-item">
-                <label class="layui-form-label">实践成绩<</label>
+                <label class="layui-form-label">实践成绩</label>
                 <div class="layui-input-block">
                     <input type="text" name="" autocomplete="" class="layui-input">
                 </div>
@@ -110,7 +110,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">设备名称</label>
                 <div class="layui-input-block">
-                    <button class="layui-btn layui-btn-normal" style="margin-left:35px;margin-top: 0px;" id="layerBtn3">选择</button>
+                    <button class="layui-btn layui-btn-normal" style="margin-left:35px;margin-top: 0px;" id="layerBtn">选择</button>
                 </div>
             </div>
             <div class="layui-form-item">
@@ -213,7 +213,7 @@
             layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
         });
         //弹出框设置
-        $('#layerBtn3').on('click',function(){
+        $('#layerBtn').on('click',function(){
             layer.open({
                 type:2,
                 title:'设备名称',
