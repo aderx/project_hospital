@@ -1215,19 +1215,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"报修",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/repair.html",
                                             "id":"415",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"维修任务",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/servicing-task.html",
                                             "id":"416",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"维修费申请",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/repair-apply.html",
                                             "id":"417",
                                             "shiro":"a"
                                         },
@@ -1239,7 +1239,7 @@ var main_list =
                                         },
                                         {
                                             "title":"补录维修报告",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/additional-record.html",
                                             "id":"419",
                                             "shiro":"a"
                                         }
@@ -1403,19 +1403,19 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"合同录入",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/contract-input.html",
                                             "id":"4395",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"合同支付",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/contract-payment.html",
                                             "id":"4396",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"合同查询",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/contract-search.html",
                                             "id":"4397",
                                             "shiro":"a"
                                         }
@@ -1431,7 +1431,7 @@ var main_list =
                             "items":[
                                 {
                                     "title":"配件申购",
-                                    "url":"./table.html",
+                                    "url":"./safe/service-management/accessories-purchase.html",
                                     "icon":"shopping-cart",
                                     "id":"4399",
                                     "shiro":"a"
@@ -1445,7 +1445,7 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"配件入库",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/accessories-in.html",
                                             "id":"43911",
                                             "shiro":"a"
                                         },
@@ -1459,7 +1459,7 @@ var main_list =
                                 },
                                 {
                                     "title":"配件出库",
-                                    "url":"./table.html",
+                                    "url":"./safe/service-management/accessories-out.html",
                                     "icon":"sign-out-alt",
                                     "id":"43913",
                                     "shiro":"a"
@@ -1480,13 +1480,13 @@ var main_list =
                                     "list":[
                                         {
                                             "title":"入库查询",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/ruku-search.html",
                                             "id":"43916",
                                             "shiro":"a"
                                         },
                                         {
                                             "title":"出库查询",
-                                            "url":"./table.html",
+                                            "url":"./safe/service-management/chuku-search.html",
                                             "id":"43917",
                                             "shiro":"a"
                                         },
@@ -1512,7 +1512,7 @@ var main_list =
                                 },
                                 {
                                     "title":"配件字典",
-                                    "url":"./table.html",
+                                    "url":"./safe/service-management/accessories-dictionary.html",
                                     "icon":"torah",
                                     "id":"43921",
                                     "shiro":"a"
